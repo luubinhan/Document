@@ -20,7 +20,6 @@ Wordpress Snip Code
 - Tùy biến chữ readmore
 - Get page slug
 - Get post id
-- Get data attribute jquery
 - jax
 - Get product object woocommerce
 - update cart ajax
@@ -57,9 +56,10 @@ Wordpress Snip Code
 
 # Get post feature image
 
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
-<img src="<?php echo $url ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
-
+```php
+    $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );
+    <img src="<?php echo $url ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+```
 
 # Get option from admin
 
@@ -83,10 +83,8 @@ $woo_options['woo_brand_logo']
 
 # Thêm VND vào WOO
 
-/*-----------------------------------------------------------------------------------*/
-/* Currency
-/*-----------------------------------------------------------------------------------*/
-<?php 
+```php
+
 add_filter( 'woocommerce_currencies', 'add_my_currency' );
 
 function add_my_currency( $currencies ) {
@@ -102,15 +100,15 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
      }
      return $currency_symbol;
 }
-?>
 
+```
 # animate css
 
 http://www.w3.org/TR/css3-transitions/#properties-from-css-
 
 # Get related post
 
-<?php
+```php
 
     $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
     if( $related )
@@ -125,37 +123,33 @@ http://www.w3.org/TR/css3-transitions/#properties-from-css-
             <?php 
         }
     wp_reset_postdata(); 
-?>
+```
 
 # Tùy biến chữ readmore
 
-<?php 
+```php
 function new_excerpt_more( $more ) {
     return '[.....]';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
- ?>
+```
 
 # Get page slug
 
-<?php 
+``` php 
     global $post;
     $slug = get_post( $post )->post_name;
- ?>
+```
 
 # Get post id
 
-<?php 
+```php
     get_the_ID()
-?>
-
-# Get data attribute jquery
-
-$(this).data("id")
-
+```
 
 #Ajax
 
+```js
 $('span.preview').click(function(){
         var $productID = $(this).parent().parent().data('product-id');
 
@@ -171,8 +165,8 @@ $('span.preview').click(function(){
             }
         });
     });
-
-<?php 
+```
+```php 
     add_action( "wp_ajax_preview_product", "do_preview_product" );
     function do_preview_product(){
      
@@ -186,16 +180,17 @@ $('span.preview').click(function(){
             die ();
         //die ($data);
     }
-?>
+```
 
 # Get product object woocommerce
 
-<?php 
+```php 
     $product = get_product( $post->ID );
-?>
+```
 
 # update cart ajax
 
+```php
 //update cart ajax
 function my_update_cart(){
   global $woocommerce;
@@ -209,15 +204,18 @@ function my_update_cart(){
 
 add_action('wp_ajax_update_cart_action','my_update_cart');
 add_action('wp_ajax_nopriv_update_cart_action', 'my_update_cart');
+```
 
 # Make field not required
 
+```php
 add_filter( 'woocommerce_billing_fields', 'wc_npr_filter_phone', 10, 1 );
  
 function wc_npr_filter_phone( $address_fields ) {
 $address_fields['billing_phone']['required'] = false;
 return $address_fields;
 }
+```
 
 # Bỏ bớt menu WooCommerce
 
@@ -247,7 +245,7 @@ Plugin > Woo Commerce > Template > Archieve product
 
 Thêm vào file functions.php
 
-<?php  
+```php
 /* REGIS SHOP SIDEBAR
 -------------------------------------------------------------- */
 function regis_shop_sidebar(){
@@ -263,11 +261,11 @@ function regis_shop_sidebar(){
 }
 
 add_action( 'widgets_init', 'regis_shop_sidebar' );
-?>
+```
 
 Tạo file sidebar-shop.php
 
-<?php  
+```html
 <div class="sidebar">
     <?php if ( woo_active_sidebar( 'shop-sidebar' ) ) { ?>
     <div class="primary">
@@ -276,11 +274,11 @@ Tạo file sidebar-shop.php
     <?php } // End IF Statement ?>   
     
 </div><!-- /#sidebar -->
-?>
+```
 
 #WordPress add class to parent element if has submenu 
 
-<?php  
+```php
 function menu_set_dropdown( $sorted_menu_items, $args ) {
     $last_top = 0;
     foreach ( $sorted_menu_items as $key => $obj ) {
@@ -295,23 +293,24 @@ function menu_set_dropdown( $sorted_menu_items, $args ) {
     return $sorted_menu_items;
 }
 add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
-?>
+```
 
 # Change post name
 
-<?php 
+```php
 add_filter('gettext', 'change_post_to_article');
 add_filter('ngettext', 'change_post_to_article');
 function change_post_to_article($translated) {
     $translated = str_ireplace('Post', 'New', $translated);
     return $translated;
 }
-?>
+```
+
 # Recruitment Register
 
-<?php  
+```php
 require_once ( get_template_directory() . '/inc/recruitment.php' );
-?>
+```
 
 # Sử dụng biến trên khởi tạo ở trang cha trên trang con
 
@@ -336,8 +335,10 @@ Trên trang con có thể sử dụng biến $i trên trang cha
 
 # Get slug trên trang archieve
 
+```php
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 echo $term->slug;
+```
 
 # Khắc phục lỗi không thể gởi mail với host việt nam 
 
@@ -345,17 +346,17 @@ use plugin WP Email SMTP
 
 # Get Thumbnail URL
 
-<?php 
+```php
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
     $url = $thumb['0'];
     echo $url;
-?>
+```
 
 # Tạo widget
 
 Chép vào function.php
 
-<?php  
+```php
 
 class MyStyle extends WP_Widget {
          public function __construct() {
@@ -407,21 +408,22 @@ class MyStyle extends WP_Widget {
 
 }
 register_widget( 'MyStyle' );
+```
 
-1. Vào thư mục includes/widgets duplicate file widget-woo-search.php
-2. includes/theme-widgets.php duplicate dòng
-    'includes/widgets/widget-woo-subscribe.php'
-?>
+1. Vào thư mục <code>includes/widgets</code> duplicate file widget-woo-search.php
+2. <code>includes/theme-widgets.php</code> duplicate dòng
+    <code>'includes/widgets/widget-woo-subscribe.php'</code>
+
 
 # Đăng ký thêm vị trí menu
 
-theme directory / includes / theme-functions.php
+<code>theme directory / includes / theme-functions.php</code>
 
 Search register_nav_menus
 
 # Get term custom term link
 
-<?php  
+```php
     $terms = get_terms('phanloai');
     echo '<ul>';
     foreach ($terms as $term) {
@@ -433,17 +435,17 @@ Search register_nav_menus
         echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
     }
     echo '</ul>';
-    ?>
+```
 
 # Get regular price woocommerce
 
-<?php  
+```php
     $regular_price = get_post_meta($_product->id,'_regular_price', true);
-?>
+```
 
 # Giảm theo số lượng sản phẩm trong giỏ hàng 
 
-<?php  
+```php 
 function mysite_box_discount( ) {
   
     global $woocommerce;
@@ -473,7 +475,7 @@ function mysite_box_discount( ) {
     }   
 }
 add_action('woocommerce_calculate_totals', 'mysite_box_discount');
-?>
+```
 
 # Add support feature image for post and page
 
@@ -484,6 +486,7 @@ if (function_exists('add_theme_support')) {
 }
 
 # woo_breadcrumbs
+
 - separator – The character to display between the breadcrumbs.
 - before – HTML to display before the breadcrumbs.
 - after – HTML to display after the breadcrumbs.
@@ -494,7 +497,7 @@ if (function_exists('add_theme_support')) {
 
 # Querying by Post Type 
 
-```
+```php
 $args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();
