@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class="">
+	<h1><a href="<%= @document.url %>"><%- @document.title or @document.name %></a></h1>
+	<p class="lead"><%- @document.description %></p>
+	<hr>
+</div>
+<article>
+	<%- @content %>
+</article>
