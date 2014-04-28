@@ -14,6 +14,7 @@ description: Note for Joomla
 - Get first image as thumbnail
 - Change joomla pagination
 - ROUTE ARTICLE
+- Escape string
 
 <!-- /MarkdownTOC -->
 
@@ -45,4 +46,9 @@ http://www.slurpitup.com/joomla/tips-and-tricks/how-to-style-default-joomla-pagi
 echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id));
 ```
 
+# Escape string
+
+```php
+ $this->escape($this->searchword)
+```
 
