@@ -15,6 +15,7 @@ description: Note for Joomla
 - Change joomla pagination
 - ROUTE ARTICLE
 - Escape string
+- stripslashes
 
 <!-- /MarkdownTOC -->
 
@@ -51,4 +52,6 @@ echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id));
 ```php
  $this->escape($this->searchword)
 ```
+
+# stripslashes
 
