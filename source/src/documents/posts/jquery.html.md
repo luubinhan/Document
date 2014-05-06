@@ -9,6 +9,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 <!-- MarkdownTOC depth=2 -->
 
 - Get data attribute jquery
+- get which radio is selected via jQuery?
 
 <!-- /MarkdownTOC -->
 
@@ -19,6 +20,11 @@ description: 'The Write Less, Do More, JavaScript Library'
 $(this).data("id")
 ```
 
+# get which radio is selected via jQuery? 
+
+```js
+$('input[name=radioName]:checked', '#myForm').val()
+```
 
 
 
