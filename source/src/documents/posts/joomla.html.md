@@ -16,6 +16,8 @@ description: Note for Joomla
 - ROUTE ARTICLE
 - Escape string
 - stripslashes
+- Get date of week
+- Create new component
 
 <!-- /MarkdownTOC -->
 
@@ -55,3 +57,10 @@ echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id));
 
 # stripslashes
 
+# Get date of week 
+
+$dw = date( "w" );
+
+# Create new component
+
+http://www.joomladevuser.com/tutorials/components/component-dev-parti
