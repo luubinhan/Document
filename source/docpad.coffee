@@ -13,7 +13,9 @@ docpadConfig = {
 		site:
 			# The production url of our website
 			# If not set, will default to the calculated site URL (e.g. http://localhost:9778)
-			url: "http://website.com"
+			url: "http://luubinhan.github.io/Document"
+
+			liveUrl: "http://luubinhan.github.io/Document"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -36,9 +38,9 @@ docpadConfig = {
 
 			# The website's styles
 			styles: [
-				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
-				'/styles/style.css'
+				'http://luubinhan.github.io/Document/vendor/normalize.css'
+				'http://luubinhan.github.io/Document/vendor/h5bp.css'
+				'http://luubinhan.github.io/Document/styles/style.css'
 			]
 
 			# The website's scripts
@@ -49,9 +51,9 @@ docpadConfig = {
 				<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\\/script>')</script>
 				"""
 
-				'/vendor/log.js'
-				'/vendor/modernizr.js'
-				'/scripts/script.js'
+				'http://luubinhan.github.io/Document/vendor/log.js'
+				'http://luubinhan.github.io/Document/vendor/modernizr.js'
+				'http://luubinhan.github.io/Document/scripts/script.js'
 			]
 
 
@@ -69,6 +71,8 @@ docpadConfig = {
 			else
 				@site.title
 
+		getLiveUrl: ->
+			@site.liveUrl
 		# Get the prepared site/document description
 		getPreparedDescription: ->
 			# if we have a document description, then we should use that, otherwise use the site's description

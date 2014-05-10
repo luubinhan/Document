@@ -46,7 +46,7 @@
 		      <div class="list-group">
 		      	<% for post in @getCollection('posts').sortArray(date: -1): %>
 
-				  <a href="<%= post.url %>" class="list-group-item">
+				  <a href="<%= @getLiveUrl() %><%= post.url %>" class="list-group-item">
 				    <h4 class="list-group-item-heading"><%- post.title or post.name %></h4>
 				    <p class="list-group-item-text"><%- post.description %></p>
 				  </a>				
