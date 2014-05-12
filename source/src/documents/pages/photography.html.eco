@@ -9,7 +9,7 @@ description: Sổ tay nhiếp ảnh
 <ul>
 	<% for post in @getFilesAtPath(@getPath("photography", "posts")).toJSON(): %>
 		<li>
-		  <a href="<%= post.url %>">
+		  <a href="<%= @getLiveUrl() %><%= post.url %>">
 		    <%- post.title or post.name %>    
 		  </a>
 	  	</li>		

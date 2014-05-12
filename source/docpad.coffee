@@ -13,9 +13,9 @@ docpadConfig = {
 		site:
 			# The production url of our website
 			# If not set, will default to the calculated site URL (e.g. http://localhost:9778)
-			url: "http://luubinhan.github.io/Document"
+			url: "http://luubinhan.github.io/notes"
 
-			liveUrl: "http://luubinhan.github.io/Document"
+			liveUrl: "http://luubinhan.github.io/notes"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -38,9 +38,9 @@ docpadConfig = {
 
 			# The website's styles
 			styles: [
-				'http://luubinhan.github.io/Document/vendor/normalize.css'
-				'http://luubinhan.github.io/Document/vendor/h5bp.css'
-				'http://luubinhan.github.io/Document/styles/style.css'
+				'http://luubinhan.github.io/notes/vendor/normalize.css'
+				'http://luubinhan.github.io/notes/vendor/h5bp.css'
+				'http://luubinhan.github.io/notes/styles/style.css'
 			]
 
 			# The website's scripts
@@ -51,9 +51,9 @@ docpadConfig = {
 				<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\\/script>')</script>
 				"""
 
-				'http://luubinhan.github.io/Document/vendor/log.js'
-				'http://luubinhan.github.io/Document/vendor/modernizr.js'
-				'http://luubinhan.github.io/Document/scripts/script.js'
+				'http://luubinhan.github.io/notes/vendor/log.js'
+				'http://luubinhan.github.io/notes/vendor/modernizr.js'
+				'http://luubinhan.github.io/notes/scripts/script.js'
 			]
 
 
