@@ -1,0 +1,17 @@
+---
+title: "Photography"
+layout: "default"
+isPage: true
+description: Sổ tay nhiếp ảnh
+---
+
+<h1>Table of content</h1>
+<ul>
+	<% for post in @getFilesAtPath(@getPath("photography", "posts")).toJSON(): %>
+		<li>
+		  <a href="<%= post.url %>">
+		    <%- post.title or post.name %>    
+		  </a>
+	  	</li>		
+	<% end %> 	
+</ul>

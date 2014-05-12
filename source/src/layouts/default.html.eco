@@ -46,11 +46,17 @@
 		      <div class="list-group">
 		      	<% for post in @getCollection('posts').sortArray(date: -1): %>
 
-				  <a href="<%= @getLiveUrl() %><%= post.url %>" class="list-group-item">
+				  <a href="<%= post.url %>" class="<%= if post.id is @document.id then 'active' else 'inactive' %> list-group-item">
 				    <h4 class="list-group-item-heading"><%- post.title or post.name %></h4>
 				    <p class="list-group-item-text"><%- post.description %></p>
 				  </a>				
-				<% end %>       
+				<% end %>  
+				<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>			        
+		            <a href="<%= page.url %>" class="<%= if page.id is @document.id then 'active' else 'inactive' %> list-group-item">
+		               <h4 class="list-group-item-heading"> <%= page.title %></h4>
+		               <p class="list-group-item-text"><%= page.description %></p>
+		            </a>			        
+			    <% end %>     
 		      </div> 
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
