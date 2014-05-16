@@ -421,6 +421,12 @@ register_widget( 'MyStyle' );
 
 Search register_nav_menus
 
+if ( function_exists( 'wp_nav_menu') ) {
+  add_theme_support( 'nav-menus' );
+  register_nav_menus( array( 'primary-menu' => __( 'Primary Menu', 'devinition' ) ) );
+  register_nav_menus( array( 'home-menu' => __( 'Home Menu', 'devinition' ) ) );
+}
+
 # Get term custom term link
 
 ```php
@@ -479,7 +485,9 @@ add_action('woocommerce_calculate_totals', 'mysite_box_discount');
 
 # Add support feature image for post and page
 
-// Add support for Featured Images
+/*  Add support for Featured Images
+-------------------------------------------------------------- */
+
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
     add_image_size('index-categories', 694, 150, true);

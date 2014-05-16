@@ -12,6 +12,7 @@ description: Best practice and trick
 - IPHONE FONT SIZE
 - iOS forces rounded corners and glare on inputs
 - How to disable phone number linking in Mobile Safari
+- Twitter width 100%
 
 <!-- /MarkdownTOC -->
 
@@ -33,3 +34,7 @@ description: Best practice and trick
 ```
 <meta name="format-detection" content="telephone=no">
 ```
+
+# Twitter width 100%
+
+iframe[id^='twitter-widget-']{ width:100% !important;}
