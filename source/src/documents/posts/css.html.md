@@ -13,6 +13,8 @@ description: Best practice and trick
 - iOS forces rounded corners and glare on inputs
 - How to disable phone number linking in Mobile Safari
 - Twitter width 100%
+- Facebook responsive
+- b-root {
 
 <!-- /MarkdownTOC -->
 
@@ -38,3 +40,14 @@ description: Best practice and trick
 # Twitter width 100%
 
 iframe[id^='twitter-widget-']{ width:100% !important;}
+
+# Facebook responsive
+
+#fb-root {
+display: none;
+}
+ 
+/* To fill the container and nothing else */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+width: 100% !important;
+}
