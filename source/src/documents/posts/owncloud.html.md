@@ -10,17 +10,27 @@ description: 'Your Cloud, Your Data, Your Way!'
 <!-- MarkdownTOC depth=2 -->
 
 - Install
-- Theming
-- Chèn thêm js và css
-- Bật debug mode
-- Thêm kích thước file trên trang download
-- Thêm share link trên trang download
-- Thêm ngày expiration trên trang download
-- Confirm trước khi delete
-- Tự động share file khi upload
-- Thêm share link trên trang list file
-- Chèn giá trị vào khi load cùng với icon
-- Tuỳ biến khi gởi email
+    - Theming
+    - Chèn thêm js và css
+    - Bật debug mode
+    - Thêm kích thước file trên trang download
+    - Thêm share link trên trang download
+    - Thêm ngày expiration trên trang download
+    - Confirm trước khi delete
+    - Tự động share file khi upload
+    - Thêm share link trên trang list file
+    - Chèn giá trị vào khi load cùng với icon
+    - Tuỳ biến khi gởi email
+- INCLUDE CSS AND JS INSINDE OF YOUR CUSTOM OWNCLOUD THEME
+    - Add File Size
+    - Add Share Link
+    - Add expiration date
+    - Customize form share
+    - Bat debug mode
+    - Confirm delete
+    - Expiration Date
+    - Customize email
+    - Mở cửa sổ popup thiết đặt khi vừa upload
 
 <!-- /MarkdownTOC -->
 
@@ -271,13 +281,101 @@ $(document).on('submit', '#dropdown #emailPrivateLink', function(event) {
 
 ```
 
+# INCLUDE CSS AND JS INSINDE OF YOUR CUSTOM OWNCLOUD THEME
+
+```php
+class BC_CUSTOM {
+ 
+     /**
+     * Returns the Path of the Theme:
+     */
+    public static function getThisTheme($subPath=null)
+    {
+        $themepath = OC::$WEBROOT.'/themes/'.OC_Util::getTheme();
+        switch ($subPath) {
+            case 'css':
+                return $themepath.'/core/css';
+                break;
+            case 'js':
+                return $themepath.'/core/js';
+                break;     
+            default:
+                return $themepath; 
+            break;
+        }  
+ 
+    }
+}
+```
+
+With this code at the end of the util.php file, I can quickly include css and js files:
+
+```html
+<!-- Include bootstrap css-->
+<link media="screen" type="text/css" href="<?php print_unescaped(BC_CUSTOM::getThisTheme("css").'/bootstrap.min.css') ?>" rel="stylesheet">
+<link media="screen" type="text/css" href="<?php print_unescaped(BC_CUSTOM::getThisTheme("css").'/bootstrap-responsive.css') ?>" rel="stylesheet">
+<!-- Include custom theme css-->
+<link media="screen" type="text/css" href="<?php print_unescaped(BC_CUSTOM::getThisTheme("css").'/style.css') ?>" rel="stylesheet">
+<!-- Include bootstrap .js-->          
+    <script type="text/javascript" src="<?php print_unescaped(BC_CUSTOM::getThisTheme("js").'/bootstrap.min.js') ?>"></script>
+```
+
+## Add File Size
+
+Apps/Files_Sharing/public.php 
+
++ $tmpl->assign('filename', $file);
+     $tmpl->assign('size', \OC\Files\Filesystem::filesize($file)); 
+
+## Add Share Link
+
+Apps/Files_Sharing/public.php 
+
+$tmpl->assign('linkShare', OCP\Util::linkToPublic('files') . $urlLinkIdentifiers); 
+
+## Add expiration date
+
+File: 
+Apps/Files_Sharing/public.php 
+
+Code:
+
+$shareOwner = $linkItem['uid_owner'];
+         + $expiration = $linkItem['expiration'];
+$tmpl->assign('filename', $file); 
+     + $tmpl->assign('expiration', $expiration); 
+
+Print array : var_dump
+
+## Customize form share
+
+core/js/share.js
+
+## Bat debug mode
+/config/config.php
+define( "DEBUG", 1);
+
+## Confirm delete
+
+apps/files/js/fileactions.js 
+element.on('click', {a: null, elem: parent, actionFunc: actions['Delete']}, actionHandler); 
+
+## Expiration Date
+
+core/js/share.js
+
+if (share.expiration != null) {
+  OC.Share.showExpirationDate(share.expiration);
+}
+
+## Customize email
+
+core/ajax/share.php
+
+## Mở cửa sổ popup thiết đặt khi vừa upload 
 
 
-
-
-
-
-
+/Applications/MAMP/htdocs/owncloud2/apps/files/js/filelist.js 
 
 
 

@@ -15,7 +15,7 @@ description: Sổ tay nhiếp ảnh
 			<div class="split-gist <%= if post.id is @document.id then 'gist-selected' else 'inactive' %>">
 				<div class="gist-meta">
 					<div class="gist-name">
-						<a href="<%= post.url %>">
+						<a href="<%= @getLiveUrl() %><%= post.url %>">
 						    <%- post.title or post.name %>    
 						  </a>
 					</div><!-- gist-name -->

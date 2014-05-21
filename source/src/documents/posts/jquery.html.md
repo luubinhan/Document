@@ -34,12 +34,19 @@ http://www.jquery4u.com/plugins/responsive-fullscreen-background-image-plugins/
 
 
 # problem with when scroll iphone Backstretch plugin
+
 add
+
+```js
 if (/iP/.test(navigator.platform) && /Safari/i.test(navigator.userAgent)) {
     g += 100;
     j += 100;
 }
+```
+
 before
+
+```js
 this.$wrap.css({
     width: b,
     height: g
@@ -47,7 +54,7 @@ this.$wrap.css({
     width: e,
     height: j
 }).css(a)
-
+```
 
 
 
