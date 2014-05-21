@@ -5,7 +5,6 @@ description: Wordpress Snip Code
 ---
 
 #### Table of content
--------------
 
 Wordpress Snip Code
 ----------------------
@@ -15,7 +14,6 @@ Wordpress Snip Code
 - Get post feature image
 - Get option from admin
 - Thêm VND vào WOO
-- animate css
 - Get related post
 - Tùy biến chữ readmore
 - Get page slug
@@ -62,7 +60,7 @@ Wordpress Snip Code
 ```
 
 # Get option from admin
-
+```php
 <?php 
 $settings = array(
             'thumb_w' => 787, 
@@ -72,6 +70,7 @@ $settings = array(
             
 $settings = woo_get_dynamic_values( $settings );
  ?>
+```
 
 Chỉ lấy một giá trị
 
@@ -102,9 +101,7 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 }
 
 ```
-# animate css
 
-http://www.w3.org/TR/css3-transitions/#properties-from-css-
 
 # Get related post
 
@@ -219,23 +216,33 @@ return $address_fields;
 
 # Bỏ bớt menu WooCommerce
 
+```
 Plugin Folder/admin/woocommerce-admin-init.php
+```
 
 # Get template part woocommerce
 
+```php
 woocommerce_get_template_part()
+```
 
 # Get product price 
 
+```php
 <?php woocommerce_get_template( 'loop/price.php' ); ?>
+```
 
 # Convert to lower case
 
+```php
 strtolower();
+```
 
 # Get Product Category
 
+```php
 <?php echo $product->get_categories(); ?>
+```
 
 # Trang shop online
 
@@ -315,23 +322,31 @@ require_once ( get_template_directory() . '/inc/recruitment.php' );
 # Sử dụng biến trên khởi tạo ở trang cha trên trang con
 
 Ví dụ khai báo biến $i trên trang cha
+```php
 <?php $i = 0; ?>
+```
 
 Đừng sử dụng get_template_part(), sử dụng, locate_template()
 
+```php
 <?php include(locate_template('content-video.php')); ?>
+```
 
 Trên trang con có thể sử dụng biến $i trên trang cha
 
+```php
 <?php if( ($i % 5) == 0 ): ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class('post-video alpha');?> >
 <?php else: ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class('post-video');?> >
 <?php endif; ?>
+```
 
 # Get Various WooCommerce Page URLs
 
+```php
 <?php $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>
+```
 
 # Get slug trên trang archieve
 
@@ -421,11 +436,13 @@ register_widget( 'MyStyle' );
 
 Search register_nav_menus
 
+```php
 if ( function_exists( 'wp_nav_menu') ) {
   add_theme_support( 'nav-menus' );
   register_nav_menus( array( 'primary-menu' => __( 'Primary Menu', 'devinition' ) ) );
   register_nav_menus( array( 'home-menu' => __( 'Home Menu', 'devinition' ) ) );
 }
+```
 
 # Get term custom term link
 
@@ -485,6 +502,7 @@ add_action('woocommerce_calculate_totals', 'mysite_box_discount');
 
 # Add support feature image for post and page
 
+```php
 /*  Add support for Featured Images
 -------------------------------------------------------------- */
 
@@ -492,6 +510,7 @@ if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
     add_image_size('index-categories', 694, 150, true);
 }
+```
 
 # woo_breadcrumbs
 
@@ -518,12 +537,17 @@ endwhile;
 
 # Get Global post id
 
+```php
 $post_id = $GLOBALS['post']->ID;
+```
 
 # Remove column 
 
 ## Wordpress SEO
+
+```php
 add_filter( 'wpseo_use_page_analysis', '__return_false' );
+```
 
 
 

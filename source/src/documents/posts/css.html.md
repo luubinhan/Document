@@ -5,7 +5,7 @@ description: Best practice and trick
 ---
 
 #### Table of content
--------------
+
 
 <!-- MarkdownTOC depth=2 -->
 
@@ -14,7 +14,6 @@ description: Best practice and trick
 - How to disable phone number linking in Mobile Safari
 - Twitter width 100%
 - Facebook responsive
-- b-root {
 
 <!-- /MarkdownTOC -->
 
@@ -33,21 +32,25 @@ description: Best practice and trick
 
 # How to disable phone number linking in Mobile Safari
 
-```
+```html
 <meta name="format-detection" content="telephone=no">
 ```
 
 # Twitter width 100%
 
+```css
 iframe[id^='twitter-widget-']{ width:100% !important;}
+```
 
 # Facebook responsive
 
+```css
 #fb-root {
-display: none;
+    display: none;
 }
- 
+
 /* To fill the container and nothing else */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-width: 100% !important;
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style]{
+    width: 100% !important;
 }
+```

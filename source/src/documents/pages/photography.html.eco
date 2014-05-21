@@ -5,13 +5,24 @@ isPage: true
 description: Sổ tay nhiếp ảnh
 ---
 
-<h1>Table of content</h1>
-<ul>
-	<% for post in @getFilesAtPath(@getPath("photography", "posts")).toJSON(): %>
-		<li>
-		  <a href="<%= @getLiveUrl() %><%= post.url %>">
-		    <%- post.title or post.name %>    
-		  </a>
-	  	</li>		
-	<% end %> 	
-</ul>
+<article>
+	<div class="killer-logo">
+		<h1><%- @document.title or @document.name %></h1>
+	</div>
+	<h4><%- @document.description %></h4>
+	<div class="split-view-list-gists">
+		<% for post in @getFilesAtPath(@getPath("photography", "posts")).toJSON(): %>
+			<div class="split-gist <%= if post.id is @document.id then 'gist-selected' else 'inactive' %>">
+				<div class="gist-meta">
+					<div class="gist-name">
+						<a href="<%= post.url %>">
+						    <%- post.title or post.name %>    
+						  </a>
+					</div><!-- gist-name -->
+				</div><!-- gist-meta -->
+			  
+		  	</div>		
+		<% end %> 	
+	</div><!-- split-view-list-gists -->	
+</article>
+

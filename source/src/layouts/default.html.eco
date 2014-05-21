@@ -13,7 +13,8 @@
 	<title><%= @getPreparedTitle() %></title>
 	<meta name="description" content="<%= @getPreparedDescription() %>" />
 	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 	<!-- DocPad Meta -->
 	<%- @getBlock('meta').toHTML() %>
 
@@ -48,13 +49,13 @@
 
 				  <a href="<%= @getLiveUrl() %><%= post.url %>" class="<%= if post.id is @document.id then 'active' else 'inactive' %> list-group-item">
 				    <h4 class="list-group-item-heading"><%- post.title or post.name %></h4>
-				    <p class="list-group-item-text"><%- post.description %></p>
+				    
 				  </a>				
 				<% end %>  
 				<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>			        
 		            <a href="<%= @getLiveUrl() %><%= page.url %>" class="<%= if page.id is @document.id then 'active' else 'inactive' %> list-group-item">
 		               <h4 class="list-group-item-heading"> <%= page.title %></h4>
-		               <p class="list-group-item-text"><%= page.description %></p>
+		              
 		            </a>			        
 			    <% end %>     
 		      </div> 

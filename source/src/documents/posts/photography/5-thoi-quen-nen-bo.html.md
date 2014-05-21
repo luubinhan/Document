@@ -1,6 +1,6 @@
 ---
 layout: 'content'
-title: '5 THÓI QUEN XẤU NÊN BỎ KHI CHỤP ẢNH'
+title: '5 thói quen nên bỏ'
 ---
 
 ### Do dự

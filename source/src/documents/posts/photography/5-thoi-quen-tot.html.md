@@ -1,6 +1,6 @@
 ---
 layout: 'content'
-title: '5 THÓI QUEN TỐT CHO NHIẾP ẢNH'
+title: '5 thói quen tốt'
 ---
 
 ### Chụp mỗi ngày
