@@ -15,7 +15,7 @@ docpadConfig = {
 			# If not set, will default to the calculated site URL (e.g. http://localhost:9778)
 			url: "http://luubinhan.github.io/notes"
 
-			liveUrl: "http://luubinhan.github.io/notes"
+			liveUrl: "http://localhost:9778"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -40,7 +40,7 @@ docpadConfig = {
 			styles: [
 				'http://luubinhan.github.io/notes/vendor/normalize.css'
 				'http://luubinhan.github.io/notes/vendor/h5bp.css'
-				'http://luubinhan.github.io/notes/styles/style.css'
+				'http://localhost:9778/styles/style.css'
 				
 			]
 
@@ -54,7 +54,7 @@ docpadConfig = {
 
 				'http://luubinhan.github.io/notes/vendor/log.js'
 				'http://luubinhan.github.io/notes/vendor/modernizr.js'
-				'http://luubinhan.github.io/notes/scripts/script.js'
+				'http://localhost:9778/scripts/script.js'
 			]
 
 

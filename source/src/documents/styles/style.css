@@ -212,6 +212,45 @@ pre {
   color: #ba2935;
   margin: 30px 0 20px;
 }
+.navbar-brand {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
 .article {
   padding-bottom: 150px;
+}
+.master {
+  margin-left: 400px;
+  padding-right: 400px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+@media (max-width: 1280px) {
+  .master {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .master {
+    margin-left: 0;
+    padding-left: 30px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    background: #e5e5e5;
+  }
+  .navbar-collapse {
+    max-height: none;
+  }
+}
+@media ( max-width: 480px) {
+  .killer-logo h1 {
+    font-size: 25px;
+  }
+  .single-post h3 {
+    font-size: 18px;
+  }
 }

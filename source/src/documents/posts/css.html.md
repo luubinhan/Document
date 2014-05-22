@@ -14,6 +14,9 @@ description: Best practice and trick
 - How to disable phone number linking in Mobile Safari
 - Twitter width 100%
 - Facebook responsive
+- Cần nhớ khi thiết kế email
+- Free fontface
+- Popular font
 
 <!-- /MarkdownTOC -->
 
@@ -54,3 +57,20 @@ iframe[id^='twitter-widget-']{ width:100% !important;}
     width: 100% !important;
 }
 ```
+
+# Cần nhớ khi thiết kế email
+
+kích thước nhỏ hơn 500-700
+Cho phép unsubscribe
+trường hợp hình ko load được
+làm rõ ai là người gởi mail
+
+# Free fontface
+
+http://fontsforweb.com/
+
+# Popular font
+
+http://www.google.com/fonts/specimen/Droid+Sans
+http://www.google.com/fonts/specimen/Noto+Sans
+123rf.com

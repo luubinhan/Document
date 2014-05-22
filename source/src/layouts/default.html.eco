@@ -38,13 +38,13 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#"><%- @site.title %></a>
+		      <a class="navbar-brand" href="<%= @getLiveUrl() %>"><%- @site.title %></a>
 		    </div><!-- navbar-header -->
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-		      <div class="list-group">
+		      <div class="list-group nav">
 		      	<% for post in @getCollection('posts').sortArray(date: -1): %>
 
 				  <a href="<%= @getLiveUrl() %><%= post.url %>" class="<%= if post.id is @document.id then 'active' else 'inactive' %> list-group-item">
@@ -63,7 +63,7 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 	</section><!-- sidebar -->
-	<section class="container">
+	<section class="master">
 		<%- @content %>
 	</section>	
 
