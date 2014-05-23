@@ -14,6 +14,8 @@ description: 'The Write Less, Do More, JavaScript Library'
 - problem with when scroll iphone Backstretch plugin
 - Plugin
 - GA
+- Khai báo mảng trong javascript
+- Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 <!-- /MarkdownTOC -->
 
@@ -101,8 +103,49 @@ gaq.push(['_trackPageview', '/url/to/page/view']);
 - Notice
 https://support.google.com/analytics/answer/1136920?hl=en
 
+# Khai báo mảng trong javascript
 
+best practices
 
+```js
+var a = [];
+```
+
+nếu khai báo
+
+```js
+var a = new Array(1);
+```
+
+Array là object có thể overwritten
+
+```js
+Array = function(key){
+    this.id = key;
+}
+```
+
+# Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+
+```js
+JSON.stringify(value [, replacer] [, space])
+```
+
+value
+Required. A JavaScript value, usually an object or array, to be converted.
+
+replacer
+Optional. A function or array that transforms the results.
+
+If replacer is a function, JSON.stringify calls the function, passing in the key and value of each member. The return value is used instead of the original value. If the function returns undefined, the member is excluded. The key for the root object is an empty string: "".
+If replacer is an array, only members with key values in the array will be converted. The order in which the members are converted is the same as the order of the keys in the array. The replacer array is ignored when the value argument is also an array.
+
+space
+Optional. Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
+If space is omitted, the return-value text is generated without any extra white space.
+If space is a number, the return-value text is indented with the specified number of white spaces at each level. If space is greater than 10, text is indented 10 spaces.
+If space is a non-empty string, such as '\t', the return-value text is indented with the characters in the string at each level.
+If space is a string that is longer than 10 characters, the first 10 characters are used.
 
 
 

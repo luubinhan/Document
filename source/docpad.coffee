@@ -15,7 +15,7 @@ docpadConfig = {
 			# If not set, will default to the calculated site URL (e.g. http://localhost:9778)
 			url: "http://luubinhan.github.io/notes"
 
-			liveUrl: "http://localhost:9778"
+			liveUrl: "http://luubinhan.github.io/notes"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -27,20 +27,16 @@ docpadConfig = {
 			title: "Notes"
 
 			# The website description (for SEO)
-			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
-				"""
+			description: "My notes, maybe it useful for you in someday"
 
 			# The website keywords (for SEO) separated by commas
-			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
-				"""
+			keywords: "Notes, development, code optimize, website"
 
 			# The website's styles
 			styles: [
 				'http://luubinhan.github.io/notes/vendor/normalize.css'
 				'http://luubinhan.github.io/notes/vendor/h5bp.css'
-				'http://localhost:9778/styles/style.css'
+				'http://luubinhan.github.io/notes/styles/style.css'
 				
 			]
 
@@ -54,7 +50,7 @@ docpadConfig = {
 
 				'http://luubinhan.github.io/notes/vendor/log.js'
 				'http://luubinhan.github.io/notes/vendor/modernizr.js'
-				'http://localhost:9778/scripts/script.js'
+				'http://luubinhan.github.io/notes/scripts/script.js'
 			]
 
 
