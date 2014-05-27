@@ -228,6 +228,9 @@ pre {
   margin-left: 0;
 }
 @media (max-width: 1280px) {
+  img {
+    max-width: 100%;
+  }
   .master {
     padding-right: 30px;
   }
@@ -251,6 +254,31 @@ pre {
     font-size: 25px;
   }
   .single-post h3 {
+    font-size: 18px;
+  }
+  .master {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #table-of-content {
+    font-size: 20px;
+  }
+  .single-post {
+    font-size: 16px;
+  }
+  h2, .h2 {
+    font-size: 20px;
+  }
+  h4, .h4 {
+    font-size: 14px;
+  }
+  .single-post h4 {
+    margin: 15px 0 10px;
+  }
+  .killer-logo {
+    padding-bottom: 0;
+  }
+  .gist-name {
     font-size: 18px;
   }
 }
