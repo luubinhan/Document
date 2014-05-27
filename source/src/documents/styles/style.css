@@ -254,3 +254,20 @@ pre {
     font-size: 18px;
   }
 }
+.gist-name {  
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+  font-size: 25px;
+}
+.gist-name a {
+  color: #333;
+
+}
+.gist-name:hover {
+  
+}
+.gist-name a:hover {
+  text-decoration: none;
+  color: #428BCA;
+}
