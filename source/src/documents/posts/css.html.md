@@ -17,6 +17,7 @@ description: Best practice and trick
 - Cần nhớ khi thiết kế email
 - Free fontface
 - Popular font
+- ont face
 
 <!-- /MarkdownTOC -->
 
@@ -74,3 +75,11 @@ http://fontsforweb.com/
 http://www.google.com/fonts/specimen/Droid+Sans
 http://www.google.com/fonts/specimen/Noto+Sans
 123rf.com
+
+#Font face
+
+Download this [Microsoft app](http://www.microsoft.com/typography/property/fpedit.htm)
+Strip out the info in the font file - replace font name with your own
+On the last page, remove the Vendor Name
+Then convert to OTF because it'll probably say corrupted. [Use this](http://www.freefontconverter.com/)
+Now upload to Font Squirrel and it'll let you use it without restrictions

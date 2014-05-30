@@ -18,6 +18,7 @@ description: Note for Joomla
 - stripslashes
 - Get date of week
 - Create new component
+- Change XAMPP IP
 
 <!-- /MarkdownTOC -->
 
@@ -64,3 +65,12 @@ $dw = date( "w" );
 # Create new component
 
 http://www.joomladevuser.com/tutorials/components/component-dev-parti
+
+# Change XAMPP IP
+
+Stop the XAMPP server, if it is running already.
+Open the file [XAMPP Installation Folder]/apache/conf/httpd.conf.
+Search for the string *Listen 80 *(I'm assuming that your XAMPP was using the port 80.
+Otherwise, just search for the string 'Listen'). This is the port number which XAMPP uses.
+Change this 80 to 172.31.1.3:80.
+Now save and re-start XAMPP server and you are done.

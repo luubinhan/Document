@@ -16,6 +16,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - GA
 - Khai báo mảng trong javascript
 - Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+- Make an array of object
 
 <!-- /MarkdownTOC -->
 
@@ -147,6 +148,36 @@ If space is a number, the return-value text is indented with the specified numbe
 If space is a non-empty string, such as '\t', the return-value text is indented with the characters in the string at each level.
 If space is a string that is longer than 10 characters, the first 10 characters are used.
 
+# Make an array of object
+
+```js
+ var usersData = [{
+        firstName: "tommy",
+        lastName: "MalCom",
+        email: "test@test.com",
+        id: 102
+    }, {
+        firstName: "Peter",
+        lastName: "breCht",
+        email: "test2@test2.com",
+        id: 103
+    }, {
+        firstName: "RoHan",
+        lastName: "sahu",
+        email: "test3@test3.com",
+        id: 104
+    }];
+```
+
+```js
+var n = 100;
+var sample = new Array();
+for (var i = 0; i < n; i++)
+    sample.push(new Object());
+```
+
+
+http://nfriedly.com/techblog/2009/06/advanced-javascript-objects-arrays-and-array-like-objects/
 
 
 
