@@ -1,0 +1,39 @@
+---
+layout: 'content'
+title: '50 shot cần có của phóng sự cưới'
+---
+
+- Ảnh chuẩn bị của cô dâu chú rể
+- Váy cưới, treo hoặc để trên giường
+- Cô dâu nhìn ra ngoài cửa sổ
+- Cô dâu bước xuống cầu thang
+- Chụp từ ngoài cửa sổ vào cô dâu
+- 3 má cô dâu chú rể thay đồ
+- Cô dâu lúc trang điểm
+- Chú rể chảy tóc
+- Ba chú rể, phụ rể chính chỉnh trang áo vest
+- Chú rể nhìn đồng hồ
+- Chú rể cùng mẹ và ba
+- Cô dâu cùng mẹ và phụ dâu
+- Cô dâu cùng với gia đình
+- Cô dâu chú rể bước vào xe
+- Cô dâu chú rể bước ra khỏi xe
+- Chú rể đợi cô dâu ở cầu thang
+- Toàn cảnh nhà hàng không có khách
+- Cô dâu trước giờ lên sân khấu
+- Cha cô dâu dẫn cô dâu lên sân khấu
+- Cô dâu tựa vài chú rể
+- Tay trong tay
+- Kiss kiss
+- Cô dâu chú rể bước ra khỏi nhà thờ
+- Cô dâu chú rể bên trong xe
+- Đón khách
+- Ảnh thức ăn
+- Chụp bàn
+- Nhảy
+- Cắt bánh, rót rượu
+- Phát biểu của ba má cô dâu chú rể
+- Ảnh hoa trang trí
+- Ký tên
+- Trẻ em vui tươi nhảy nhót
+- Ném hoa

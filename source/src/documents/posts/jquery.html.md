@@ -17,6 +17,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Khai báo mảng trong javascript
 - Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 - Make an array of object
+- One Page Plugin
 
 <!-- /MarkdownTOC -->
 
@@ -180,6 +181,7 @@ for (var i = 0; i < n; i++)
 http://nfriedly.com/techblog/2009/06/advanced-javascript-objects-arrays-and-array-like-objects/
 
 
+# One Page Plugin
 
-
-
+https://github.com/alvarotrigo/fullPage.js
+https://github.com/peachananr/onepage-scroll
