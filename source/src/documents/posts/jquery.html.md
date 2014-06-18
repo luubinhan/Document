@@ -185,3 +185,8 @@ http://nfriedly.com/techblog/2009/06/advanced-javascript-objects-arrays-and-arra
 
 https://github.com/alvarotrigo/fullPage.js
 https://github.com/peachananr/onepage-scroll
+
+Gallery
+https://github.com/nghuuphuoc/bootstrapvalidator
+http://www.elevateweb.co.uk/image-zoom/examples
+http://sachinchoolur.github.io/lightslider/

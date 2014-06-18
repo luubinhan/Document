@@ -48,6 +48,7 @@ Wordpress Snip Code
 - Get Global post id
 - Remove column
     - Wordpress SEO
+- Optimize Contact Form 7
 
 <!-- /MarkdownTOC -->
 
@@ -549,6 +550,24 @@ $post_id = $GLOBALS['post']->ID;
 add_filter( 'wpseo_use_page_analysis', '__return_false' );
 ```
 
+
+# Optimize Contact Form 7
+
+// Deregister Contact Form 7 styles
+add_action( 'wp_print_styles', 'aa_deregister_styles', 100 );
+function aa_deregister_styles() {
+    if ( ! is_page( 'contact-us' ) ) {
+        wp_deregister_style( 'contact-form-7' );
+    }
+}
+
+// Deregister Contact Form 7 JavaScript files on all pages without a form
+add_action( 'wp_print_scripts', 'aa_deregister_javascript', 100 );
+function aa_deregister_javascript() {
+    if ( ! is_page( 'contact-us' ) ) {
+        wp_deregister_script( 'contact-form-7' );
+    }
+}
 
 
 
