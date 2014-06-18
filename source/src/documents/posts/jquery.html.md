@@ -190,3 +190,9 @@ Gallery
 https://github.com/nghuuphuoc/bootstrapvalidator
 http://www.elevateweb.co.uk/image-zoom/examples
 http://sachinchoolur.github.io/lightslider/
+
+ScrollMe is a jQuery plugin for adding simple scrolling effects to web pages.
+http://scrollme.nckprsn.com/
+
+A color generator for JavaScript.
+http://llllll.li/randomColor/
