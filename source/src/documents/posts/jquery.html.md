@@ -196,3 +196,6 @@ http://scrollme.nckprsn.com/
 
 A color generator for JavaScript.
 http://llllll.li/randomColor/
+
+Countdown
+https://github.com/mudar/Amarok-Apollo-WebUI
