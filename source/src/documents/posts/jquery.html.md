@@ -18,6 +18,8 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 - Make an array of object
 - One Page Plugin
+- Instagram
+- Datetime picker
 
 <!-- /MarkdownTOC -->
 
@@ -199,3 +201,11 @@ http://llllll.li/randomColor/
 
 Countdown
 https://github.com/mudar/Amarok-Apollo-WebUI
+
+# Instagram
+
+http://pongstr.github.io/pongstagr.am
+
+# Datetime picker
+
+http://xdsoft.net/jqplugins/datetimepicker/
