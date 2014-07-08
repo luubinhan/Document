@@ -50,6 +50,7 @@ Wordpress Snip Code
     - Wordpress SEO
 - Optimize Contact Form 7
 - Add google map
+- Make Clickable
 
 <!-- /MarkdownTOC -->
 
@@ -674,3 +675,7 @@ css
 }
 #googleMap img { max-width: none; }
 ```
+
+# Make Clickable
+
+make_clickable()
