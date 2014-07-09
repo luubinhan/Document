@@ -19,6 +19,7 @@ description: Note for Joomla
 - Get date of week
 - Create new component
 - Change XAMPP IP
+- Get Page Alias
 
 <!-- /MarkdownTOC -->
 
@@ -74,3 +75,19 @@ Search for the string *Listen 80 *(I'm assuming that your XAMPP was using the po
 Otherwise, just search for the string 'Listen'). This is the port number which XAMPP uses.
 Change this 80 to 172.31.1.3:80.
 Now save and re-start XAMPP server and you are done.
+
+# Get Page Alias
+
+```php
+function getCurrentAlias()
+{
+   $path = JFactory::getURI()->getPath();
+   $length = strlen($path);
+   
+   for ($i = $length; $i >= 0 ; $i--)
+      if ($path[$i] == '/')
+         return substr($path, $i + 1, $length - $i - 1);
+
+   return $path;
+}
+```
