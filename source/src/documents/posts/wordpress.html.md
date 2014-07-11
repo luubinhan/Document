@@ -51,6 +51,8 @@ Wordpress Snip Code
 - Optimize Contact Form 7
 - Add google map
 - Make Clickable
+- Add shortcodes in sidebar Widgets
+- Thêm cột trong admin
 
 <!-- /MarkdownTOC -->
 
@@ -60,6 +62,33 @@ Wordpress Snip Code
 ```php
     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );
     <img src="<?php echo $url ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+
+    function get_thumbnail_src( $post ){
+
+        $thumb_id = get_post_thumbnail_id( $post );
+        $src = wp_get_attachment_thumb_url( $thumb_id );
+        
+        return $src;
+    }
+
+echo '<img alt="" src="' . get_thumbnail_src( get_the_ID() ) . '" />';
+
+function get_thumbnail_src( $post = false ) {
+
+    if (  false === $post ) {
+        $post = get_the_ID();
+    } else if ( is_object( $post ) && isset( $post->ID ) ) {
+        $post = $post->ID;
+    } else if ( is_array( $post ) && isset( $post['ID'] ) ) {
+        $post = $post['ID'];
+    }
+    
+    $thumb_id = get_post_thumbnail_id( $post );
+    $src = wp_get_attachment_thumb_url( $thumb_id );
+    
+    return $src;
+    
+}
 ```
 
 # Get option from admin
@@ -679,3 +708,93 @@ css
 # Make Clickable
 
 make_clickable()
+
+
+# Add shortcodes in sidebar Widgets
+
+add_filter('widget_text', 'do_shortcode');
+
+# Thêm cột trong admin
+
+```php
+
+function add_table_columns( $columns ) { 
+    $columns['email_address'] = __( 'Email Address', 'tuts-crm' );
+    $columns['phone_number'] = __( 'Phone Number', 'tuts-crm' );
+    $columns['photo'] = __( 'Photo', 'tuts-crm' );
+     
+    return $columns;
+     
+}
+function output_table_columns_data( $columnName, $post_id ) {
+    echo get_field( $columnName, $post_id );   
+}
+add_action( 'manage_{Post type}_posts_custom_column', array( $this, 'output_table_columns_data'), 10, 2 );
+```
+
+Các giá trị phone_number tương ứng với id của ACF
+
+Để hiển thị hình ảnh
+
+```php
+function output_table_columns_data( $columnName, $post_id ) {
+ 
+    // Field
+    $field = get_field( $columnName, $post_id );
+     
+    if ( 'photo' == $columnName ) {
+        echo '<img src="' . $field['sizes']['thumbnail'].'" width="'.$field['sizes']['thumbnail-width'] . '" height="' . $field['sizes']['thumbnail-height'] . '" />';
+    } else {
+        // Output field
+        echo $field;
+    }
+     
+}
+```
+
+Để cột có thể sắp xếp
+
+```php
+function define_sortable_table_columns( $columns ) {
+ 
+    $columns['email_address'] = 'email_address';
+    $columns['phone_number'] = 'phone_number';
+     
+    return $columns;
+     
+}
+ if ( is_admin() ) {
+        add_filter( 'request', array( $this, 'orderby_sortable_table_columns' ) );
+    }
+/**
+* Inspect the request to see if we are on the Contacts WP_List_Table and attempting to
+* sort by email address or phone number.  If so, amend the Posts query to sort by
+* that custom meta key
+*
+* @param array $vars Request Variables
+* @return array New Request Variables
+*/
+function orderby_sortable_table_columns( $vars ) {
+ 
+    // Don't do anything if we are not on the Contact Custom Post Type
+    if ( 'contact' != $vars['post_type'] ) return $vars;
+     
+    // Don't do anything if no orderby parameter is set
+    if ( ! isset( $vars['orderby'] ) ) return $vars;
+     
+    // Check if the orderby parameter matches one of our sortable columns
+    if ( $vars['orderby'] == 'email_address' OR
+        $vars['orderby'] == 'phone_number' ) {
+        // Add orderby meta_value and meta_key parameters to the query
+        $vars = array_merge( $vars, array(
+            'meta_key' => $vars['orderby'],
+            'orderby' => 'meta_value',
+        ));
+    }
+     
+    return $vars;
+     
+}
+add_filter( 'manage_edit-contact_sortable_columns', array( $this, 'define_sortable_table_columns') );
+```
+
