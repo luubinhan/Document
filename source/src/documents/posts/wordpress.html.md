@@ -53,6 +53,7 @@ Wordpress Snip Code
 - Make Clickable
 - Add shortcodes in sidebar Widgets
 - Thêm cột trong admin
+- Permalink structrue ending .html
 
 <!-- /MarkdownTOC -->
 
@@ -798,3 +799,25 @@ function orderby_sortable_table_columns( $vars ) {
 add_filter( 'manage_edit-contact_sortable_columns', array( $this, 'define_sortable_table_columns') );
 ```
 
+# Permalink structrue ending .html 
+
+```php
+add_action( 'rewrite_rules_array', 'rewrite_rules' );
+function rewrite_rules( $rules ) {
+    $new_rules = array();
+    foreach ( get_post_types() as $t )
+        $new_rules[ $t . '/([^/]+)\.html$' ] = 'index.php?post_type=' . $t . '&name=$matches[1]';
+    return $new_rules + $rules;
+}
+
+add_filter( 'post_type_link', 'custom_post_permalink' ); // for cpt post_type_link (rather than post_link)
+
+function custom_post_permalink ( $post_link ) {
+    global $post;
+    $type = get_post_type( $post->ID );
+    return home_url( $type . '/' . $post->post_name . '.html' );
+}
+
+add_filter( 'redirect_canonical', '__return_false' );
+
+```
