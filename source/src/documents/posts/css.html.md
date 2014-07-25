@@ -18,6 +18,7 @@ description: Best practice and trick
 - Free fontface
 - Popular font
 - ont face
+- Extend Bootstrap
 
 <!-- /MarkdownTOC -->
 
@@ -83,3 +84,7 @@ Strip out the info in the font file - replace font name with your own
 On the last page, remove the Vendor Name
 Then convert to OTF because it'll probably say corrupted. [Use this](http://www.freefontconverter.com/)
 Now upload to Font Squirrel and it'll let you use it without restrictions
+
+# Extend Bootstrap
+
+http://exacttarget.github.io/fuelux/

@@ -54,6 +54,7 @@ Wordpress Snip Code
 - Add shortcodes in sidebar Widgets
 - Thêm cột trong admin
 - Permalink structrue ending .html
+- Tao shortcode
 
 <!-- /MarkdownTOC -->
 
@@ -820,4 +821,27 @@ function custom_post_permalink ( $post_link ) {
 
 add_filter( 'redirect_canonical', '__return_false' );
 
+```
+
+# Tao shortcode
+
+```php
+function recent_posts_function() {
+   query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => 1));
+   if (have_posts()) :
+      while (have_posts()) : the_post();
+         $return_string = '<a href="'.get_permalink().'">'.get_the_title().'</a>';
+      endwhile;
+   endif;
+   wp_reset_query();
+   return $return_string;
+}
+
+function register_shortcodes(){
+   add_shortcode('recent-posts', 'recent_posts_function');
+}
+
+add_action( 'init', 'register_shortcodes');
+
+[recent-posts]
 ```
