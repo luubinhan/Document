@@ -55,6 +55,7 @@ Wordpress Snip Code
 - Thêm cột trong admin
 - Permalink structrue ending .html
 - Tao shortcode
+- Thêm class cho widget
 
 <!-- /MarkdownTOC -->
 
@@ -728,10 +729,11 @@ function add_table_columns( $columns ) {
     return $columns;
      
 }
+add_filter( 'manage_edit-{Post Type}_columns', 'add_table_columns',10, 1 );
 function output_table_columns_data( $columnName, $post_id ) {
     echo get_field( $columnName, $post_id );   
 }
-add_action( 'manage_{Post type}_posts_custom_column', array( $this, 'output_table_columns_data'), 10, 2 );
+add_action( 'manage_{Post Type}_posts_custom_column', 'output_table_columns_data', 10, 2 );
 ```
 
 Các giá trị phone_number tương ứng với id của ACF
@@ -844,4 +846,19 @@ function register_shortcodes(){
 add_action( 'init', 'register_shortcodes');
 
 [recent-posts]
+```
+
+# Thêm class cho widget
+
+```php
+register_sidebar(array(
+    'id' => 'sidebar1',
+    'name' => 'Sidebar (Main)',
+    'description' => 'Primary sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widgettitle">',
+    'after_title' => '</h3>',
+    'class' => 'clearfix'
+));
 ```
