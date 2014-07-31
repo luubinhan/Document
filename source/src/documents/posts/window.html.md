@@ -32,3 +32,11 @@ find the line > Listen 80
 and change to > listen 0.0.0.0:80
 
 This will force apache to listen on IPV4 and make the pre-configured phpMyAdmin security configuration compatable.
+
+# Change max file upload phpadmin
+
+Đổi size trong apache/php.ini
+
+memory_limit
+post_max_size
+upload_max_filesize

@@ -56,6 +56,13 @@ Wordpress Snip Code
 - Permalink structrue ending .html
 - Tao shortcode
 - Thêm class cho widget
+- Remove Width and Height Attributes From Inserted Images
+- WooCommerce : Remove Review tab
+- Convert string to date
+- Get the taxonomy (use as category)
+- Get next/previous product
+- Lấy ngẫu nhiên danh sách post liên quan với post hiện tại
+- LOAD DASH ICON IN THEME
 
 <!-- /MarkdownTOC -->
 
@@ -862,3 +869,182 @@ register_sidebar(array(
     'class' => 'clearfix'
 ));
 ```
+
+# Remove Width and Height Attributes From Inserted Images
+
+```php
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+```
+
+# WooCommerce : Remove Review tab
+
+```php
+add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+function sb_woo_remove_reviews_tab($tabs) {
+
+    unset($tabs['reviews']);
+    unset($tabs['description']);                
+    unset($tabs['additional_information']);    
+
+    return $tabs;
+}
+```
+
+# Convert string to date
+
+```php
+echo $display_date = date('d F, Y', strtotime(get_field('product_start_date')));
+```
+
+# Get the taxonomy (use as category)
+
+```php
+$terms = get_the_terms( $post->ID, 'product_cat' );
+$term = array_pop($terms);
+echo '<a href="'.get_term_link($term->slug, 'product_cat').'">'.$term->name.'</a>';
+```
+
+# Get next/previous product
+
+<?php
+// get next and prev products
+// Author: Georgy Bunin (bunin.co.il@gmail.com)
+// forked from https://gist.github.com/2176823
+
+function ShowLinkToProduct($post_id, $categories_as_array, $label) {
+    // get post according post id
+    $query_args = array( 'post__in' => array($post_id), 'posts_per_page' => 1, 'post_status' => 'publish', 'post_type' => 'product', 'tax_query' => array(
+        array(
+            'taxonomy' => 'product_cat',
+            'field' => 'id',
+            'terms' => $categories_as_array
+        )));
+    $r_single = new WP_Query($query_args);
+    if ($r_single->have_posts()) {
+        $r_single->the_post();
+        global $product;
+    ?>
+    <ul class="product_list_widget">
+        <li><a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
+            <?php if (has_post_thumbnail()) the_post_thumbnail('shop_thumbnail'); else echo '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" width="'.$woocommerce->get_image_size('shop_thumbnail_image_width').'" height="'.$woocommerce->get_image_size('shop_thumbnail_image_height').'" />'; ?>
+            <?php echo $label; ?>
+            <?php if ( get_the_title() ) the_title(); else the_ID(); ?>
+        </a> <?php echo $product->get_price_html(); ?></li>
+    </ul>
+    <?php
+        wp_reset_query();
+    }
+}
+
+if ( is_singular('product') ) {
+    global $post;
+
+    // get categories
+    $terms = wp_get_post_terms( $post->ID, 'product_cat' );
+    foreach ( $terms as $term ) $cats_array[] = $term->term_id;
+
+    // get all posts in current categories
+    $query_args = array('posts_per_page' => -1, 'post_status' => 'publish', 'post_type' => 'product', 'tax_query' => array(
+        array(
+            'taxonomy' => 'product_cat',
+            'field' => 'id',
+            'terms' => $cats_array
+        )));
+    $r = new WP_Query($query_args);
+
+    // show next and prev only if we have 3 or more
+    if ($r->post_count > 2) {
+
+        $prev_product_id = -1;
+        $next_product_id = -1;
+
+        $found_product = false;
+        $i = 0;
+
+        $current_product_index = $i;
+        $current_product_id = get_the_ID();
+
+        if ($r->have_posts()) {
+            while ($r->have_posts()) {
+                $r->the_post();
+                $current_id = get_the_ID();
+
+                if ($current_id == $current_product_id) {
+                    $found_product = true;
+                    $current_product_index = $i;
+                }
+
+                $is_first = ($current_product_index == $first_product_index);
+
+                if ($is_first) {
+                    $prev_product_id = get_the_ID(); // if product is first then 'prev' = last product
+                } else {
+                    if (!$found_product && $current_id != $current_product_id) {
+                        $prev_product_id = get_the_ID();
+                    }
+                }
+
+                if ($i == 0) { // if product is last then 'next' = first product
+                    $next_product_id = get_the_ID();
+                }
+
+                if ($found_product && $i == $current_product_index + 1) {
+                    $next_product_id = get_the_ID();
+                }
+
+                $i++;
+            }
+
+            if ($prev_product_id != -1) { ShowLinkToProduct($prev_product_id, $cats_array, "next: "); }
+            if ($next_product_id != -1) { ShowLinkToProduct($next_product_id, $cats_array, "prev: "); }
+        }
+
+        wp_reset_query();
+    }
+}
+?>
+<?php previous_post_link('&laquo; %link'); ?>    
+<?php next_post_link('%link &raquo;'); ?> 
+
+# Lấy ngẫu nhiên danh sách post liên quan với post hiện tại
+
+```php
+$terms = get_the_terms( $post->ID, 'product_cat' );
+$term = array_pop($terms);  
+
+$args = array(
+    'post_type'            => 'product',
+    'ignore_sticky_posts'  => 1,
+    'no_found_rows'        => 1,
+    'posts_per_page'       => 3,
+    'orderby'              => 'rand',
+    'tax_query' => array(
+        array(
+            'taxonomy'  => 'product_cat',
+            'field'     => 'slug',
+            'terms'     => $term,
+            'operator'  => 'IN'
+        )
+    ),
+    'post__not_in'         => array( $product->id )
+);
+
+$products = new WP_Query( $args );
+```
+
+# LOAD DASH ICON IN THEME
+
+```php
+add_action( 'wp_enqueue_scripts', 'themename_scripts' );
+function themename_scripts() {
+    wp_enqueue_style( 'themename-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
+}
+```
+
+Xem code icon ở đây: http://melchoyce.github.io/dashicons/

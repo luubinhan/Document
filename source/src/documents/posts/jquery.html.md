@@ -20,6 +20,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - One Page Plugin
 - Instagram
 - Datetime picker
+- Chạy 1 function sau X giây
 
 <!-- /MarkdownTOC -->
 
@@ -209,3 +210,21 @@ http://pongstr.github.io/pongstagr.am
 # Datetime picker
 
 http://xdsoft.net/jqplugins/datetimepicker/
+
+# Chạy 1 function sau X giây
+
+```js
+var timeoutID;
+
+function delayedAlert() {
+  timeoutID = window.setTimeout(slowAlert, 2000);
+}
+
+function slowAlert() {
+  alert("That was really slow!");
+}
+
+function clearAlert() {
+  window.clearTimeout(timeoutID);
+}
+```
