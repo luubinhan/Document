@@ -63,6 +63,8 @@ Wordpress Snip Code
 - Get next/previous product
 - Lấy ngẫu nhiên danh sách post liên quan với post hiện tại
 - LOAD DASH ICON IN THEME
+- Woocommerce - Thêm nút clear giỏ hàng
+- get number of items in cart woocommerce
 
 <!-- /MarkdownTOC -->
 
@@ -1048,3 +1050,26 @@ function themename_scripts() {
 ```
 
 Xem code icon ở đây: http://melchoyce.github.io/dashicons/
+
+# Woocommerce - Thêm nút clear giỏ hàng
+
+```php
+// check for empty-cart get param to clear the cart
+add_action( 'init', 'woocommerce_clear_cart_url' );
+function woocommerce_clear_cart_url() {
+    global $woocommerce;
+    if ( isset( $_GET['empty-cart'] ) ) {
+    $woocommerce->cart->empty_cart();
+    }
+}
+
+
+<a class="button" href="<?php echo $woocommerce->cart->get_cart_url(); ?>?empty-cart"><?php _e( 'Empty Cart', 'woocommerce' ); ?></a>
+
+```
+
+# get number of items in cart woocommerce
+
+<?php global $woocommerce; ?>
+
+<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
