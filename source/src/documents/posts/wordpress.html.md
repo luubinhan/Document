@@ -65,6 +65,7 @@ Wordpress Snip Code
 - LOAD DASH ICON IN THEME
 - Woocommerce - Thêm nút clear giỏ hàng
 - get number of items in cart woocommerce
+- Paging
 
 <!-- /MarkdownTOC -->
 
@@ -1073,3 +1074,18 @@ function woocommerce_clear_cart_url() {
 <?php global $woocommerce; ?>
 
 <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+
+# Paging
+
+```php
+                                                                         
+$args = array( 
+    'post_type' => 'client-logo', 
+    'posts_per_page' => 20,
+    'paged' => get_query_var('paged')
+ 
+);
+$loop = new WP_Query( $args );
+wp_pagenavi( array( 'query' => $loop ) );
+wp_reset_query();
+```
