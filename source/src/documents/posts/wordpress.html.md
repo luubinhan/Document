@@ -66,6 +66,7 @@ Wordpress Snip Code
 - Woocommerce - Thêm nút clear giỏ hàng
 - get number of items in cart woocommerce
 - Paging
+- Get post date in loop
 
 <!-- /MarkdownTOC -->
 
@@ -392,6 +393,14 @@ Trên trang con có thể sử dụng biến $i trên trang cha
 ```php
 <?php $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>
 ```
+
+- $myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+- $payment_page = get_permalink( woocommerce_get_page_id( 'pay' ) );
+- $myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+- global $woocommerce;
+$checkout_url = $woocommerce->cart->get_checkout_url();
+global $woocommerce;
+$cart_url = $woocommerce->cart->get_cart_url();
 
 # Get slug trên trang archieve
 
@@ -1089,3 +1098,16 @@ $loop = new WP_Query( $args );
 wp_pagenavi( array( 'query' => $loop ) );
 wp_reset_query();
 ```
+
+# Get post date in loop
+
+```php
+    get_the_date( $d ); 
+```
+
+$d
+- l, F j, Y :Friday, September 24, 2004
+-  l, F jS, Y - Saturday, November 6th, 2010 
+-  F j, Y g:i a - November 6, 2010 12:50 am 
+
+http://codex.wordpress.org/Formatting_Date_and_Time
