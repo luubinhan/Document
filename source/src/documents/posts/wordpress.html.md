@@ -67,6 +67,8 @@ Wordpress Snip Code
 - get number of items in cart woocommerce
 - Paging
 - Get post date in loop
+- Hiển thị Widget Cart trên tất cả các trang
+- woocommerce custom ajax top cart
 
 <!-- /MarkdownTOC -->
 
@@ -1063,18 +1065,25 @@ Xem code icon ở đây: http://melchoyce.github.io/dashicons/
 
 # Woocommerce - Thêm nút clear giỏ hàng
 
-```php
-// check for empty-cart get param to clear the cart
-add_action( 'init', 'woocommerce_clear_cart_url' );
-function woocommerce_clear_cart_url() {
-    global $woocommerce;
-    if ( isset( $_GET['empty-cart'] ) ) {
-    $woocommerce->cart->empty_cart();
-    }
+```
+// Add the Empty Cart button right before the "Continue to Checkout" button
+add_action( 'woocommerce_proceed_to_checkout', 'iwc_clear_cart_contents_button' );
+function iwc_clear_cart_contents_button() {
+    // HTML for our new button
+    echo '<input type="submit" class="button" name="empty_cart" value="Empty Cart" />';
 }
 
-
-<a class="button" href="<?php echo $woocommerce->cart->get_cart_url(); ?>?empty-cart"><?php _e( 'Empty Cart', 'woocommerce' ); ?></a>
+add_action( 'woocommerce_before_cart', 'iwc_clear_cart_contents' );
+function iwc_clear_cart_contents() {
+    // check whether or not this button was the one pressed
+    if( isset( $_POST['empty_cart'] ) ) {
+        global $woocommerce;
+        // Go ahead and empty the cart
+        $woocommerce->cart->empty_cart();
+        // Finally redirect to your Shop Page since the Cart is now empty
+        wp_safe_redirect( get_permalink( woocommerce_get_page_id( 'shop' ) ) );
+    }
+}
 
 ```
 
@@ -1111,3 +1120,43 @@ $d
 -  F j, Y g:i a - November 6, 2010 12:50 am 
 
 http://codex.wordpress.org/Formatting_Date_and_Time
+
+# Hiển thị Widget Cart trên tất cả các trang
+
+file <code>class-wc-widget-cart.php</code>
+
+```php
+if ( is_cart() || is_checkout() ) return;  
+```
+
+Edit: Additional information how to override widget and make changes update secure
+Source: http://www.skyverge.com/blog/overriddin-woocommerce-widgets/ (Option 5)
+
+    Duplicate class-wc-widget-cart.php;
+    Copy the duplicate into a folder inside your theme, for example: cust_woo_widgets
+    Make above changes to the file;
+
+    Additionally make the following change to the widget duplicate:
+
+    class Custom_WooCommerce_Widget_Cart extends WooCommerce_Widget_Cart {
+      function widget( $args, $instance ) {
+    // copy the widget function from woocommerce/classes/widgets/class-wc-widget-cart.php
+      }
+    }
+
+    Put following code into your functions.php:
+
+    add_action( 'widgets_init', 'override_woocommerce_widgets', 15 );
+    function override_woocommerce_widgets() { 
+      if ( class_exists( 'WooCommerce_Widget_Cart' ) ) {
+        unregister_widget( 'WooCommerce_Widget_Cart' ); 
+        include_once( 'cust_woo_widgets/widget-cart.php' );
+        register_widget( 'Custom_WooCommerce_Widget_Cart' );
+      } 
+    }
+
+Note: See source for more information; untested.
+
+# woocommerce custom ajax top cart
+
+http://stackoverflow.com/questions/14675292/woocommerce-custom-ajax-top-cart
