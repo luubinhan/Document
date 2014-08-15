@@ -70,6 +70,8 @@ Wordpress Snip Code
 - Hiển thị Widget Cart trên tất cả các trang
 - woocommerce custom ajax top cart
 - Redirect login problem
+- Woocommerce: get all categories
+- Convert string to slug
 
 <!-- /MarkdownTOC -->
 
@@ -1165,3 +1167,24 @@ http://stackoverflow.com/questions/14675292/woocommerce-custom-ajax-top-cart
 # Redirect login problem
 
 add_query_arg( array('key1' => 'value1', ...), $old_query_or_uri );
+
+# Woocommerce: get all categories 
+
+```php
+woocommerce_product_categories();
+
+//or
+$args = array(
+    'number'     => $number,
+    'orderby'    => $orderby,
+    'order'      => $order,
+    'hide_empty' => $hide_empty,
+    'include'    => $ids
+);
+
+$product_categories = get_terms( 'product_cat', $args );
+```
+
+# Convert string to slug
+
+sanitize_title();
