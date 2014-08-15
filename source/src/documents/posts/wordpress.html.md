@@ -69,6 +69,7 @@ Wordpress Snip Code
 - Get post date in loop
 - Hiển thị Widget Cart trên tất cả các trang
 - woocommerce custom ajax top cart
+- Redirect login problem
 
 <!-- /MarkdownTOC -->
 
@@ -1160,3 +1161,7 @@ Note: See source for more information; untested.
 # woocommerce custom ajax top cart
 
 http://stackoverflow.com/questions/14675292/woocommerce-custom-ajax-top-cart
+
+# Redirect login problem
+
+add_query_arg( array('key1' => 'value1', ...), $old_query_or_uri );
