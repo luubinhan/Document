@@ -72,6 +72,7 @@ Wordpress Snip Code
 - Redirect login problem
 - Woocommerce: get all categories
 - Convert string to slug
+- User không thể print invoice
 
 <!-- /MarkdownTOC -->
 
@@ -1188,3 +1189,17 @@ $product_categories = get_terms( 'product_cat', $args );
 # Convert string to slug
 
 sanitize_title();
+
+# User không thể print invoice
+
+```php
+//xóa dòng sau trong plugin
+
+if( !is_admin() ) {
+    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+}
+
+if( !current_user_can( 'manage_woocommerce_orders' ) && !current_user_can( 'edit_shop_orders' ) ) {
+    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+}
+```
