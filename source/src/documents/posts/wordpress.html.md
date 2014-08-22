@@ -73,6 +73,9 @@ Wordpress Snip Code
 - Woocommerce: get all categories
 - Convert string to slug
 - User không thể print invoice
+- Thêm array động trong php
+- check if admin
+- Add discount/fee woocommerce
 
 <!-- /MarkdownTOC -->
 
@@ -1202,4 +1205,44 @@ if( !is_admin() ) {
 if( !current_user_can( 'manage_woocommerce_orders' ) && !current_user_can( 'edit_shop_orders' ) ) {
     wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 }
+```
+
+# Thêm array động trong php
+
+```php
+$array = array();
+Add to an array:
+
+$array[] = "item";
+$array[$key] = "item";
+array_push($array, "item", "another item");
+Remove from an array:
+
+$item = array_pop($array);
+$item = array_shift($array);
+unset($array[$key]);
+```
+
+# check if admin
+
+current_user_can( 'manage_options' )
+
+# Add discount/fee woocommerce
+
+```php
+add_action( 'woocommerce_cart_calculate_fees','RuleShouldDiscountAdministrationFee' );
+function RuleShouldDiscountAdministrationFee() {
+    global $woocommerce;
+
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+        return;
+
+    $percentage = 0.01;
+    $surcharge = ( $woocommerce->cart->cart_contents_total + $woocommerce->cart->shipping_total ) * $percentage;    
+    $woocommerce->cart->add_fee( 'Surcharge', $surcharge, true, 'standard' );
+
+}
+// discount
+$discount = floatval(10);
+$discount *= -1; // convert positive to negative fees
 ```
