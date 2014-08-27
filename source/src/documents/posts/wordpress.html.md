@@ -76,6 +76,7 @@ Wordpress Snip Code
 - Thêm array động trong php
 - check if admin
 - Add discount/fee woocommerce
+- Paging problem with custom taxonomi
 
 <!-- /MarkdownTOC -->
 
@@ -1245,4 +1246,13 @@ function RuleShouldDiscountAdministrationFee() {
 // discount
 $discount = floatval(10);
 $discount *= -1; // convert positive to negative fees
+```
+
+# Paging problem with custom taxonomi
+
+```php
+function jetstream_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action('init', 'jetstream_rewrite_flush');
 ```

@@ -10,6 +10,7 @@ description: 'Streamlined Web Development'
 
 - Install
 - Get all file in posts/wordpress
+- Deploy github page
 
 <!-- /MarkdownTOC -->
 
@@ -29,6 +30,20 @@ docpad run
     <li>
     <a href="<%= document.url %>"><%= document.title %></a></li>
 <% end %>
+```
+
+# Deploy github page
+
+1. Install
+
+```
+docpad install ghpages
+```
+
+2. Deploy
+
+```
+docpad deploy-ghpages --env static
 ```
 
 
