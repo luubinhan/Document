@@ -251,3 +251,7 @@ if ($('.routeLink').length) {
     }
 }
 ```
+
+# Input Number Step
+
+http://codepen.io/djgrant/pen/AwFHL

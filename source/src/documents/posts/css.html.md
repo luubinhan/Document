@@ -92,3 +92,105 @@ http://exacttarget.github.io/fuelux/
 # CSS Checkbox generator
 
 http://www.csscheckbox.com/css-checkbox-generator.php
+
+
+# Typography Collection
+
+## http://www.coudalpartners.com/
+
+Small headline
+
+```
+    font-family: Gill Sans, Verdana;
+    font-size: 11px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+```
+
+Large Headline
+
+```css
+
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: #444;
+    margin: 0;
+    padding: 0px 0px 6px 0px;
+    font-size: 51px;
+    line-height: 44px;
+    letter-spacing: -2px;
+    font-weight: bold;
+```
+
+## Human Sexuality and the Nuptial Mystery
+
+```css
+HEADLINE
+        font-family:Georgia,serif;
+    color:#4E443C;
+    font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+
+PARAGRAPH
+        font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em; color: #666;
+
+PARAGRAPH START
+        font-family:Georgia,serif;
+    font-size: .8em;
+        font-weight: bold;
+    text-transform:uppercase;
+    letter-spacing:2px; 
+```
+
+## I love Typography
+
+```css
+HEADLINE
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:24px;
+    margin-top: 5px; margin-bottom: 0px;
+    text-align: center;
+        font-weight: normal;
+        color: #222;
+
+SUBHEADLINE
+        font-family: "Lucida Grande", Tahoma;
+    font-size: 10px;
+    font-weight: lighter;
+    font-variant: normal;
+    text-transform: uppercase;
+    color: #666666;
+        margin-top: 10px;
+    text-align: center!important;
+    letter-spacing: 0.3em;
+```
+
+## The Big Noob
+
+```css
+DATE
+      font-size: 85%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bbb;
+      font-size: 10px;
+      font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+      font-weight: 100; 
+
+HEADLINE
+        font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+    color: #333;
+    line-height: 90%;
+    margin: .2em 0 .4em 0;
+    letter-spacing: -2px;
+
+TAG
+        color: #76879b;
+        font-size: 10px;
+        margin: 5px;
+        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+
+```
