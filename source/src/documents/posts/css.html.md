@@ -88,3 +88,7 @@ Now upload to Font Squirrel and it'll let you use it without restrictions
 # Extend Bootstrap
 
 http://exacttarget.github.io/fuelux/
+
+# CSS Checkbox generator
+
+http://www.csscheckbox.com/css-checkbox-generator.php

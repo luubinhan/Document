@@ -228,3 +228,26 @@ function clearAlert() {
   window.clearTimeout(timeoutID);
 }
 ```
+
+# Direction 
+
+```js
+if ($('.routeLink').length) {
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            //http://maps.google.com/maps?saddr=10.823099000000001,106.62966399999999&daddr=52.165045,5.353441;        
+            
+            var url = "http://maps.google.com/maps?saddr=" + position.coords.latitude + ","+ position.coords.longitude +"&daddr=52.165045,5.353441";
+            $('.routeLink').attr('href', url);
+          
+        }, function() {
+          handleNoGeolocation(true);
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleNoGeolocation(false);
+
+
+    }
+}
+```

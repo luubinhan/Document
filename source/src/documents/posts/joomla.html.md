@@ -91,3 +91,39 @@ function getCurrentAlias()
    return $path;
 }
 ```
+
+# Module khong hien thi title
+
+<jdoc:include type="modules" name="frontpage-column-1" style="xhtml"  />
+
+# Add jquery
+
+JHTML::_('behavior.mootools');
+$document = &JFactory::getDocument();
+$document->addScript( "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" );
+$document->addCustomTag( '<script type="text/javascript">jQuery.noConflict();</script>' );
+
+# Xac dinh home page or article page
+
+ //identify front page
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$lang = JFactory::getLanguage();
+$frontpage = '';  
+if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+    $frontpage = 'frontpage';
+}
+if (JRequest::getVar('option')=='com_content' && JRequest::getVar('view')=='article') {
+    $frontpage = 'article';
+}
+
+# Get category name
+
+```php
+// GET CURRENT CATEGORY
+$pathway =& $mainframe->getPathway();
+$cates   = $pathway->getPathWay();                                
+if ($cates[0]->name) {
+   echo stripslashes(htmlspecialchars($cates[0]->name));
+} 
+```
