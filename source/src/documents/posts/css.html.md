@@ -257,3 +257,8 @@ p { color: #f2f2f2; background: #ff4a4a; font-size: 75px; line-height: 74px; fon
 a { color: #adadad; font-size: 25px; text-decoration: none; float: right; font-family: 'Libre Baskerville', serif; line-height: 4; }
 
 a:hover { color: #ff4a4a; text-decoration: none; }
+
+
+# Character-cod
+
+http://character-code.com/

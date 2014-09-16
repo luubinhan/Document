@@ -40,3 +40,24 @@ This will force apache to listen on IPV4 and make the pre-configured phpMyAdmin 
 memory_limit
 post_max_size
 upload_max_filesize
+
+
+# Create mouse shortcut for "Go to defination" Sublime
+
+Windows - create Default (Windows).sublime-mousemap in %appdata%\Sublime Text 3\Packages\User
+
+Linux - create Default (Linux).sublime-mousemap in ~/.config/sublime-text-3/Packages/User
+
+Mac - create Default (OSX).sublime-mousemap in ~/Library/Application Support/Sublime Text 3/Packages/User
+
+Now open that file and put the following configuration inside
+
+[
+    {
+        "button": "button1", 
+        "count": 1, 
+        "modifiers": ["ctrl"],
+        "press_command": "drag_select",
+        "command": "goto_definition"
+    }
+]
