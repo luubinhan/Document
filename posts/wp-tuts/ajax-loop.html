@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>Getting Loopy - Ajax Powered Loops with jQuery and WordPress | Notes</title>
+	<meta name="description" content="My notes, maybe it useful for you in someday" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>Getting Loopy - Ajax Powered Loops with jQuery and WordPress</h1>
+	</div>
+	<div class="single-post">
+		<ol>
+<li>Tạo file loopHandler.php ( cùng thư mục file functions.php )</li>
+</ol>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">// Our include</span>
+define(<span class="hljs-string">'WP_USE_THEMES'</span>, <span class="hljs-keyword">false</span>);
+<span class="hljs-keyword">require_once</span>(<span class="hljs-string">'../../../wp-load.php'</span>);
+
+<span class="hljs-comment">// Storing GET Data as Variables in Our Handler.</span>
+<span class="hljs-variable">$numPosts</span> = (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'numPosts'</span>])) ? <span class="hljs-variable">$_GET</span>[<span class="hljs-string">'numPosts'</span>] : <span class="hljs-number">0</span>;
+<span class="hljs-variable">$page</span> = (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'pageNumber'</span>])) ? <span class="hljs-variable">$_GET</span>[<span class="hljs-string">'pageNumber'</span>] : <span class="hljs-number">0</span>;
+
+query_posts(<span class="hljs-keyword">array</span>(
+       <span class="hljs-string">'posts_per_page'</span> =&gt; <span class="hljs-variable">$numPosts</span>,
+       <span class="hljs-string">'paged'</span>          =&gt; <span class="hljs-variable">$page</span>
+));
+
+
+<span class="hljs-comment">// our loop</span>
+<span class="hljs-keyword">if</span> (have_posts()) {
+       <span class="hljs-keyword">while</span> (have_posts()){
+              the_post();
+              get_template_part( <span class="hljs-string">'content'</span>, get_post_format() );
+       }
+}
+</code></pre>
+<ol>
+<li>File ajaxLoop.js</li>
+</ol>
+<pre class="highlight"><code class="hljs javascript">jQuery(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($)</span>{</span>
+    <span class="hljs-keyword">var</span> page = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> loading = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">var</span> $window = $(window);
+    <span class="hljs-keyword">var</span> $content = $(<span class="hljs-string">"body.blog #content"</span>);
+    <span class="hljs-keyword">var</span> load_posts = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+            $.ajax({
+                type       : <span class="hljs-string">"GET"</span>,
+                data       : {numPosts : <span class="hljs-number">1</span>, pageNumber: page},
+                dataType   : <span class="hljs-string">"html"</span>,
+                url        : <span class="hljs-string">"http://WWW.YOURSITE.COM/wp-content/themes/YOUR_THEME_NAME/loopHandler.php"</span>,
+                beforeSend : <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                    <span class="hljs-keyword">if</span>(page != <span class="hljs-number">1</span>){
+                        $content.append(<span class="hljs-string">'&lt;div id="temp_load" style="text-align:center"&gt;\
+                            &lt;img src="../images/ajax-loader.gif" /&gt;\
+                            &lt;/div&gt;'</span>);
+                    }
+                },
+                success    : <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+                    $data = $(data);
+                    <span class="hljs-keyword">if</span>($data.length){
+                        $data.hide();
+                        $content.append($data);
+                        $data.fadeIn(<span class="hljs-number">500</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                            $(<span class="hljs-string">"#temp_load"</span>).remove();
+                            loading = <span class="hljs-literal">false</span>;
+                        });
+                    } <span class="hljs-keyword">else</span> {
+                        $(<span class="hljs-string">"#temp_load"</span>).remove();
+                    }
+                },
+                error     : <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(jqXHR, textStatus, errorThrown)</span> {</span>
+                    $(<span class="hljs-string">"#temp_load"</span>).remove();
+                    alert(jqXHR + <span class="hljs-string">" :: "</span> + textStatus + <span class="hljs-string">" :: "</span> + errorThrown);
+                }
+        });
+    }
+    $window.scroll(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">var</span> content_offset = $content.offset();
+        console.log(content_offset.top);
+        <span class="hljs-keyword">if</span>(!loading &amp;&amp; ($window.scrollTop() +
+            $window.height()) &gt; ($content.scrollTop() +
+            $content.height() + content_offset.top)) {
+                loading = <span class="hljs-literal">true</span>;
+                page++;
+                load_posts();
+        }
+    });
+    load_posts();
+});
+</code></pre>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

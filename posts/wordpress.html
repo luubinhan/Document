@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>Wordpress | Notes</title>
+	<meta name="description" content="Wordpress Snip Code" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="active list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>Wordpress</h1>
+	</div>
+	<div class="single-post">
+		<h4 id="table-of-content">Table of content</h4>
+<h2 id="wordpress-snip-code">Wordpress Snip Code</h2>
+<!-- MarkdownTOC depth=2 -->
+
+<ul>
+<li>Get post feature image</li>
+<li>Get option from admin</li>
+<li>Thêm VND vào WOO</li>
+<li>Get related post</li>
+<li>Tùy biến chữ readmore</li>
+<li>Get page slug</li>
+<li>Get post id</li>
+<li>jax</li>
+<li>Get product object woocommerce</li>
+<li>update cart ajax</li>
+<li>Make field not required</li>
+<li>Bỏ bớt menu WooCommerce</li>
+<li>Get template part woocommerce</li>
+<li>Get product price</li>
+<li>Convert to lower case</li>
+<li>Get Product Category</li>
+<li>Trang shop online</li>
+<li>Đăng ký sidebar</li>
+<li>ordPress add class to parent element if has submenu</li>
+<li>Change post name</li>
+<li>Recruitment Register</li>
+<li>Sử dụng biến trên khởi tạo ở trang cha trên trang con</li>
+<li>Get Various WooCommerce Page URLs</li>
+<li>Get slug trên trang archieve</li>
+<li>Khắc phục lỗi không thể gởi mail với host việt nam</li>
+<li>Get Thumbnail URL</li>
+<li>Tạo widget</li>
+<li>Đăng ký thêm vị trí menu</li>
+<li>Get term custom term link</li>
+<li>Get regular price woocommerce</li>
+<li>Giảm theo số lượng sản phẩm trong giỏ hàng</li>
+<li>Add support feature image for post and page</li>
+<li>woo_breadcrumbs</li>
+<li>Querying by Post Type</li>
+<li>Get Global post id</li>
+<li>Remove column<ul>
+<li>Wordpress SEO</li>
+</ul>
+</li>
+<li>Optimize Contact Form 7</li>
+<li>Add google map</li>
+<li>Make Clickable</li>
+<li>Add shortcodes in sidebar Widgets</li>
+<li>Thêm cột trong admin</li>
+<li>Permalink structrue ending .html</li>
+<li>Tao shortcode</li>
+<li>Thêm class cho widget</li>
+<li>Remove Width and Height Attributes From Inserted Images</li>
+<li>WooCommerce : Remove Review tab</li>
+<li>Convert string to date</li>
+<li>Get the taxonomy (use as category)</li>
+<li>Get next/previous product</li>
+<li>Lấy ngẫu nhiên danh sách post liên quan với post hiện tại</li>
+<li>LOAD DASH ICON IN THEME</li>
+<li>Woocommerce - Thêm nút clear giỏ hàng</li>
+<li>get number of items in cart woocommerce</li>
+<li>Paging</li>
+<li>Get post date in loop</li>
+<li>Hiển thị Widget Cart trên tất cả các trang</li>
+<li>woocommerce custom ajax top cart</li>
+<li>Redirect login problem</li>
+<li>Woocommerce: get all categories</li>
+<li>Convert string to slug</li>
+<li>User không thể print invoice</li>
+<li>Thêm array động trong php</li>
+<li>check if admin</li>
+<li>Add discount/fee woocommerce</li>
+<li>Paging problem with custom taxonomi</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+
+<h1 id="get-post-feature-image">Get post feature image</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-variable">$url</span> = wp_get_attachment_url( get_post_thumbnail_id(<span class="hljs-variable">$post</span>-&gt;ID, <span class="hljs-string">'thumbnail'</span>) );
+    &lt;img src=<span class="hljs-string">"&lt;?php echo $url ?&gt;"</span> title=<span class="hljs-string">"&lt;?php the_title(); ?&gt;"</span> alt=<span class="hljs-string">"&lt;?php the_title(); ?&gt;"</span> /&gt;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_thumbnail_src</span><span class="hljs-params">( <span class="hljs-variable">$post</span> )</span>{</span>
+
+        <span class="hljs-variable">$thumb_id</span> = get_post_thumbnail_id( <span class="hljs-variable">$post</span> );
+        <span class="hljs-variable">$src</span> = wp_get_attachment_thumb_url( <span class="hljs-variable">$thumb_id</span> );
+
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$src</span>;
+    }
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;img alt="" src="'</span> . get_thumbnail_src( get_the_ID() ) . <span class="hljs-string">'" /&gt;'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_thumbnail_src</span><span class="hljs-params">( <span class="hljs-variable">$post</span> = false )</span> {</span>
+
+    <span class="hljs-keyword">if</span> (  <span class="hljs-keyword">false</span> === <span class="hljs-variable">$post</span> ) {
+        <span class="hljs-variable">$post</span> = get_the_ID();
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( is_object( <span class="hljs-variable">$post</span> ) &amp;&amp; <span class="hljs-keyword">isset</span>( <span class="hljs-variable">$post</span>-&gt;ID ) ) {
+        <span class="hljs-variable">$post</span> = <span class="hljs-variable">$post</span>-&gt;ID;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( is_array( <span class="hljs-variable">$post</span> ) &amp;&amp; <span class="hljs-keyword">isset</span>( <span class="hljs-variable">$post</span>[<span class="hljs-string">'ID'</span>] ) ) {
+        <span class="hljs-variable">$post</span> = <span class="hljs-variable">$post</span>[<span class="hljs-string">'ID'</span>];
+    }
+
+    <span class="hljs-variable">$thumb_id</span> = get_post_thumbnail_id( <span class="hljs-variable">$post</span> );
+    <span class="hljs-variable">$src</span> = wp_get_attachment_thumb_url( <span class="hljs-variable">$thumb_id</span> );
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$src</span>;
+
+}
+</code></pre>
+<h1 id="get-option-from-admin">Get option from admin</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> 
+<span class="hljs-variable">$settings</span> = <span class="hljs-keyword">array</span>(
+            <span class="hljs-string">'thumb_w'</span> =&gt; <span class="hljs-number">787</span>, 
+            <span class="hljs-string">'thumb_h'</span> =&gt; <span class="hljs-number">300</span>, 
+            <span class="hljs-string">'thumb_align'</span> =&gt; <span class="hljs-string">'alignleft'</span>
+            );
+
+<span class="hljs-variable">$settings</span> = woo_get_dynamic_values( <span class="hljs-variable">$settings</span> );
+ <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p>Chỉ lấy một giá trị</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">global</span> <span class="hljs-variable">$woo_options</span>;
+
+<span class="hljs-variable">$woo_options</span>[<span class="hljs-string">'woo_brand_logo'</span>]
+</code></pre>
+<h1 id="th-m-vnd-v-o-woo">Thêm VND vào WOO</h1>
+<pre class="highlight"><code class="hljs php">
+add_filter( <span class="hljs-string">'woocommerce_currencies'</span>, <span class="hljs-string">'add_my_currency'</span> );
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add_my_currency</span><span class="hljs-params">( <span class="hljs-variable">$currencies</span> )</span> {</span>
+     <span class="hljs-variable">$currencies</span>[<span class="hljs-string">'VNĐ'</span>] = __( <span class="hljs-string">'Vietnam dong (đ)'</span>, <span class="hljs-string">'VNĐ'</span> );
+     <span class="hljs-keyword">return</span> <span class="hljs-variable">$currencies</span>;
+}
+
+add_filter(<span class="hljs-string">'woocommerce_currency_symbol'</span>, <span class="hljs-string">'add_my_currency_symbol'</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add_my_currency_symbol</span><span class="hljs-params">( <span class="hljs-variable">$currency_symbol</span>, <span class="hljs-variable">$currency</span> )</span> {</span>
+     <span class="hljs-keyword">switch</span>( <span class="hljs-variable">$currency</span> ) {
+          <span class="hljs-keyword">case</span> <span class="hljs-string">'VNĐ'</span>: <span class="hljs-variable">$currency_symbol</span> = <span class="hljs-string">' VNĐ'</span>; <span class="hljs-keyword">break</span>;
+     }
+     <span class="hljs-keyword">return</span> <span class="hljs-variable">$currency_symbol</span>;
+}
+</code></pre>
+<h1 id="get-related-post">Get related post</h1>
+<pre class="highlight"><code class="hljs php">
+    <span class="hljs-variable">$related</span> = get_posts( <span class="hljs-keyword">array</span>( <span class="hljs-string">'category__in'</span> =&gt; wp_get_post_categories(<span class="hljs-variable">$post</span>-&gt;ID), <span class="hljs-string">'numberposts'</span> =&gt; <span class="hljs-number">5</span>, <span class="hljs-string">'post__not_in'</span> =&gt; <span class="hljs-keyword">array</span>(<span class="hljs-variable">$post</span>-&gt;ID) ) );
+    <span class="hljs-keyword">if</span>( <span class="hljs-variable">$related</span> )
+        <span class="hljs-keyword">echo</span> <span class="hljs-string">"&lt;hr /&gt;&lt;h3&gt;Đọc thêm &lt;/h3&gt;"</span>;
+        <span class="hljs-keyword">foreach</span>( <span class="hljs-variable">$related</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$post</span> ) {
+            setup_postdata(<span class="hljs-variable">$post</span>); <span class="hljs-preprocessor">?&gt;</span>
+            &lt;ul&gt; 
+                &lt;li&gt;
+                &lt;a href=<span class="hljs-string">"&lt;?php the_permalink() ?&gt;"</span> rel=<span class="hljs-string">"bookmark"</span> title=<span class="hljs-string">"&lt;?php the_title(); ?&gt;"</span>&gt;<span class="hljs-preprocessor">&lt;?php</span> the_title(); <span class="hljs-preprocessor">?&gt;</span>&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;   
+            <span class="hljs-preprocessor">&lt;?php</span> 
+        }
+    wp_reset_postdata();
+</code></pre>
+<h1 id="t-y-bi-n-ch-readmore">Tùy biến chữ readmore</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new_excerpt_more</span><span class="hljs-params">( <span class="hljs-variable">$more</span> )</span> {</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'[.....]'</span>;
+}
+add_filter(<span class="hljs-string">'excerpt_more'</span>, <span class="hljs-string">'new_excerpt_more'</span>);
+</code></pre>
+<h1 id="get-page-slug">Get page slug</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-keyword">global</span> <span class="hljs-variable">$post</span>;
+    <span class="hljs-variable">$slug</span> = get_post( <span class="hljs-variable">$post</span> )-&gt;post_name;
+</code></pre>
+<h1 id="get-post-id">Get post id</h1>
+<pre class="highlight"><code class="hljs php">    get_the_ID()
+</code></pre>
+<h1 id="ajax">Ajax</h1>
+<pre class="highlight"><code class="hljs javascript">$(<span class="hljs-string">'span.preview'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+        <span class="hljs-keyword">var</span> $productID = $(<span class="hljs-keyword">this</span>).parent().parent().data(<span class="hljs-string">'product-id'</span>);
+
+        $.ajax({
+            url: <span class="hljs-string">"wp-admin/admin-ajax.php"</span>,
+            type: <span class="hljs-string">'POST'</span>,
+            data: <span class="hljs-string">'action=preview_product&amp;proID='</span> + $productID,
+            success: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data, textStatus, XMLHttpRequest)</span>{</span>
+                <span class="hljs-keyword">if</span>( textStatus === <span class="hljs-string">'success'</span> ){
+                    $data = data;
+                    console.log($data);
+                }
+            }
+        });
+    });
+</code></pre>
+<pre class="highlight"><code class="hljs php">    add_action( <span class="hljs-string">"wp_ajax_preview_product"</span>, <span class="hljs-string">"do_preview_product"</span> );
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">do_preview_product</span><span class="hljs-params">()</span>{</span>
+
+            <span class="hljs-variable">$proID</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">'proID'</span>];
+            <span class="hljs-variable">$data</span>;
+
+            <span class="hljs-keyword">if</span>( <span class="hljs-variable">$proID</span> !== <span class="hljs-string">''</span>){
+                <span class="hljs-variable">$data</span> =get_post( <span class="hljs-variable">$proID</span> ) ;
+                <span class="hljs-keyword">echo</span> <span class="hljs-variable">$data</span>-&gt;post_title;
+            }
+            <span class="hljs-keyword">die</span> ();
+        <span class="hljs-comment">//die ($data);</span>
+    }
+</code></pre>
+<h1 id="get-product-object-woocommerce">Get product object woocommerce</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-variable">$product</span> = get_product( <span class="hljs-variable">$post</span>-&gt;ID );
+</code></pre>
+<h1 id="update-cart-ajax">update cart ajax</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">//update cart ajax</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">my_update_cart</span><span class="hljs-params">()</span>{</span>
+  <span class="hljs-keyword">global</span> <span class="hljs-variable">$woocommerce</span>;
+  <span class="hljs-variable">$my_cart</span> = <span class="hljs-string">""</span>;
+
+  <span class="hljs-variable">$my_cart</span> .= <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;cart_contents_count .<span class="hljs-string">" - "</span> .<span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;get_cart_total(); 
+
+  <span class="hljs-keyword">echo</span> <span class="hljs-variable">$my_cart</span>;
+
+}
+
+add_action(<span class="hljs-string">'wp_ajax_update_cart_action'</span>,<span class="hljs-string">'my_update_cart'</span>);
+add_action(<span class="hljs-string">'wp_ajax_nopriv_update_cart_action'</span>, <span class="hljs-string">'my_update_cart'</span>);
+</code></pre>
+<h1 id="make-field-not-required">Make field not required</h1>
+<pre class="highlight"><code class="hljs php">add_filter( <span class="hljs-string">'woocommerce_billing_fields'</span>, <span class="hljs-string">'wc_npr_filter_phone'</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span> );
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wc_npr_filter_phone</span><span class="hljs-params">( <span class="hljs-variable">$address_fields</span> )</span> {</span>
+<span class="hljs-variable">$address_fields</span>[<span class="hljs-string">'billing_phone'</span>][<span class="hljs-string">'required'</span>] = <span class="hljs-keyword">false</span>;
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$address_fields</span>;
+}
+</code></pre>
+<h1 id="b-b-t-menu-woocommerce">Bỏ bớt menu WooCommerce</h1>
+<pre class="highlight"><code class="hljs lasso">Plugin Folder/admin/woocommerce<span class="hljs-attribute">-admin</span><span class="hljs-attribute">-init</span><span class="hljs-built_in">.</span>php
+</code></pre><h1 id="get-template-part-woocommerce">Get template part woocommerce</h1>
+<pre class="highlight"><code class="hljs php">woocommerce_get_template_part()
+</code></pre>
+<h1 id="get-product-price">Get product price</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> woocommerce_get_template( <span class="hljs-string">'loop/price.php'</span> ); <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<h1 id="convert-to-lower-case">Convert to lower case</h1>
+<pre class="highlight"><code class="hljs php">strtolower();
+</code></pre>
+<h1 id="get-product-category">Get Product Category</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-variable">$product</span>-&gt;get_categories(); <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<h1 id="trang-shop-online">Trang shop online</h1>
+<p>Plugin &gt; Woo Commerce &gt; Template &gt; Archieve product</p>
+<h1 id="-ng-k-sidebar">Đăng ký sidebar</h1>
+<p>Thêm vào file functions.php</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">/* REGIS SHOP SIDEBAR
+-------------------------------------------------------------- */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">regis_shop_sidebar</span><span class="hljs-params">()</span>{</span>
+    register_sidebar(<span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'name'</span>          =&gt; __( <span class="hljs-string">'Shop Sidebar'</span> ),
+        <span class="hljs-string">'id'</span>            =&gt; <span class="hljs-string">'shop-sidebar'</span>,
+        <span class="hljs-string">'description'</span>   =&gt; __( <span class="hljs-string">'Widget hiển thị trên các trang sản phẩm'</span> ),
+        <span class="hljs-string">'before_title'</span>  =&gt; <span class="hljs-string">'&lt;h3&gt;'</span>,
+        <span class="hljs-string">'after_title'</span>   =&gt; <span class="hljs-string">'&lt;/h3&gt;'</span>,
+        <span class="hljs-string">'before_widget'</span> =&gt; <span class="hljs-string">'&lt;div id="%1$s" class="widget %2$s"&gt;'</span>,
+        <span class="hljs-string">'after_widget'</span>  =&gt; <span class="hljs-string">'&lt;/div&gt;'</span>,    
+    ));    
+}
+
+add_action( <span class="hljs-string">'widgets_init'</span>, <span class="hljs-string">'regis_shop_sidebar'</span> );
+</code></pre>
+<p>Tạo file sidebar-shop.php</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sidebar"</span>&gt;</span>
+    <span class="php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">if</span> ( woo_active_sidebar( <span class="hljs-string">'shop-sidebar'</span> ) ) { <span class="hljs-preprocessor">?&gt;</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+        <span class="php"><span class="hljs-preprocessor">&lt;?php</span> woo_sidebar( <span class="hljs-string">'shop-sidebar'</span> );  <span class="hljs-preprocessor">?&gt;</span></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>        
+    <span class="php"><span class="hljs-preprocessor">&lt;?php</span> } <span class="hljs-comment">// End IF Statement ?&gt;</span></span>   
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- /#sidebar --&gt;</span>
+</code></pre>
+<h1 id="wordpress-add-class-to-parent-element-if-has-submenu">WordPress add class to parent element if has submenu</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">menu_set_dropdown</span><span class="hljs-params">( <span class="hljs-variable">$sorted_menu_items</span>, <span class="hljs-variable">$args</span> )</span> {</span>
+    <span class="hljs-variable">$last_top</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">foreach</span> ( <span class="hljs-variable">$sorted_menu_items</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$key</span> =&gt; <span class="hljs-variable">$obj</span> ) {
+        <span class="hljs-comment">// it is a top lv item?</span>
+        <span class="hljs-keyword">if</span> ( <span class="hljs-number">0</span> == <span class="hljs-variable">$obj</span>-&gt;menu_item_parent ) {
+            <span class="hljs-comment">// set the key of the parent</span>
+            <span class="hljs-variable">$last_top</span> = <span class="hljs-variable">$key</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-variable">$sorted_menu_items</span>[<span class="hljs-variable">$last_top</span>]-&gt;classes[<span class="hljs-string">'dropdown'</span>] = <span class="hljs-string">'dropdown'</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$sorted_menu_items</span>;
+}
+add_filter( <span class="hljs-string">'wp_nav_menu_objects'</span>, <span class="hljs-string">'menu_set_dropdown'</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span> );
+</code></pre>
+<h1 id="change-post-name">Change post name</h1>
+<pre class="highlight"><code class="hljs php">add_filter(<span class="hljs-string">'gettext'</span>, <span class="hljs-string">'change_post_to_article'</span>);
+add_filter(<span class="hljs-string">'ngettext'</span>, <span class="hljs-string">'change_post_to_article'</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">change_post_to_article</span><span class="hljs-params">(<span class="hljs-variable">$translated</span>)</span> {</span>
+    <span class="hljs-variable">$translated</span> = str_ireplace(<span class="hljs-string">'Post'</span>, <span class="hljs-string">'New'</span>, <span class="hljs-variable">$translated</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$translated</span>;
+}
+</code></pre>
+<h1 id="recruitment-register">Recruitment Register</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">require_once</span> ( get_template_directory() . <span class="hljs-string">'/inc/recruitment.php'</span> );
+</code></pre>
+<h1 id="s-d-ng-bi-n-tr-n-kh-i-t-o-trang-cha-tr-n-trang-con">Sử dụng biến trên khởi tạo ở trang cha trên trang con</h1>
+<p>Ví dụ khai báo biến $i trên trang cha</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-variable">$i</span> = <span class="hljs-number">0</span>; <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p>Đừng sử dụng get_template_part(), sử dụng, locate_template()</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">include</span>(locate_template(<span class="hljs-string">'content-video.php'</span>)); <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p>Trên trang con có thể sử dụng biến $i trên trang cha</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">if</span>( (<span class="hljs-variable">$i</span> % <span class="hljs-number">5</span>) == <span class="hljs-number">0</span> ): <span class="hljs-preprocessor">?&gt;</span>
+    &lt;div id=<span class="hljs-string">"post-&lt;?php the_ID(); ?&gt;"</span> <span class="hljs-preprocessor">&lt;?php</span> post_class(<span class="hljs-string">'post-video alpha'</span>);<span class="hljs-preprocessor">?&gt;</span> &gt;
+<span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">else</span>: <span class="hljs-preprocessor">?&gt;</span>
+    &lt;div id=<span class="hljs-string">"post-&lt;?php the_ID(); ?&gt;"</span> <span class="hljs-preprocessor">&lt;?php</span> post_class(<span class="hljs-string">'post-video'</span>);<span class="hljs-preprocessor">?&gt;</span> &gt;
+<span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">endif</span>; <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<h1 id="get-various-woocommerce-page-urls">Get Various WooCommerce Page URLs</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-variable">$shop_page_url</span> = get_permalink( woocommerce_get_page_id( <span class="hljs-string">'shop'</span> ) ); <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<ul>
+<li>$myaccount_page_id = get_option( &#39;woocommerce_myaccount_page_id&#39; );</li>
+<li>$payment_page = get_permalink( woocommerce_get_page_id( &#39;pay&#39; ) );</li>
+<li>$myaccount_page_id = get_option( &#39;woocommerce_myaccount_page_id&#39; );</li>
+<li>global $woocommerce;
+$checkout_url = $woocommerce-&gt;cart-&gt;get_checkout_url();
+global $woocommerce;
+$cart_url = $woocommerce-&gt;cart-&gt;get_cart_url();</li>
+</ul>
+<h1 id="get-slug-tr-n-trang-archieve">Get slug trên trang archieve</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$term</span> = get_term_by( <span class="hljs-string">'slug'</span>, get_query_var( <span class="hljs-string">'term'</span> ), get_query_var( <span class="hljs-string">'taxonomy'</span> ) );
+<span class="hljs-keyword">echo</span> <span class="hljs-variable">$term</span>-&gt;slug;
+</code></pre>
+<h1 id="kh-c-ph-c-l-i-kh-ng-th-g-i-mail-v-i-host-vi-t-nam">Khắc phục lỗi không thể gởi mail với host việt nam</h1>
+<p>use plugin WP Email SMTP</p>
+<h1 id="get-thumbnail-url">Get Thumbnail URL</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-variable">$thumb</span> = wp_get_attachment_image_src( get_post_thumbnail_id(<span class="hljs-variable">$post</span>-&gt;ID), <span class="hljs-string">'thumbnail'</span> );
+    <span class="hljs-variable">$url</span> = <span class="hljs-variable">$thumb</span>[<span class="hljs-string">'0'</span>];
+    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$url</span>;
+</code></pre>
+<h1 id="t-o-widget">Tạo widget</h1>
+<p>Chép vào function.php</p>
+<pre class="highlight"><code class="hljs php">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyStyle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WP_Widget</span> {</span>
+         <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">()</span> {</span>
+            <span class="hljs-comment">// widget actual processes</span>
+            <span class="hljs-keyword">parent</span>::WP_Widget(<span class="hljs-keyword">false</span>,<span class="hljs-string">'Tài khoản ngân hàng'</span>,<span class="hljs-string">'description=Hiển thị danh sách tài khoản ngân hàng'</span>);
+        }
+
+        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">form</span><span class="hljs-params">( <span class="hljs-variable">$instance</span> )</span> {</span>
+               <span class="hljs-comment">// outputs the options form on admin</span>
+        }
+
+        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">update</span><span class="hljs-params">( <span class="hljs-variable">$new_instance</span>, <span class="hljs-variable">$old_instance</span> )</span> {</span>
+               <span class="hljs-comment">// processes widget options to be saved</span>
+        }
+
+        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">widget</span><span class="hljs-params">( <span class="hljs-variable">$args</span>, <span class="hljs-variable">$instance</span> )</span> {</span>
+               <span class="hljs-comment">// outputs the content of the widget</span>
+            <span class="hljs-keyword">echo</span> <span class="hljs-variable">$before_widget</span>;  
+
+            <span class="hljs-keyword">global</span> <span class="hljs-variable">$woo_options</span>;
+            <span class="hljs-variable">$settings</span> = <span class="hljs-keyword">array</span>(
+                <span class="hljs-string">'chu_tk_vietcombank'</span> =&gt; <span class="hljs-string">''</span>,    
+                <span class="hljs-string">'so_tk_vietcombank'</span>  =&gt; <span class="hljs-string">''</span>,    
+                <span class="hljs-string">'chu_tk_donga'</span>       =&gt; <span class="hljs-string">''</span>,    
+                <span class="hljs-string">'so_tk_donga'</span>        =&gt; <span class="hljs-string">''</span>   
+            );
+
+            <span class="hljs-variable">$settings</span> = woo_get_dynamic_values( <span class="hljs-variable">$settings</span> );
+
+            <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;h3&gt;Tài khoản Vietcombank&lt;/h3&gt;'</span>;
+            <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;div class="menu-nav-help-container"&gt;'</span>;
+                <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dl class="dl-horizontal"&gt;'</span>;
+                    <span class="hljs-keyword">echo</span>  <span class="hljs-string">'&lt;dt&gt;Chủ tài khoản:&lt;/dt&gt;'</span>;
+                        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dd&gt;'</span>.<span class="hljs-variable">$settings</span>[<span class="hljs-string">'chu_tk_vietcombank'</span>].<span class="hljs-string">'&lt;/dd&gt;'</span>;
+                    <span class="hljs-keyword">echo</span>   <span class="hljs-string">'&lt;dt&gt;Số tài khoản:&lt;/dt&gt;'</span>;
+                        <span class="hljs-keyword">echo</span>  <span class="hljs-string">'&lt;dd&gt;'</span>.<span class="hljs-variable">$settings</span>[<span class="hljs-string">'so_tk_vietcombank'</span>].<span class="hljs-string">'&lt;/dd&gt;'</span>;
+                        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;/dl&gt;'</span>;
+                        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;h3&gt;Tài khoản Đông á &lt;/h3&gt;'</span>;
+                        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dl class="dl-horizontal"&gt;'</span>;
+                        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dt&gt;Chủ tài khoản:&lt;/dt&gt;'</span>;
+                            <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dd&gt;'</span>.<span class="hljs-variable">$settings</span>[<span class="hljs-string">'chu_tk_donga'</span>].<span class="hljs-string">'&lt;/dd&gt;'</span>;
+                        <span class="hljs-keyword">echo</span>  <span class="hljs-string">'&lt;dt&gt;Số tài khoản:&lt;/dt&gt;'</span>;
+                    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;dd&gt;'</span> .<span class="hljs-variable">$settings</span>[<span class="hljs-string">'so_tk_donga'</span>].<span class="hljs-string">'&lt;/dd&gt;'</span>;
+                <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;/dl&gt;'</span>;
+            <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;/div&gt;'</span>;
+
+            <span class="hljs-keyword">echo</span> <span class="hljs-variable">$after_widget</span>;
+        }
+
+}
+register_widget( <span class="hljs-string">'MyStyle'</span> );
+</code></pre>
+<ol>
+<li>Vào thư mục <code>includes/widgets</code> duplicate file widget-woo-search.php</li>
+<li><code>includes/theme-widgets.php</code> duplicate dòng
+ <code>&#39;includes/widgets/widget-woo-subscribe.php&#39;</code></li>
+</ol>
+<h1 id="-ng-k-th-m-v-tr-menu">Đăng ký thêm vị trí menu</h1>
+<p><code>theme directory / includes / theme-functions.php</code></p>
+<p>Search register_nav_menus</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">if</span> ( function_exists( <span class="hljs-string">'wp_nav_menu'</span>) ) {
+  add_theme_support( <span class="hljs-string">'nav-menus'</span> );
+  register_nav_menus( <span class="hljs-keyword">array</span>( <span class="hljs-string">'primary-menu'</span> =&gt; __( <span class="hljs-string">'Primary Menu'</span>, <span class="hljs-string">'devinition'</span> ) ) );
+  register_nav_menus( <span class="hljs-keyword">array</span>( <span class="hljs-string">'home-menu'</span> =&gt; __( <span class="hljs-string">'Home Menu'</span>, <span class="hljs-string">'devinition'</span> ) ) );
+}
+</code></pre>
+<h1 id="get-term-custom-term-link">Get term custom term link</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-variable">$terms</span> = get_terms(<span class="hljs-string">'phanloai'</span>);
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;ul&gt;'</span>;
+    <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$terms</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$term</span>) {
+        <span class="hljs-comment">//Always check if it's an error before continuing. get_term_link() can be finicky sometimes</span>
+        <span class="hljs-variable">$term_link</span> = get_term_link( <span class="hljs-variable">$term</span>, <span class="hljs-string">'ao-thun'</span> );
+        <span class="hljs-keyword">if</span>( is_wp_error( <span class="hljs-variable">$term_link</span> ) )
+            <span class="hljs-keyword">continue</span>;
+        <span class="hljs-comment">//We successfully got a link. Print it out.</span>
+        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;li&gt;&lt;a href="'</span> . <span class="hljs-variable">$term_link</span> . <span class="hljs-string">'"&gt;'</span> . <span class="hljs-variable">$term</span>-&gt;name . <span class="hljs-string">'&lt;/a&gt;&lt;/li&gt;'</span>;
+    }
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;/ul&gt;'</span>;
+</code></pre>
+<h1 id="get-regular-price-woocommerce">Get regular price woocommerce</h1>
+<pre class="highlight"><code class="hljs php">    <span class="hljs-variable">$regular_price</span> = get_post_meta(<span class="hljs-variable">$_product</span>-&gt;id,<span class="hljs-string">'_regular_price'</span>, <span class="hljs-keyword">true</span>);
+</code></pre>
+<h1 id="gi-m-theo-s-l-ng-s-n-ph-m-trong-gi-h-ng">Giảm theo số lượng sản phẩm trong giỏ hàng</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mysite_box_discount</span><span class="hljs-params">( )</span> {</span>
+
+    <span class="hljs-keyword">global</span> <span class="hljs-variable">$woocommerce</span>;
+
+    <span class="hljs-comment">/* Grab current total number of products */</span>
+    <span class="hljs-variable">$number_products</span> = <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;cart_contents_count;
+
+    <span class="hljs-variable">$total_discount</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable">$my_increment</span> = <span class="hljs-number">5</span>; <span class="hljs-comment">// Apply another discount every 15 products</span>
+    <span class="hljs-variable">$discount</span> = <span class="hljs-number">8.85</span>;
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$number_products</span> &gt;= <span class="hljs-variable">$my_increment</span>) {
+
+      <span class="hljs-comment">/* Loop through the total number of products */</span>
+      <span class="hljs-keyword">foreach</span> ( <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;cart_contents <span class="hljs-keyword">as</span> <span class="hljs-variable">$cart_item_key</span> =&gt; <span class="hljs-variable">$values</span> ) {
+        <span class="hljs-variable">$_product</span> = <span class="hljs-variable">$values</span>[<span class="hljs-string">'data'</span>];
+
+        <span class="hljs-variable">$regular_price</span> = get_post_meta(<span class="hljs-variable">$_product</span>-&gt;id,<span class="hljs-string">'_regular_price'</span>, <span class="hljs-keyword">true</span>);
+        <span class="hljs-variable">$retail_price</span> = <span class="hljs-variable">$_product</span>-&gt;get_price();
+
+        <span class="hljs-variable">$total_discount</span> += ( <span class="hljs-variable">$retail_price</span> - <span class="hljs-variable">$regular_price</span> ) * <span class="hljs-variable">$values</span>[<span class="hljs-string">'quantity'</span>];
+
+      }
+
+      <span class="hljs-comment">// Alter the cart discount total</span>
+      <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;discount_total = <span class="hljs-variable">$total_discount</span>;
+    }   
+}
+add_action(<span class="hljs-string">'woocommerce_calculate_totals'</span>, <span class="hljs-string">'mysite_box_discount'</span>);
+</code></pre>
+<h1 id="add-support-feature-image-for-post-and-page">Add support feature image for post and page</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">/*  Add support for Featured Images
+-------------------------------------------------------------- */</span>
+
+<span class="hljs-keyword">if</span> (function_exists(<span class="hljs-string">'add_theme_support'</span>)) {
+    add_theme_support(<span class="hljs-string">'post-thumbnails'</span>);
+    add_image_size(<span class="hljs-string">'index-categories'</span>, <span class="hljs-number">694</span>, <span class="hljs-number">150</span>, <span class="hljs-keyword">true</span>);
+}
+</code></pre>
+<h1 id="woo_breadcrumbs">woo_breadcrumbs</h1>
+<ul>
+<li>separator – The character to display between the breadcrumbs.</li>
+<li>before – HTML to display before the breadcrumbs.</li>
+<li>after – HTML to display after the breadcrumbs.</li>
+<li>front_page – Include the front page at the beginning of the breadcrumbs.</li>
+<li>show_home – If $show_home is set and we’re not on the front page of the site, link to the home page.</li>
+<li>echo – Specify whether or not to echo the breadcrumbs. Alternative is “return”.</li>
+<li>show_posts_page – If a static front page is set and there is a posts page, toggle whether or not to display that page’s tree.</li>
+</ul>
+<h1 id="querying-by-post-type">Querying by Post Type</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>( <span class="hljs-string">'post_type'</span> =&gt; <span class="hljs-string">'product'</span>, <span class="hljs-string">'posts_per_page'</span> =&gt; <span class="hljs-number">10</span> );
+<span class="hljs-variable">$loop</span> = <span class="hljs-keyword">new</span> WP_Query( <span class="hljs-variable">$args</span> );
+<span class="hljs-keyword">while</span> ( <span class="hljs-variable">$loop</span>-&gt;have_posts() ) : <span class="hljs-variable">$loop</span>-&gt;the_post();
+    the_title();
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;div class="entry-content"&gt;'</span>;
+    the_content();
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;/div&gt;'</span>;
+<span class="hljs-keyword">endwhile</span>;
+</code></pre>
+<h1 id="get-global-post-id">Get Global post id</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$post_id</span> = <span class="hljs-variable">$GLOBALS</span>[<span class="hljs-string">'post'</span>]-&gt;ID;
+</code></pre>
+<h1 id="remove-column">Remove column</h1>
+<h2 id="wordpress-seo">Wordpress SEO</h2>
+<pre class="highlight"><code class="hljs php">add_filter( <span class="hljs-string">'wpseo_use_page_analysis'</span>, <span class="hljs-string">'__return_false'</span> );
+</code></pre>
+<h1 id="optimize-contact-form-7">Optimize Contact Form 7</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">// Deregister Contact Form 7 styles</span>
+add_action( <span class="hljs-string">'wp_print_styles'</span>, <span class="hljs-string">'aa_deregister_styles'</span>, <span class="hljs-number">100</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">aa_deregister_styles</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">if</span> ( ! is_page( <span class="hljs-string">'contact-us'</span> ) ) {
+        wp_deregister_style( <span class="hljs-string">'contact-form-7'</span> );
+    }
+}
+
+<span class="hljs-comment">// Deregister Contact Form 7 JavaScript files on all pages without a form</span>
+add_action( <span class="hljs-string">'wp_print_scripts'</span>, <span class="hljs-string">'aa_deregister_javascript'</span>, <span class="hljs-number">100</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">aa_deregister_javascript</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">if</span> ( ! is_page( <span class="hljs-string">'contact-us'</span> ) ) {
+        wp_deregister_script( <span class="hljs-string">'contact-form-7'</span> );
+    }
+}
+</code></pre>
+<h1 id="add-google-map">Add google map</h1>
+<p>File google-map.php</p>
+<pre class="highlight"><code class="hljs javascript">&lt;div id=<span class="hljs-string">"googleMap"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://maps.google.com/maps/api/js?sensor=false"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+<span class="hljs-comment">//&lt;![CDATA[</span>
+<span class="hljs-keyword">var</span> geocoder = <span class="hljs-keyword">new</span> google.maps.Geocoder();
+<span class="hljs-keyword">var</span> address = <span class="hljs-string">""</span>; <span class="hljs-comment">//Add your address here, all on one line.</span>
+<span class="hljs-keyword">var</span> latitude;
+<span class="hljs-keyword">var</span> longitude;
+<span class="hljs-keyword">var</span> color = <span class="hljs-string">""</span>; <span class="hljs-comment">//Set your tint color. Needs to be a hex value.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getGeocode</span><span class="hljs-params">()</span> {</span>
+    geocoder.geocode( { <span class="hljs-string">'address'</span>: address}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(results, status)</span> {</span>
+        <span class="hljs-keyword">if</span> (status == google.maps.GeocoderStatus.OK) {
+            latitude = results[<span class="hljs-number">0</span>].geometry.location.lat();
+            longitude = results[<span class="hljs-number">0</span>].geometry.location.lng(); 
+            initGoogleMap();   
+        } 
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initGoogleMap</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> styles = [
+        {
+          stylers: [
+            { saturation: -<span class="hljs-number">100</span> }
+          ]
+        }
+    ];
+
+    <span class="hljs-keyword">var</span> options = {
+        mapTypeControlOptions: {
+            mapTypeIds: [<span class="hljs-string">'Styled'</span>]
+        },
+        center: <span class="hljs-keyword">new</span> google.maps.LatLng(latitude, longitude),
+        zoom: <span class="hljs-number">13</span>,
+        scrollwheel: <span class="hljs-literal">false</span>,
+        navigationControl: <span class="hljs-literal">false</span>,
+        mapTypeControl: <span class="hljs-literal">false</span>,
+        zoomControl: <span class="hljs-literal">true</span>,
+        disableDefaultUI: <span class="hljs-literal">true</span>, 
+        mapTypeId: <span class="hljs-string">'Styled'</span>
+    };
+    <span class="hljs-keyword">var</span> div = document.getElementById(<span class="hljs-string">'googleMap'</span>);
+    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> google.maps.Map(div, options);
+    marker = <span class="hljs-keyword">new</span> google.maps.Marker({
+        map:map,
+        draggable:<span class="hljs-literal">false</span>,
+        animation: google.maps.Animation.DROP,
+        position: <span class="hljs-keyword">new</span> google.maps.LatLng(latitude,longitude)
+    });
+    <span class="hljs-keyword">var</span> styledMapType = <span class="hljs-keyword">new</span> google.maps.StyledMapType(styles, { name: <span class="hljs-string">'Styled'</span> });
+    map.mapTypes.set(<span class="hljs-string">'Styled'</span>, styledMapType);
+
+    <span class="hljs-keyword">var</span> infowindow = <span class="hljs-keyword">new</span> google.maps.InfoWindow({
+          content: <span class="hljs-string">"&lt;div class='iwContent'&gt;"</span>+address+<span class="hljs-string">"&lt;/div&gt;"</span>
+    });
+    google.maps.event.addListener(marker, <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        infowindow.open(map,marker);
+      });
+
+
+    bounds = <span class="hljs-keyword">new</span> google.maps.LatLngBounds(
+      <span class="hljs-keyword">new</span> google.maps.LatLng(-<span class="hljs-number">84.999999</span>, -<span class="hljs-number">179.999999</span>), 
+      <span class="hljs-keyword">new</span> google.maps.LatLng(<span class="hljs-number">84.999999</span>, <span class="hljs-number">179.999999</span>));
+
+    rect = <span class="hljs-keyword">new</span> google.maps.Rectangle({
+        bounds: bounds,
+        fillColor: color,
+        fillOpacity: <span class="hljs-number">0.2</span>,
+        strokeWeight: <span class="hljs-number">0</span>,
+        map: map
+    });
+}
+google.maps.event.addDomListener(window, <span class="hljs-string">'load'</span>, getGeocode);
+<span class="hljs-comment">//]]&gt;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<p>Add to your template</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-preprocessor">&lt;?php</span> get_template_part( <span class="hljs-string">'google-map'</span>); <span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p>css</p>
+<pre class="highlight"><code class="hljs css"><span class="hljs-id">#googleMap</span> <span class="hljs-tag">iframe</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100</span>%</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-id">#googleMap</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">350</span>px</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-id">#googleMap</span> <span class="hljs-tag">img</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">max-width</span>:<span class="hljs-value"> none</span></span>; <span class="hljs-rule">}</span></span>
+</code></pre>
+<h1 id="make-clickable">Make Clickable</h1>
+<p>make_clickable()</p>
+<h1 id="add-shortcodes-in-sidebar-widgets">Add shortcodes in sidebar Widgets</h1>
+<p>add_filter(&#39;widget_text&#39;, &#39;do_shortcode&#39;);</p>
+<h1 id="th-m-c-t-trong-admin">Thêm cột trong admin</h1>
+<pre class="highlight"><code class="hljs php">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add_table_columns</span><span class="hljs-params">( <span class="hljs-variable">$columns</span> )</span> {</span> 
+    <span class="hljs-variable">$columns</span>[<span class="hljs-string">'email_address'</span>] = __( <span class="hljs-string">'Email Address'</span>, <span class="hljs-string">'tuts-crm'</span> );
+    <span class="hljs-variable">$columns</span>[<span class="hljs-string">'phone_number'</span>] = __( <span class="hljs-string">'Phone Number'</span>, <span class="hljs-string">'tuts-crm'</span> );
+    <span class="hljs-variable">$columns</span>[<span class="hljs-string">'photo'</span>] = __( <span class="hljs-string">'Photo'</span>, <span class="hljs-string">'tuts-crm'</span> );
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$columns</span>;
+
+}
+add_filter( <span class="hljs-string">'manage_edit-{Post Type}_columns'</span>, <span class="hljs-string">'add_table_columns'</span>,<span class="hljs-number">10</span>, <span class="hljs-number">1</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">output_table_columns_data</span><span class="hljs-params">( <span class="hljs-variable">$columnName</span>, <span class="hljs-variable">$post_id</span> )</span> {</span>
+    <span class="hljs-keyword">echo</span> get_field( <span class="hljs-variable">$columnName</span>, <span class="hljs-variable">$post_id</span> );   
+}
+add_action( <span class="hljs-string">'manage_{Post Type}_posts_custom_column'</span>, <span class="hljs-string">'output_table_columns_data'</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span> );
+</code></pre>
+<p>Các giá trị phone_number tương ứng với id của ACF</p>
+<p>Để hiển thị hình ảnh</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">output_table_columns_data</span><span class="hljs-params">( <span class="hljs-variable">$columnName</span>, <span class="hljs-variable">$post_id</span> )</span> {</span>
+
+    <span class="hljs-comment">// Field</span>
+    <span class="hljs-variable">$field</span> = get_field( <span class="hljs-variable">$columnName</span>, <span class="hljs-variable">$post_id</span> );
+
+    <span class="hljs-keyword">if</span> ( <span class="hljs-string">'photo'</span> == <span class="hljs-variable">$columnName</span> ) {
+        <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;img src="'</span> . <span class="hljs-variable">$field</span>[<span class="hljs-string">'sizes'</span>][<span class="hljs-string">'thumbnail'</span>].<span class="hljs-string">'" width="'</span>.<span class="hljs-variable">$field</span>[<span class="hljs-string">'sizes'</span>][<span class="hljs-string">'thumbnail-width'</span>] . <span class="hljs-string">'" height="'</span> . <span class="hljs-variable">$field</span>[<span class="hljs-string">'sizes'</span>][<span class="hljs-string">'thumbnail-height'</span>] . <span class="hljs-string">'" /&gt;'</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Output field</span>
+        <span class="hljs-keyword">echo</span> <span class="hljs-variable">$field</span>;
+    }
+
+}
+</code></pre>
+<p>Để cột có thể sắp xếp</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">define_sortable_table_columns</span><span class="hljs-params">( <span class="hljs-variable">$columns</span> )</span> {</span>
+
+    <span class="hljs-variable">$columns</span>[<span class="hljs-string">'email_address'</span>] = <span class="hljs-string">'email_address'</span>;
+    <span class="hljs-variable">$columns</span>[<span class="hljs-string">'phone_number'</span>] = <span class="hljs-string">'phone_number'</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$columns</span>;
+
+}
+ <span class="hljs-keyword">if</span> ( is_admin() ) {
+        add_filter( <span class="hljs-string">'request'</span>, <span class="hljs-keyword">array</span>( <span class="hljs-variable">$this</span>, <span class="hljs-string">'orderby_sortable_table_columns'</span> ) );
+    }
+<span class="hljs-comment">/**
+* Inspect the request to see if we are on the Contacts WP_List_Table and attempting to
+* sort by email address or phone number.  If so, amend the Posts query to sort by
+* that custom meta key
+*
+*<span class="hljs-phpdoc"> @param</span> array $vars Request Variables
+*<span class="hljs-phpdoc"> @return</span> array New Request Variables
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">orderby_sortable_table_columns</span><span class="hljs-params">( <span class="hljs-variable">$vars</span> )</span> {</span>
+
+    <span class="hljs-comment">// Don't do anything if we are not on the Contact Custom Post Type</span>
+    <span class="hljs-keyword">if</span> ( <span class="hljs-string">'contact'</span> != <span class="hljs-variable">$vars</span>[<span class="hljs-string">'post_type'</span>] ) <span class="hljs-keyword">return</span> <span class="hljs-variable">$vars</span>;
+
+    <span class="hljs-comment">// Don't do anything if no orderby parameter is set</span>
+    <span class="hljs-keyword">if</span> ( ! <span class="hljs-keyword">isset</span>( <span class="hljs-variable">$vars</span>[<span class="hljs-string">'orderby'</span>] ) ) <span class="hljs-keyword">return</span> <span class="hljs-variable">$vars</span>;
+
+    <span class="hljs-comment">// Check if the orderby parameter matches one of our sortable columns</span>
+    <span class="hljs-keyword">if</span> ( <span class="hljs-variable">$vars</span>[<span class="hljs-string">'orderby'</span>] == <span class="hljs-string">'email_address'</span> <span class="hljs-keyword">OR</span>
+        <span class="hljs-variable">$vars</span>[<span class="hljs-string">'orderby'</span>] == <span class="hljs-string">'phone_number'</span> ) {
+        <span class="hljs-comment">// Add orderby meta_value and meta_key parameters to the query</span>
+        <span class="hljs-variable">$vars</span> = array_merge( <span class="hljs-variable">$vars</span>, <span class="hljs-keyword">array</span>(
+            <span class="hljs-string">'meta_key'</span> =&gt; <span class="hljs-variable">$vars</span>[<span class="hljs-string">'orderby'</span>],
+            <span class="hljs-string">'orderby'</span> =&gt; <span class="hljs-string">'meta_value'</span>,
+        ));
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$vars</span>;
+
+}
+add_filter( <span class="hljs-string">'manage_edit-contact_sortable_columns'</span>, <span class="hljs-keyword">array</span>( <span class="hljs-variable">$this</span>, <span class="hljs-string">'define_sortable_table_columns'</span>) );
+</code></pre>
+<h1 id="permalink-structrue-ending-html">Permalink structrue ending .html</h1>
+<pre class="highlight"><code class="hljs php">add_action( <span class="hljs-string">'rewrite_rules_array'</span>, <span class="hljs-string">'rewrite_rules'</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rewrite_rules</span><span class="hljs-params">( <span class="hljs-variable">$rules</span> )</span> {</span>
+    <span class="hljs-variable">$new_rules</span> = <span class="hljs-keyword">array</span>();
+    <span class="hljs-keyword">foreach</span> ( get_post_types() <span class="hljs-keyword">as</span> <span class="hljs-variable">$t</span> )
+        <span class="hljs-variable">$new_rules</span>[ <span class="hljs-variable">$t</span> . <span class="hljs-string">'/([^/]+)\.html</span> ] = <span class="hljs-string">'index.php?post_type='</span> . <span class="hljs-variable">$t</span> . <span class="hljs-string">'&amp;name=$matches[1]'</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$new_rules</span> + <span class="hljs-variable">$rules</span>;
+}
+
+add_filter( <span class="hljs-string">'post_type_link'</span>, <span class="hljs-string">'custom_post_permalink'</span> ); <span class="hljs-comment">// for cpt post_type_link (rather than post_link)</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">custom_post_permalink</span> <span class="hljs-params">( <span class="hljs-variable">$post_link</span> )</span> {</span>
+    <span class="hljs-keyword">global</span> <span class="hljs-variable">$post</span>;
+    <span class="hljs-variable">$type</span> = get_post_type( <span class="hljs-variable">$post</span>-&gt;ID );
+    <span class="hljs-keyword">return</span> home_url( <span class="hljs-variable">$type</span> . <span class="hljs-string">'/'</span> . <span class="hljs-variable">$post</span>-&gt;post_name . <span class="hljs-string">'.html'</span> );
+}
+
+add_filter( <span class="hljs-string">'redirect_canonical'</span>, <span class="hljs-string">'__return_false'</span> );
+</code></pre>
+<h1 id="tao-shortcode">Tao shortcode</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">recent_posts_function</span><span class="hljs-params">()</span> {</span>
+   query_posts(<span class="hljs-keyword">array</span>(<span class="hljs-string">'orderby'</span> =&gt; <span class="hljs-string">'date'</span>, <span class="hljs-string">'order'</span> =&gt; <span class="hljs-string">'DESC'</span> , <span class="hljs-string">'showposts'</span> =&gt; <span class="hljs-number">1</span>));
+   <span class="hljs-keyword">if</span> (have_posts()) :
+      <span class="hljs-keyword">while</span> (have_posts()) : the_post();
+         <span class="hljs-variable">$return_string</span> = <span class="hljs-string">'&lt;a href="'</span>.get_permalink().<span class="hljs-string">'"&gt;'</span>.get_the_title().<span class="hljs-string">'&lt;/a&gt;'</span>;
+      <span class="hljs-keyword">endwhile</span>;
+   <span class="hljs-keyword">endif</span>;
+   wp_reset_query();
+   <span class="hljs-keyword">return</span> <span class="hljs-variable">$return_string</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">register_shortcodes</span><span class="hljs-params">()</span>{</span>
+   add_shortcode(<span class="hljs-string">'recent-posts'</span>, <span class="hljs-string">'recent_posts_function'</span>);
+}
+
+add_action( <span class="hljs-string">'init'</span>, <span class="hljs-string">'register_shortcodes'</span>);
+
+[recent-posts]
+</code></pre>
+<h1 id="th-m-class-cho-widget">Thêm class cho widget</h1>
+<pre class="highlight"><code class="hljs php">register_sidebar(<span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'id'</span> =&gt; <span class="hljs-string">'sidebar1'</span>,
+    <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'Sidebar (Main)'</span>,
+    <span class="hljs-string">'description'</span> =&gt; <span class="hljs-string">'Primary sidebar'</span>,
+    <span class="hljs-string">'before_widget'</span> =&gt; <span class="hljs-string">'&lt;div id="%1$s" class="widget %2$s"&gt;'</span>,
+    <span class="hljs-string">'after_widget'</span> =&gt; <span class="hljs-string">'&lt;/div&gt;'</span>,
+    <span class="hljs-string">'before_title'</span> =&gt; <span class="hljs-string">'&lt;h3 class="widgettitle"&gt;'</span>,
+    <span class="hljs-string">'after_title'</span> =&gt; <span class="hljs-string">'&lt;/h3&gt;'</span>,
+    <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'clearfix'</span>
+));
+</code></pre>
+<h1 id="remove-width-and-height-attributes-from-inserted-images">Remove Width and Height Attributes From Inserted Images</h1>
+<pre class="highlight"><code class="hljs php">add_filter( <span class="hljs-string">'post_thumbnail_html'</span>, <span class="hljs-string">'remove_width_attribute'</span>, <span class="hljs-number">10</span> );
+add_filter( <span class="hljs-string">'image_send_to_editor'</span>, <span class="hljs-string">'remove_width_attribute'</span>, <span class="hljs-number">10</span> );
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remove_width_attribute</span><span class="hljs-params">( <span class="hljs-variable">$html</span> )</span> {</span>
+   <span class="hljs-variable">$html</span> = preg_replace( <span class="hljs-string">'/(width|height)="\d*"\s/'</span>, <span class="hljs-string">""</span>, <span class="hljs-variable">$html</span> );
+   <span class="hljs-keyword">return</span> <span class="hljs-variable">$html</span>;
+}
+</code></pre>
+<h1 id="woocommerce-remove-review-tab">WooCommerce : Remove Review tab</h1>
+<pre class="highlight"><code class="hljs php">add_filter( <span class="hljs-string">'woocommerce_product_tabs'</span>, <span class="hljs-string">'sb_woo_remove_reviews_tab'</span>, <span class="hljs-number">98</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sb_woo_remove_reviews_tab</span><span class="hljs-params">(<span class="hljs-variable">$tabs</span>)</span> {</span>
+
+    <span class="hljs-keyword">unset</span>(<span class="hljs-variable">$tabs</span>[<span class="hljs-string">'reviews'</span>]);
+    <span class="hljs-keyword">unset</span>(<span class="hljs-variable">$tabs</span>[<span class="hljs-string">'description'</span>]);                
+    <span class="hljs-keyword">unset</span>(<span class="hljs-variable">$tabs</span>[<span class="hljs-string">'additional_information'</span>]);    
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$tabs</span>;
+}
+</code></pre>
+<h1 id="convert-string-to-date">Convert string to date</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">echo</span> <span class="hljs-variable">$display_date</span> = date(<span class="hljs-string">'d F, Y'</span>, strtotime(get_field(<span class="hljs-string">'product_start_date'</span>)));
+</code></pre>
+<h1 id="get-the-taxonomy-use-as-category-">Get the taxonomy (use as category)</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$terms</span> = get_the_terms( <span class="hljs-variable">$post</span>-&gt;ID, <span class="hljs-string">'product_cat'</span> );
+<span class="hljs-variable">$term</span> = array_pop(<span class="hljs-variable">$terms</span>);
+<span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;a href="'</span>.get_term_link(<span class="hljs-variable">$term</span>-&gt;slug, <span class="hljs-string">'product_cat'</span>).<span class="hljs-string">'"&gt;'</span>.<span class="hljs-variable">$term</span>-&gt;name.<span class="hljs-string">'&lt;/a&gt;'</span>;
+</code></pre>
+<h1 id="get-next-previous-product">Get next/previous product</h1>
+<p>&lt;?php
+// get next and prev products
+// Author: Georgy Bunin (bunin.co.il@gmail.com)
+// forked from <a href="https://gist.github.com/2176823">https://gist.github.com/2176823</a></p>
+<p>function ShowLinkToProduct($post_id, $categories_as_array, $label) {
+    // get post according post id
+    $query_args = array( &#39;post__in&#39; =&gt; array($post_id), &#39;posts_per_page&#39; =&gt; 1, &#39;post_status&#39; =&gt; &#39;publish&#39;, &#39;post_type&#39; =&gt; &#39;product&#39;, &#39;tax_query&#39; =&gt; array(
+        array(
+            &#39;taxonomy&#39; =&gt; &#39;product_cat&#39;,
+            &#39;field&#39; =&gt; &#39;id&#39;,
+            &#39;terms&#39; =&gt; $categories_as_array
+        )));
+    $r_single = new WP_Query($query_args);
+    if ($r_single-&gt;have_posts()) {
+        $r_single-&gt;the_post();
+        global $product;
+    ?&gt;
+    <ul class="product_list_widget">
+        <li><a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
+            &lt;?php if (has_post_thumbnail()) the_post_thumbnail(&#39;shop_thumbnail&#39;); else echo &#39;<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" width="'.$woocommerce->get_image_size('shop_thumbnail_image_width').'" height="'.$woocommerce->get_image_size('shop_thumbnail_image_height').'" />&#39;; ?&gt;
+            &lt;?php echo $label; ?&gt;
+            &lt;?php if ( get_the_title() ) the_title(); else the_ID(); ?&gt;
+        </a> &lt;?php echo $product-&gt;get_price_html(); ?&gt;</li>
+    </ul>
+    &lt;?php
+        wp_reset_query();
+    }
+}</p>
+<p>if ( is_singular(&#39;product&#39;) ) {
+    global $post;</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">// get categories</span>
+<span class="hljs-variable">$terms</span> = wp_get_post_terms( <span class="hljs-variable">$post</span>-&gt;ID, <span class="hljs-string">'product_cat'</span> );
+<span class="hljs-keyword">foreach</span> ( <span class="hljs-variable">$terms</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$term</span> ) <span class="hljs-variable">$cats_array</span>[] = <span class="hljs-variable">$term</span>-&gt;term_id;
+
+<span class="hljs-comment">// get all posts in current categories</span>
+<span class="hljs-variable">$query_args</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">'posts_per_page'</span> =&gt; -<span class="hljs-number">1</span>, <span class="hljs-string">'post_status'</span> =&gt; <span class="hljs-string">'publish'</span>, <span class="hljs-string">'post_type'</span> =&gt; <span class="hljs-string">'product'</span>, <span class="hljs-string">'tax_query'</span> =&gt; <span class="hljs-keyword">array</span>(
+    <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'taxonomy'</span> =&gt; <span class="hljs-string">'product_cat'</span>,
+        <span class="hljs-string">'field'</span> =&gt; <span class="hljs-string">'id'</span>,
+        <span class="hljs-string">'terms'</span> =&gt; <span class="hljs-variable">$cats_array</span>
+    )));
+<span class="hljs-variable">$r</span> = <span class="hljs-keyword">new</span> WP_Query(<span class="hljs-variable">$query_args</span>);
+
+<span class="hljs-comment">// show next and prev only if we have 3 or more</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$r</span>-&gt;post_count &gt; <span class="hljs-number">2</span>) {
+
+    <span class="hljs-variable">$prev_product_id</span> = -<span class="hljs-number">1</span>;
+    <span class="hljs-variable">$next_product_id</span> = -<span class="hljs-number">1</span>;
+
+    <span class="hljs-variable">$found_product</span> = <span class="hljs-keyword">false</span>;
+    <span class="hljs-variable">$i</span> = <span class="hljs-number">0</span>;
+
+    <span class="hljs-variable">$current_product_index</span> = <span class="hljs-variable">$i</span>;
+    <span class="hljs-variable">$current_product_id</span> = get_the_ID();
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$r</span>-&gt;have_posts()) {
+        <span class="hljs-keyword">while</span> (<span class="hljs-variable">$r</span>-&gt;have_posts()) {
+            <span class="hljs-variable">$r</span>-&gt;the_post();
+            <span class="hljs-variable">$current_id</span> = get_the_ID();
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-variable">$current_id</span> == <span class="hljs-variable">$current_product_id</span>) {
+                <span class="hljs-variable">$found_product</span> = <span class="hljs-keyword">true</span>;
+                <span class="hljs-variable">$current_product_index</span> = <span class="hljs-variable">$i</span>;
+            }
+
+            <span class="hljs-variable">$is_first</span> = (<span class="hljs-variable">$current_product_index</span> == <span class="hljs-variable">$first_product_index</span>);
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-variable">$is_first</span>) {
+                <span class="hljs-variable">$prev_product_id</span> = get_the_ID(); <span class="hljs-comment">// if product is first then 'prev' = last product</span>
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span> (!<span class="hljs-variable">$found_product</span> &amp;&amp; <span class="hljs-variable">$current_id</span> != <span class="hljs-variable">$current_product_id</span>) {
+                    <span class="hljs-variable">$prev_product_id</span> = get_the_ID();
+                }
+            }
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-variable">$i</span> == <span class="hljs-number">0</span>) { <span class="hljs-comment">// if product is last then 'next' = first product</span>
+                <span class="hljs-variable">$next_product_id</span> = get_the_ID();
+            }
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-variable">$found_product</span> &amp;&amp; <span class="hljs-variable">$i</span> == <span class="hljs-variable">$current_product_index</span> + <span class="hljs-number">1</span>) {
+                <span class="hljs-variable">$next_product_id</span> = get_the_ID();
+            }
+
+            <span class="hljs-variable">$i</span>++;
+        }
+
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$prev_product_id</span> != -<span class="hljs-number">1</span>) { ShowLinkToProduct(<span class="hljs-variable">$prev_product_id</span>, <span class="hljs-variable">$cats_array</span>, <span class="hljs-string">"next: "</span>); }
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$next_product_id</span> != -<span class="hljs-number">1</span>) { ShowLinkToProduct(<span class="hljs-variable">$next_product_id</span>, <span class="hljs-variable">$cats_array</span>, <span class="hljs-string">"prev: "</span>); }
+    }
+
+    wp_reset_query();
+}
+</code></pre><p>}
+?&gt;
+&lt;?php previous_post_link(&#39;&laquo; %link&#39;); ?&gt;<br>&lt;?php next_post_link(&#39;%link &raquo;&#39;); ?&gt; </p>
+<h1 id="l-y-ng-u-nhi-n-danh-s-ch-post-li-n-quan-v-i-post-hi-n-t-i">Lấy ngẫu nhiên danh sách post liên quan với post hiện tại</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$terms</span> = get_the_terms( <span class="hljs-variable">$post</span>-&gt;ID, <span class="hljs-string">'product_cat'</span> );
+<span class="hljs-variable">$term</span> = array_pop(<span class="hljs-variable">$terms</span>);  
+
+<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'post_type'</span>            =&gt; <span class="hljs-string">'product'</span>,
+    <span class="hljs-string">'ignore_sticky_posts'</span>  =&gt; <span class="hljs-number">1</span>,
+    <span class="hljs-string">'no_found_rows'</span>        =&gt; <span class="hljs-number">1</span>,
+    <span class="hljs-string">'posts_per_page'</span>       =&gt; <span class="hljs-number">3</span>,
+    <span class="hljs-string">'orderby'</span>              =&gt; <span class="hljs-string">'rand'</span>,
+    <span class="hljs-string">'tax_query'</span> =&gt; <span class="hljs-keyword">array</span>(
+        <span class="hljs-keyword">array</span>(
+            <span class="hljs-string">'taxonomy'</span>  =&gt; <span class="hljs-string">'product_cat'</span>,
+            <span class="hljs-string">'field'</span>     =&gt; <span class="hljs-string">'slug'</span>,
+            <span class="hljs-string">'terms'</span>     =&gt; <span class="hljs-variable">$term</span>,
+            <span class="hljs-string">'operator'</span>  =&gt; <span class="hljs-string">'IN'</span>
+        )
+    ),
+    <span class="hljs-string">'post__not_in'</span>         =&gt; <span class="hljs-keyword">array</span>( <span class="hljs-variable">$product</span>-&gt;id )
+);
+
+<span class="hljs-variable">$products</span> = <span class="hljs-keyword">new</span> WP_Query( <span class="hljs-variable">$args</span> );
+</code></pre>
+<h1 id="load-dash-icon-in-theme">LOAD DASH ICON IN THEME</h1>
+<pre class="highlight"><code class="hljs php">add_action( <span class="hljs-string">'wp_enqueue_scripts'</span>, <span class="hljs-string">'themename_scripts'</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">themename_scripts</span><span class="hljs-params">()</span> {</span>
+    wp_enqueue_style( <span class="hljs-string">'themename-style'</span>, get_stylesheet_uri(), <span class="hljs-keyword">array</span>( <span class="hljs-string">'dashicons'</span> ), <span class="hljs-string">'1.0'</span> );
+}
+</code></pre>
+<p>Xem code icon ở đây: <a href="http://melchoyce.github.io/dashicons/">http://melchoyce.github.io/dashicons/</a></p>
+<h1 id="woocommerce-th-m-n-t-clear-gi-h-ng">Woocommerce - Thêm nút clear giỏ hàng</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">// Add the Empty Cart button right before the "Continue to Checkout" button</span>
+add_action( <span class="hljs-string">'woocommerce_proceed_to_checkout'</span>, <span class="hljs-string">'iwc_clear_cart_contents_button'</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iwc_clear_cart_contents_button</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// HTML for our new button</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;input type="submit" class="button" name="empty_cart" value="Empty Cart" /&gt;'</span>;
+}
+
+add_action( <span class="hljs-string">'woocommerce_before_cart'</span>, <span class="hljs-string">'iwc_clear_cart_contents'</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iwc_clear_cart_contents</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// check whether or not this button was the one pressed</span>
+    <span class="hljs-keyword">if</span>( <span class="hljs-keyword">isset</span>( <span class="hljs-variable">$_POST</span>[<span class="hljs-string">'empty_cart'</span>] ) ) {
+        <span class="hljs-keyword">global</span> <span class="hljs-variable">$woocommerce</span>;
+        <span class="hljs-comment">// Go ahead and empty the cart</span>
+        <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;empty_cart();
+        <span class="hljs-comment">// Finally redirect to your Shop Page since the Cart is now empty</span>
+        wp_safe_redirect( get_permalink( woocommerce_get_page_id( <span class="hljs-string">'shop'</span> ) ) );
+    }
+}
+</code></pre><h1 id="get-number-of-items-in-cart-woocommerce">get number of items in cart woocommerce</h1>
+<p>&lt;?php global $woocommerce; ?&gt;</p>
+<p><a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">&lt;?php echo sprintf(_n(&#39;%d item&#39;, &#39;%d items&#39;, $woocommerce-&gt;cart-&gt;cart_contents_count, &#39;woothemes&#39;), $woocommerce-&gt;cart-&gt;cart_contents_count);?&gt; - &lt;?php echo $woocommerce-&gt;cart-&gt;get_cart_total(); ?&gt;</a></p>
+<h1 id="paging">Paging</h1>
+<pre class="highlight"><code class="hljs php">
+<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>( 
+    <span class="hljs-string">'post_type'</span> =&gt; <span class="hljs-string">'client-logo'</span>, 
+    <span class="hljs-string">'posts_per_page'</span> =&gt; <span class="hljs-number">20</span>,
+    <span class="hljs-string">'paged'</span> =&gt; get_query_var(<span class="hljs-string">'paged'</span>)
+
+);
+<span class="hljs-variable">$loop</span> = <span class="hljs-keyword">new</span> WP_Query( <span class="hljs-variable">$args</span> );
+wp_pagenavi( <span class="hljs-keyword">array</span>( <span class="hljs-string">'query'</span> =&gt; <span class="hljs-variable">$loop</span> ) );
+wp_reset_query();
+</code></pre>
+<h1 id="get-post-date-in-loop">Get post date in loop</h1>
+<pre class="highlight"><code class="hljs php">    get_the_date( <span class="hljs-variable">$d</span> );
+</code></pre>
+<p>$d</p>
+<ul>
+<li>l, F j, Y :Friday, September 24, 2004</li>
+<li>l, F jS, Y - Saturday, November 6th, 2010 </li>
+<li>F j, Y g:i a - November 6, 2010 12:50 am </li>
+</ul>
+<p><a href="http://codex.wordpress.org/Formatting_Date_and_Time">http://codex.wordpress.org/Formatting_Date_and_Time</a></p>
+<h1 id="hi-n-th-widget-cart-tr-n-t-t-c-c-c-trang">Hiển thị Widget Cart trên tất cả các trang</h1>
+<p>file <code>class-wc-widget-cart.php</code></p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">if</span> ( is_cart() || is_checkout() ) <span class="hljs-keyword">return</span>;
+</code></pre>
+<p>Edit: Additional information how to override widget and make changes update secure
+Source: <a href="http://www.skyverge.com/blog/overriddin-woocommerce-widgets/">http://www.skyverge.com/blog/overriddin-woocommerce-widgets/</a> (Option 5)</p>
+<pre class="highlight"><code class="hljs scala">Duplicate <span class="hljs-keyword">class</span>-wc-widget-cart.php;
+Copy the duplicate into a folder inside your theme, <span class="hljs-keyword">for</span> example: cust_woo_widgets
+Make above changes to the file;
+
+Additionally make the following change to the widget duplicate:
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Custom_WooCommerce_Widget_Cart</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WooCommerce_Widget_Cart</span> {</span>
+  function widget( $args, $instance ) {
+<span class="hljs-comment">// copy the widget function from woocommerce/classes/widgets/class-wc-widget-cart.php</span>
+  }
+}
+
+Put following code into your functions.php:
+
+add_action( <span class="hljs-string">'widgets_init'</span>, <span class="hljs-string">'override_woocommerce_widgets'</span>, <span class="hljs-number">15</span> );
+function override_woocommerce_widgets() { 
+  <span class="hljs-keyword">if</span> ( class_exists( <span class="hljs-string">'WooCommerce_Widget_Cart'</span> ) ) {
+    unregister_widget( <span class="hljs-string">'WooCommerce_Widget_Cart'</span> ); 
+    include_once( <span class="hljs-string">'cust_woo_widgets/widget-cart.php'</span> );
+    register_widget( <span class="hljs-string">'Custom_WooCommerce_Widget_Cart'</span> );
+  } 
+}
+</code></pre><p>Note: See source for more information; untested.</p>
+<h1 id="woocommerce-custom-ajax-top-cart">woocommerce custom ajax top cart</h1>
+<p><a href="http://stackoverflow.com/questions/14675292/woocommerce-custom-ajax-top-cart">http://stackoverflow.com/questions/14675292/woocommerce-custom-ajax-top-cart</a></p>
+<h1 id="redirect-login-problem">Redirect login problem</h1>
+<p>add_query_arg( array(&#39;key1&#39; =&gt; &#39;value1&#39;, ...), $old_query_or_uri );</p>
+<h1 id="woocommerce-get-all-categories">Woocommerce: get all categories</h1>
+<pre class="highlight"><code class="hljs php">woocommerce_product_categories();
+
+<span class="hljs-comment">//or</span>
+<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'number'</span>     =&gt; <span class="hljs-variable">$number</span>,
+    <span class="hljs-string">'orderby'</span>    =&gt; <span class="hljs-variable">$orderby</span>,
+    <span class="hljs-string">'order'</span>      =&gt; <span class="hljs-variable">$order</span>,
+    <span class="hljs-string">'hide_empty'</span> =&gt; <span class="hljs-variable">$hide_empty</span>,
+    <span class="hljs-string">'include'</span>    =&gt; <span class="hljs-variable">$ids</span>
+);
+
+<span class="hljs-variable">$product_categories</span> = get_terms( <span class="hljs-string">'product_cat'</span>, <span class="hljs-variable">$args</span> );
+</code></pre>
+<h1 id="convert-string-to-slug">Convert string to slug</h1>
+<p>sanitize_title();</p>
+<h1 id="user-kh-ng-th-print-invoice">User không thể print invoice</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">//xóa dòng sau trong plugin</span>
+
+<span class="hljs-keyword">if</span>( !is_admin() ) {
+    wp_die( __( <span class="hljs-string">'You do not have sufficient permissions to access this page.'</span> ) );
+}
+
+<span class="hljs-keyword">if</span>( !current_user_can( <span class="hljs-string">'manage_woocommerce_orders'</span> ) &amp;&amp; !current_user_can( <span class="hljs-string">'edit_shop_orders'</span> ) ) {
+    wp_die( __( <span class="hljs-string">'You do not have sufficient permissions to access this page.'</span> ) );
+}
+</code></pre>
+<h1 id="th-m-array-ng-trong-php">Thêm array động trong php</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$array</span> = <span class="hljs-keyword">array</span>();
+Add to an <span class="hljs-keyword">array</span>:
+
+<span class="hljs-variable">$array</span>[] = <span class="hljs-string">"item"</span>;
+<span class="hljs-variable">$array</span>[<span class="hljs-variable">$key</span>] = <span class="hljs-string">"item"</span>;
+array_push(<span class="hljs-variable">$array</span>, <span class="hljs-string">"item"</span>, <span class="hljs-string">"another item"</span>);
+Remove from an <span class="hljs-keyword">array</span>:
+
+<span class="hljs-variable">$item</span> = array_pop(<span class="hljs-variable">$array</span>);
+<span class="hljs-variable">$item</span> = array_shift(<span class="hljs-variable">$array</span>);
+<span class="hljs-keyword">unset</span>(<span class="hljs-variable">$array</span>[<span class="hljs-variable">$key</span>]);
+</code></pre>
+<h1 id="check-if-admin">check if admin</h1>
+<p>current_user_can( &#39;manage_options&#39; )</p>
+<h1 id="add-discount-fee-woocommerce">Add discount/fee woocommerce</h1>
+<pre class="highlight"><code class="hljs php">add_action( <span class="hljs-string">'woocommerce_cart_calculate_fees'</span>,<span class="hljs-string">'RuleShouldDiscountAdministrationFee'</span> );
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">RuleShouldDiscountAdministrationFee</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">global</span> <span class="hljs-variable">$woocommerce</span>;
+
+    <span class="hljs-keyword">if</span> ( is_admin() &amp;&amp; ! defined( <span class="hljs-string">'DOING_AJAX'</span> ) )
+        <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-variable">$percentage</span> = <span class="hljs-number">0.01</span>;
+    <span class="hljs-variable">$surcharge</span> = ( <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;cart_contents_total + <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;shipping_total ) * <span class="hljs-variable">$percentage</span>;    
+    <span class="hljs-variable">$woocommerce</span>-&gt;cart-&gt;add_fee( <span class="hljs-string">'Surcharge'</span>, <span class="hljs-variable">$surcharge</span>, <span class="hljs-keyword">true</span>, <span class="hljs-string">'standard'</span> );
+
+}
+<span class="hljs-comment">// discount</span>
+<span class="hljs-variable">$discount</span> = floatval(<span class="hljs-number">10</span>);
+<span class="hljs-variable">$discount</span> *= -<span class="hljs-number">1</span>; <span class="hljs-comment">// convert positive to negative fees</span>
+</code></pre>
+<h1 id="paging-problem-with-custom-taxonomi">Paging problem with custom taxonomi</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">jetstream_rewrite_flush</span><span class="hljs-params">()</span> {</span>
+    flush_rewrite_rules();
+}
+add_action(<span class="hljs-string">'init'</span>, <span class="hljs-string">'jetstream_rewrite_flush'</span>);
+</code></pre>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

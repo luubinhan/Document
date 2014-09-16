@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>OwnCloud | Notes</title>
+	<meta name="description" content="Your Cloud, Your Data, Your Way!" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="active list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>OwnCloud</h1>
+	</div>
+	<div class="single-post">
+		<h4 id="table-of-content">Table of Content</h4>
+<hr>
+<!-- MarkdownTOC depth=2 -->
+
+<ul>
+<li>Install<ul>
+<li>Theming</li>
+<li>Chèn thêm js và css</li>
+<li>Bật debug mode</li>
+<li>Thêm kích thước file trên trang download</li>
+<li>Thêm share link trên trang download</li>
+<li>Thêm ngày expiration trên trang download</li>
+<li>Confirm trước khi delete</li>
+<li>Tự động share file khi upload</li>
+<li>Thêm share link trên trang list file</li>
+<li>Chèn giá trị vào khi load cùng với icon</li>
+<li>Tuỳ biến khi gởi email</li>
+</ul>
+</li>
+<li>INCLUDE CSS AND JS INSINDE OF YOUR CUSTOM OWNCLOUD THEME<ul>
+<li>Add File Size</li>
+<li>Add Share Link</li>
+<li>Add expiration date</li>
+<li>Customize form share</li>
+<li>Bat debug mode</li>
+<li>Confirm delete</li>
+<li>Expiration Date</li>
+<li>Customize email</li>
+<li>Mở cửa sổ popup thiết đặt khi vừa upload</li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h2 id="install">Install</h2>
+<ul>
+<li>Download source file: <a href="http://owncloud.org/">owncloud.org</a></li>
+<li>Upload to localhost</li>
+<li>Run and follow setup step</li>
+</ul>
+<p><img src="http://i0.wp.com/imagecdn5.maketecheasier.com/2012/01/owncloud-first-run-wizard.png?resize=600%2C365" alt="Image"></p>
+<p>View this <a href="http://www.maketecheasier.com/install-and-configure-owncloud/2012/01/11">Article</a></p>
+<h2 id="theming">Theming</h2>
+<p><a href="http://owncloud.org/theming/">Document</a></p>
+<ul>
+<li>Place your theme in the theme folder <code>/themes</code>.</li>
+<li>Activate by putting <code>&#39;theme&#39; =&gt; ‘themename’</code>, into the <code>/config/config.php</code> file</li>
+</ul>
+<h2 id="ch-n-th-m-js-v-css">Chèn thêm js và css</h2>
+<p>Xem <a href="http://creadicted.com/snippets/including-custom-librarys-insinde-of-owncloud/">bài viết hướng dẫn</a></p>
+<h2 id="b-t-debug-mode">Bật debug mode</h2>
+<p>Debug mode sẽ không nén file js, css</p>
+<p>Mở file <strong>config/config.php</strong> thêm dòng sau vào cuối</p>
+<pre class="highlight"><code class="hljs php">define( <span class="hljs-string">"DEBUG"</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<h2 id="th-m-k-ch-th-c-file-tr-n-trang-download">Thêm kích thước file trên trang download</h2>
+<p>Thông tin này mặc định không trả về ở giao diện trang download file, mở file <strong>Apps/Files_Sharing/public.php</strong> thêm dòng</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$tmpl</span>-&gt;assign(<span class="hljs-string">'size'</span>, \OC\Files\Filesystem::filesize(<span class="hljs-variable">$file</span>));
+</code></pre>
+<p>vào phía dưới đoạn code <code>$tmpl-&gt;assign(&#39;filename&#39;, $file);</code></p>
+<p>Trên trang <strong>Apps/Files_Sharing/Templates/public.php</strong></p>
+<pre class="highlight"><code class="hljs php">p(<span class="hljs-variable">$_</span>[<span class="hljs-string">'size'</span>]);
+</code></pre>
+<p>Hiển thị kích thước file đã format</p>
+<pre class="highlight"><code class="hljs php">p(OCP\human_file_size(<span class="hljs-variable">$file</span>[<span class="hljs-string">'size'</span>]));
+</code></pre>
+<h2 id="th-m-share-link-tr-n-trang-download">Thêm share link trên trang download</h2>
+<p>Mở file <strong>Apps/Files_Sharing/public.php</strong> thêm dòng</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$tmpl</span>-&gt;assign(<span class="hljs-string">'linkShare'</span>, OCP\Util::linkToPublic(<span class="hljs-string">'files'</span>) . <span class="hljs-variable">$urlLinkIdentifiers</span>);
+</code></pre>
+<p>Trên trang <strong>Apps/Files_Sharing/Templates/public.php</strong></p>
+<pre class="highlight"><code class="hljs php">p(<span class="hljs-variable">$_</span>[<span class="hljs-string">'linkShare'</span>]);
+</code></pre>
+<h2 id="th-m-ng-y-expiration-tr-n-trang-download">Thêm ngày expiration trên trang download</h2>
+<p>Mở file <strong>Apps/Files_Sharing/public.php</strong> thêm dòng</p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$expiration</span> = <span class="hljs-variable">$linkItem</span>[<span class="hljs-string">'expiration'</span>];
+</code></pre>
+<p>sau dòng  <code>$shareOwner = $linkItem[&#39;uid_owner&#39;];</code></p>
+<p>thêm dòng </p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-variable">$tmpl</span>-&gt;assign(<span class="hljs-string">'expiration'</span>, <span class="hljs-variable">$expiration</span>);
+</code></pre>
+<p>sau dòng <code>$tmpl-&gt;assign(&#39;filename&#39;, $file);</code></p>
+<p>Trên trang <strong>Apps/Files_Sharing/Templates/public.php</strong></p>
+<pre class="highlight"><code class="hljs php">p(<span class="hljs-variable">$_</span>[<span class="hljs-string">'expiration'</span>]);
+</code></pre>
+<h2 id="confirm-tr-c-khi-delete">Confirm trước khi delete</h2>
+<p>File thực hiện theo tác delete <code>apps/files/js/fileactions.js </code></p>
+<p>Dòng thực hiện </p>
+<pre class="highlight"><code class="hljs javascript">element.on(<span class="hljs-string">'click'</span>, {a: <span class="hljs-literal">null</span>, elem: parent, actionFunc: actions[<span class="hljs-string">'Delete'</span>]}, actionHandler);
+</code></pre>
+<pre class="highlight"><code class="hljs javascript">element.on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+    <span class="hljs-comment">//alert(1);</span>
+    <span class="hljs-comment">//Show confirm delete</span>
+    <span class="hljs-keyword">var</span> modalConfirm = <span class="hljs-string">'&lt;div id="modalConfirm" class="modal" data-backdrop="true" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;div class="modal-header"&gt;'</span>;
+                modalConfirm += <span class="hljs-string">'&lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;×&lt;/button&gt;'</span>;
+                modalConfirm += <span class="hljs-string">'&lt;h3 id="myModalLabel"&gt;'</span>;
+                    modalConfirm += t(<span class="hljs-string">'core'</span>, <span class="hljs-string">'Confirm Delete'</span>);
+                modalConfirm += <span class="hljs-string">'&lt;/h3&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;/div&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;div class="modal-body"&gt;'</span>;
+                modalConfirm += <span class="hljs-string">'&lt;p&gt;'</span>;
+                    modalConfirm += t(<span class="hljs-string">'core'</span>, <span class="hljs-string">'Are you sure you want to permanently delete this file? You can not undo this action.'</span>);
+                modalConfirm += <span class="hljs-string">'&lt;/p&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;/div&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;div class="modal-footer"&gt;'</span>;
+                modalConfirm += <span class="hljs-string">'&lt;button class="btn close-btn" data-dismiss="modal" aria-hidden="true"&gt;'</span> + t(<span class="hljs-string">'core'</span>,<span class="hljs-string">'NO'</span>) + <span class="hljs-string">'&lt;/button&gt;'</span>;
+                modalConfirm += <span class="hljs-string">'&lt;button class="btn btn-primary"&gt;'</span>+ t(<span class="hljs-string">'core'</span>,<span class="hljs-string">'YES'</span>) +<span class="hljs-string">'&lt;/button&gt;'</span>;
+            modalConfirm += <span class="hljs-string">'&lt;/div&gt;'</span>;
+        modalConfirm += <span class="hljs-string">'&lt;/div&gt;'</span>;
+        $(<span class="hljs-string">'#content-wrapper'</span>).prepend($(modalConfirm));
+            $(<span class="hljs-string">'#modalConfirm .close'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                $(<span class="hljs-string">'#modalConfirm'</span>).remove();
+        });
+
+        $(<span class="hljs-string">'#modalConfirm .close-btn'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+            $(<span class="hljs-string">'#modalConfirm'</span>).remove();
+        });
+
+        $(<span class="hljs-string">'.btn-primary'</span>).on(<span class="hljs-string">'click'</span>, {a: <span class="hljs-literal">null</span>, elem: parent, actionFunc: actions[<span class="hljs-string">'Delete'</span>]}, actionHandler);
+
+        $(<span class="hljs-string">'.btn-primary'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+            $(<span class="hljs-string">'#modalConfirm'</span>).remove();
+        });
+
+
+});
+</code></pre>
+<h2 id="t-ng-share-file-khi-upload">Tự động share file khi upload</h2>
+<p>Chèn code tuỳ biến vào <code>Apps/files/js/filelist.js</code></p>
+<pre class="highlight"><code class="hljs undefined">loadingDone:function(name, id)
+      // ...
+        puropela.shareFile(tr.data('type'),id);
+    },
+</code></pre>
+<p>Hàm shareFile</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shareFile</span><span class="hljs-params">(itemType,itemSource)</span>{</span>
+    OC.Share.share(itemType, itemSource, OC.Share.SHARE_TYPE_LINK, <span class="hljs-string">''</span>, OC.PERMISSION_READ, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+        OC.Share.showLink(data.token, <span class="hljs-literal">null</span>, itemSource);
+        OC.Share.updateIcon(itemType, itemSource);
+    });
+}
+</code></pre>
+<h2 id="th-m-share-link-tr-n-trang-list-file">Thêm share link trên trang list file</h2>
+<p>Bổ sung thêm ham lấy tất cả file đã share, <strong>core/ajax/share.php</strong>, đặt ngay sau case <strong>getItemsSharedStatuses</strong></p>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">case</span> <span class="hljs-string">'getItemsSharedToken'</span>:
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'itemType'</span>])) {
+            <span class="hljs-variable">$return</span> = OCP\Share::getItemsShared(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'itemType'</span>]);
+            is_array(<span class="hljs-variable">$return</span>) ? OC_JSON::success(<span class="hljs-keyword">array</span>(<span class="hljs-string">'data'</span> =&gt; <span class="hljs-variable">$return</span>)) : OC_JSON::error();
+        }
+        <span class="hljs-keyword">break</span>;
+</code></pre><h2 id="ch-n-gi-tr-v-o-khi-load-c-ng-v-i-icon">Chèn giá trị vào khi load cùng với icon</h2>
+<p>Bổ sung hàm <strong>loadIcons</strong> file <strong>core/js/share.js</strong></p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-comment">//Insert share link </span>
+<span class="hljs-comment">//get shared file </span>
+$.get(OC.filePath(<span class="hljs-string">'core'</span>, <span class="hljs-string">'ajax'</span>, <span class="hljs-string">'share.php'</span>), { fetch: <span class="hljs-string">'getItemsSharedToken'</span>, itemType: <span class="hljs-string">'file'</span> }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result)</span> {</span>
+
+    <span class="hljs-keyword">if</span> (result &amp;&amp; result.status === <span class="hljs-string">'success'</span>){
+
+            <span class="hljs-comment">//get token</span>
+
+            $.each(result.data, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(item, listfile)</span>{</span>
+
+                <span class="hljs-comment">//chon dong tuong ung</span>
+
+                <span class="hljs-keyword">var</span> $tr = $(<span class="hljs-string">'#fileList tr'</span>).filterAttr(<span class="hljs-string">'data-id'</span>, listfile.file_source);
+                <span class="hljs-comment">//var filename = $tr.filterAttr('data-id', String(listfile.file_source)).data('file');</span>
+                <span class="hljs-comment">//var type = $tr.filterAttr('data-id', String(listfile.file_source)).data('type');</span>
+
+                <span class="hljs-keyword">var</span> link = parent.location.protocol+<span class="hljs-string">'//'</span>+location.host+OC.linkTo(<span class="hljs-string">''</span>, <span class="hljs-string">'public.php'</span>)+<span class="hljs-string">'?service=files&amp;t='</span>+listfile.token;
+                $tr.find(<span class="hljs-string">'.text-link'</span>).val(link);
+            });
+    }
+});
+</code></pre><h2 id="tu-bi-n-khi-g-i-email">Tuỳ biến khi gởi email</h2>
+<p>Can thiệp vào hàm file <strong>core/js/share.js</strong></p>
+<p>Dòng 586</p>
+<pre class="highlight"><code class="hljs javascript">
+$(document).on(<span class="hljs-string">'submit'</span>, <span class="hljs-string">'#dropdown #emailPrivateLink'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> {</span>
+        event.preventDefault();
+        <span class="hljs-keyword">var</span> link = $(<span class="hljs-string">'#linkText'</span>).val();
+        <span class="hljs-keyword">var</span> itemType = $(<span class="hljs-string">'#dropdown'</span>).data(<span class="hljs-string">'item-type'</span>);
+        <span class="hljs-keyword">var</span> itemSource = $(<span class="hljs-string">'#dropdown'</span>).data(<span class="hljs-string">'item-source'</span>);
+        <span class="hljs-keyword">var</span> file = $(<span class="hljs-string">'tr'</span>).filterAttr(<span class="hljs-string">'data-id'</span>, <span class="hljs-built_in">String</span>(itemSource)).data(<span class="hljs-string">'file'</span>);
+        <span class="hljs-keyword">var</span> email = $(<span class="hljs-string">'#email'</span>).val();
+        <span class="hljs-keyword">if</span> (email != <span class="hljs-string">''</span>) {
+            $(<span class="hljs-string">'#email'</span>).attr(<span class="hljs-string">'disabled'</span>, <span class="hljs-string">"disabled"</span>);
+            $(<span class="hljs-string">'#email'</span>).val(t(<span class="hljs-string">'core'</span>, <span class="hljs-string">'Sending ...'</span>));
+            $(<span class="hljs-string">'#emailButton'</span>).attr(<span class="hljs-string">'disabled'</span>, <span class="hljs-string">"disabled"</span>);
+
+            $.post(OC.filePath(<span class="hljs-string">'core'</span>, <span class="hljs-string">'ajax'</span>, <span class="hljs-string">'share.php'</span>), { action: <span class="hljs-string">'email'</span>, toaddress: email, link: link, itemType: itemType, itemSource: itemSource, file: file},
+                <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result)</span> {</span>
+                    $(<span class="hljs-string">'#email'</span>).attr(<span class="hljs-string">'disabled'</span>, <span class="hljs-string">"false"</span>);
+                    $(<span class="hljs-string">'#emailButton'</span>).attr(<span class="hljs-string">'disabled'</span>, <span class="hljs-string">"false"</span>);
+                <span class="hljs-keyword">if</span> (result &amp;&amp; result.status == <span class="hljs-string">'success'</span>) {
+                    $(<span class="hljs-string">'#email'</span>).css(<span class="hljs-string">'font-weight'</span>, <span class="hljs-string">'bold'</span>);
+                    $(<span class="hljs-string">'#email'</span>).animate({ fontWeight: <span class="hljs-string">'normal'</span> }, <span class="hljs-number">2000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+                        $(<span class="hljs-keyword">this</span>).val(<span class="hljs-string">''</span>);
+                    }).val(t(<span class="hljs-string">'core'</span>,<span class="hljs-string">'Email sent'</span>));
+                } <span class="hljs-keyword">else</span> {
+                    OC.dialogs.alert(result.data.message, t(<span class="hljs-string">'core'</span>, <span class="hljs-string">'Error while sharing'</span>));
+                }
+            });
+        }
+    });
+</code></pre>
+<h1 id="include-css-and-js-insinde-of-your-custom-owncloud-theme">INCLUDE CSS AND JS INSINDE OF YOUR CUSTOM OWNCLOUD THEME</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BC_CUSTOM</span> {</span>
+
+     <span class="hljs-comment">/**
+     * Returns the Path of the Theme:
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getThisTheme</span><span class="hljs-params">(<span class="hljs-variable">$subPath</span>=null)</span>
+    {</span>
+        <span class="hljs-variable">$themepath</span> = OC::<span class="hljs-variable">$WEBROOT</span>.<span class="hljs-string">'/themes/'</span>.OC_Util::getTheme();
+        <span class="hljs-keyword">switch</span> (<span class="hljs-variable">$subPath</span>) {
+            <span class="hljs-keyword">case</span> <span class="hljs-string">'css'</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-variable">$themepath</span>.<span class="hljs-string">'/core/css'</span>;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-string">'js'</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-variable">$themepath</span>.<span class="hljs-string">'/core/js'</span>;
+                <span class="hljs-keyword">break</span>;     
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-variable">$themepath</span>; 
+            <span class="hljs-keyword">break</span>;
+        }  
+
+    }
+}
+</code></pre>
+<p>With this code at the end of the util.php file, I can quickly include css and js files:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-comment">&lt;!-- Include bootstrap css--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"screen"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;?php print_unescaped(BC_CUSTOM::getThisTheme("</span><span class="hljs-value">css").'</span>/<span class="hljs-attribute">bootstrap.min.css</span>') ?&gt;</span>" rel="stylesheet"&gt;
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"screen"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;?php print_unescaped(BC_CUSTOM::getThisTheme("</span><span class="hljs-value">css").'</span>/<span class="hljs-attribute">bootstrap-responsive.css</span>') ?&gt;</span>" rel="stylesheet"&gt;
+<span class="hljs-comment">&lt;!-- Include custom theme css--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"screen"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;?php print_unescaped(BC_CUSTOM::getThisTheme("</span><span class="hljs-value">css").'</span>/<span class="hljs-attribute">style.css</span>') ?&gt;</span>" rel="stylesheet"&gt;
+<span class="hljs-comment">&lt;!-- Include bootstrap .js--&gt;</span>          
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"&lt;?php print_unescaped(BC_CUSTOM::getThisTheme("</span><span class="hljs-value">js").'</span>/<span class="hljs-attribute">bootstrap.min.js</span>') ?&gt;</span><span class="javascript"><span class="hljs-string">"&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<h2 id="add-file-size">Add File Size</h2>
+<p>Apps/Files_Sharing/public.php </p>
+<ul>
+<li>$tmpl-&gt;assign(&#39;filename&#39;, $file);
+   $tmpl-&gt;assign(&#39;size&#39;, \OC\Files\Filesystem::filesize($file)); </li>
+</ul>
+<h2 id="add-share-link">Add Share Link</h2>
+<p>Apps/Files_Sharing/public.php </p>
+<p>$tmpl-&gt;assign(&#39;linkShare&#39;, OCP\Util::linkToPublic(&#39;files&#39;) . $urlLinkIdentifiers); </p>
+<h2 id="add-expiration-date">Add expiration date</h2>
+<p>File: 
+Apps/Files_Sharing/public.php </p>
+<p>Code:</p>
+<p>$shareOwner = $linkItem[&#39;uid_owner&#39;];</p>
+<pre class="highlight"><code class="hljs bash">     + <span class="hljs-variable">$expiration</span> = <span class="hljs-variable">$linkItem</span>[<span class="hljs-string">'expiration'</span>];
+</code></pre><p>$tmpl-&gt;assign(&#39;filename&#39;, $file); </p>
+<pre class="highlight"><code class="hljs lasso"> <span class="hljs-subst">+</span> <span class="hljs-variable">$tmpl</span><span class="hljs-subst">-&gt;</span>assign(<span class="hljs-string">'expiration'</span>, <span class="hljs-variable">$expiration</span>); 
+</code></pre><p>Print array : var_dump</p>
+<h2 id="customize-form-share">Customize form share</h2>
+<p>core/js/share.js</p>
+<h2 id="bat-debug-mode">Bat debug mode</h2>
+<p>/config/config.php
+define( &quot;DEBUG&quot;, 1);</p>
+<h2 id="confirm-delete">Confirm delete</h2>
+<p>apps/files/js/fileactions.js 
+element.on(&#39;click&#39;, {a: null, elem: parent, actionFunc: actions[&#39;Delete&#39;]}, actionHandler); </p>
+<h2 id="expiration-date">Expiration Date</h2>
+<p>core/js/share.js</p>
+<p>if (share.expiration != null) {
+  OC.Share.showExpirationDate(share.expiration);
+}</p>
+<h2 id="customize-email">Customize email</h2>
+<p>core/ajax/share.php</p>
+<h2 id="m-c-a-s-popup-thi-t-t-khi-v-a-upload">Mở cửa sổ popup thiết đặt khi vừa upload</h2>
+<p>/Applications/MAMP/htdocs/owncloud2/apps/files/js/filelist.js</p>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

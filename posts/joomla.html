@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>Joomla | Notes</title>
+	<meta name="description" content="Note for Joomla" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="active list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>Joomla</h1>
+	</div>
+	<div class="single-post">
+		<h4 id="table-of-content">Table of content</h4>
+<hr>
+<!-- MarkdownTOC depth=2 -->
+
+<ul>
+<li>GRUNTJS SETUP ERROR</li>
+<li>Truncate string PHP</li>
+<li>Get first image as thumbnail</li>
+<li>Change joomla pagination</li>
+<li>ROUTE ARTICLE</li>
+<li>Escape string</li>
+<li>stripslashes</li>
+<li>Get date of week</li>
+<li>Create new component</li>
+<li>Change XAMPP IP</li>
+<li>Get Page Alias</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+
+<h1 id="gruntjs-setup-error">GRUNTJS SETUP ERROR</h1>
+<p><code>path=%PATH%;%APPDATA%\npm</code></p>
+<h1 id="truncate-string-php">Truncate string PHP</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">echo</span> substr(<span class="hljs-variable">$product_s_desc</span>, <span class="hljs-number">0</span>, strpos(wordwrap(<span class="hljs-variable">$product_s_desc</span>, <span class="hljs-number">150</span>), <span class="hljs-string">"\n"</span>));
+</code></pre>
+<h1 id="get-first-image-as-thumbnail">Get first image as thumbnail</h1>
+<pre class="highlight"><code class="hljs php">preg_match(<span class="hljs-string">'/&lt;img (.*?)&gt;/'</span>, <span class="hljs-variable">$this</span>-&gt;item-&gt;text, <span class="hljs-variable">$match</span>); <span class="hljs-preprocessor">?&gt;</span>&lt;a href=<span class="hljs-string">"&lt;?php echo $this-&gt;item-&gt;readmore_link; ?&gt;"</span>&gt;<span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-variable">$match</span>[<span class="hljs-number">0</span>]; <span class="hljs-preprocessor">?&gt;</span>&lt;/a&gt;
+</code></pre>
+<h1 id="change-joomla-pagination">Change joomla pagination</h1>
+<p><a href="http://www.slurpitup.com/joomla/tips-and-tricks/how-to-style-default-joomla-pagination-with-css">http://www.slurpitup.com/joomla/tips-and-tricks/how-to-style-default-joomla-pagination-with-css</a></p>
+<h1 id="route-article">ROUTE ARTICLE</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-keyword">echo</span> JRoute::_(ContentHelperRoute::getArticleRoute(<span class="hljs-variable">$this</span>-&gt;item-&gt;id));
+</code></pre>
+<h1 id="escape-string">Escape string</h1>
+<pre class="highlight"><code class="hljs php"> <span class="hljs-variable">$this</span>-&gt;escape(<span class="hljs-variable">$this</span>-&gt;searchword)
+</code></pre>
+<h1 id="stripslashes">stripslashes</h1>
+<h1 id="get-date-of-week">Get date of week</h1>
+<p>$dw = date( &quot;w&quot; );</p>
+<h1 id="create-new-component">Create new component</h1>
+<p><a href="http://www.joomladevuser.com/tutorials/components/component-dev-parti">http://www.joomladevuser.com/tutorials/components/component-dev-parti</a></p>
+<h1 id="change-xampp-ip">Change XAMPP IP</h1>
+<p>Stop the XAMPP server, if it is running already.
+Open the file [XAMPP Installation Folder]/apache/conf/httpd.conf.
+Search for the string <em>Listen 80 </em>(I&#39;m assuming that your XAMPP was using the port 80.
+Otherwise, just search for the string &#39;Listen&#39;). This is the port number which XAMPP uses.
+Change this 80 to 172.31.1.3:80.
+Now save and re-start XAMPP server and you are done.</p>
+<h1 id="get-page-alias">Get Page Alias</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCurrentAlias</span><span class="hljs-params">()</span>
+{</span>
+   <span class="hljs-variable">$path</span> = JFactory::getURI()-&gt;getPath();
+   <span class="hljs-variable">$length</span> = strlen(<span class="hljs-variable">$path</span>);
+
+   <span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-variable">$length</span>; <span class="hljs-variable">$i</span> &gt;= <span class="hljs-number">0</span> ; <span class="hljs-variable">$i</span>--)
+      <span class="hljs-keyword">if</span> (<span class="hljs-variable">$path</span>[<span class="hljs-variable">$i</span>] == <span class="hljs-string">'/'</span>)
+         <span class="hljs-keyword">return</span> substr(<span class="hljs-variable">$path</span>, <span class="hljs-variable">$i</span> + <span class="hljs-number">1</span>, <span class="hljs-variable">$length</span> - <span class="hljs-variable">$i</span> - <span class="hljs-number">1</span>);
+
+   <span class="hljs-keyword">return</span> <span class="hljs-variable">$path</span>;
+}
+</code></pre>
+<h1 id="module-khong-hien-thi-title">Module khong hien thi title</h1>
+<jdoc:include type="modules" name="frontpage-column-1" style="xhtml"  />
+
+<h1 id="add-jquery">Add jquery</h1>
+<p>JHTML::_(&#39;behavior.mootools&#39;);
+$document = &amp;JFactory::getDocument();
+$document-&gt;addScript( &quot;<a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js</a>&quot; );
+$document-&gt;addCustomTag( &#39;<script type="text/javascript">jQuery.noConflict();</script>&#39; );</p>
+<h1 id="xac-dinh-home-page-or-article-page">Xac dinh home page or article page</h1>
+<p> //identify front page
+$app = JFactory::getApplication();
+$menu = $app-&gt;getMenu();
+$lang = JFactory::getLanguage();
+$frontpage = &#39;&#39;;<br>if ($menu-&gt;getActive() == $menu-&gt;getDefault($lang-&gt;getTag())) {
+    $frontpage = &#39;frontpage&#39;;
+}
+if (JRequest::getVar(&#39;option&#39;)==&#39;com_content&#39; &amp;&amp; JRequest::getVar(&#39;view&#39;)==&#39;article&#39;) {
+    $frontpage = &#39;article&#39;;
+}</p>
+<h1 id="get-category-name">Get category name</h1>
+<pre class="highlight"><code class="hljs php"><span class="hljs-comment">// GET CURRENT CATEGORY</span>
+<span class="hljs-variable">$pathway</span> =&amp; <span class="hljs-variable">$mainframe</span>-&gt;getPathway();
+<span class="hljs-variable">$cates</span>   = <span class="hljs-variable">$pathway</span>-&gt;getPathWay();                                
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$cates</span>[<span class="hljs-number">0</span>]-&gt;name) {
+   <span class="hljs-keyword">echo</span> stripslashes(htmlspecialchars(<span class="hljs-variable">$cates</span>[<span class="hljs-number">0</span>]-&gt;name));
+}
+</code></pre>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

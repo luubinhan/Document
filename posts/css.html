@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>CSS | Notes</title>
+	<meta name="description" content="Best practice and trick" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="active list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>CSS</h1>
+	</div>
+	<div class="single-post">
+		<h4 id="table-of-content">Table of content</h4>
+<!-- MarkdownTOC depth=2 -->
+
+<ul>
+<li>IPHONE FONT SIZE</li>
+<li>iOS forces rounded corners and glare on inputs</li>
+<li>How to disable phone number linking in Mobile Safari</li>
+<li>Twitter width 100%</li>
+<li>Facebook responsive</li>
+<li>Cần nhớ khi thiết kế email</li>
+<li>Free fontface</li>
+<li>Popular font</li>
+<li>ont face</li>
+<li>Extend Bootstrap</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+
+<h1 id="iphone-font-size">IPHONE FONT SIZE</h1>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">-webkit-text-size-adjust</span>: 100%;
+</code></pre>
+<h1 id="ios-forces-rounded-corners-and-glare-on-inputs">iOS forces rounded corners and glare on inputs</h1>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">-webkit-appearance</span>: <span class="hljs-tag">none</span>;
+</code></pre>
+<h1 id="how-to-disable-phone-number-linking-in-mobile-safari">How to disable phone number linking in Mobile Safari</h1>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"format-detection"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"telephone=no"</span>&gt;</span>
+</code></pre>
+<h1 id="twitter-width-100-">Twitter width 100%</h1>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">iframe</span><span class="hljs-attr_selector">[id^='twitter-widget-']</span><span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"><span class="hljs-number">100</span>% <span class="hljs-important">!important</span></span></span>;<span class="hljs-rule">}</span></span>
+</code></pre>
+<h1 id="facebook-responsive">Facebook responsive</h1>
+<pre class="highlight"><code class="hljs css"><span class="hljs-id">#fb-root</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
+<span class="hljs-rule">}</span></span>
+
+<span class="hljs-comment">/* To fill the container and nothing else */</span>
+<span class="hljs-class">.fb_iframe_widget</span>, <span class="hljs-class">.fb_iframe_widget</span> <span class="hljs-tag">span</span>, <span class="hljs-class">.fb_iframe_widget</span> <span class="hljs-tag">span</span> <span class="hljs-tag">iframe</span><span class="hljs-attr_selector">[style]</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100</span>% <span class="hljs-important">!important</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre>
+<h1 id="c-n-nh-khi-thi-t-k-email">Cần nhớ khi thiết kế email</h1>
+<p>kích thước nhỏ hơn 500-700
+Cho phép unsubscribe
+trường hợp hình ko load được
+làm rõ ai là người gởi mail</p>
+<h1 id="free-fontface">Free fontface</h1>
+<p><a href="http://fontsforweb.com/">http://fontsforweb.com/</a></p>
+<h1 id="popular-font">Popular font</h1>
+<p><a href="http://www.google.com/fonts/specimen/Droid+Sans">http://www.google.com/fonts/specimen/Droid+Sans</a>
+<a href="http://www.google.com/fonts/specimen/Noto+Sans">http://www.google.com/fonts/specimen/Noto+Sans</a>
+123rf.com</p>
+<h1 id="font-face">Font face</h1>
+<p>Download this <a href="http://www.microsoft.com/typography/property/fpedit.htm">Microsoft app</a>
+Strip out the info in the font file - replace font name with your own
+On the last page, remove the Vendor Name
+Then convert to OTF because it&#39;ll probably say corrupted. <a href="http://www.freefontconverter.com/">Use this</a>
+Now upload to Font Squirrel and it&#39;ll let you use it without restrictions</p>
+<h1 id="extend-bootstrap">Extend Bootstrap</h1>
+<p><a href="http://exacttarget.github.io/fuelux/">http://exacttarget.github.io/fuelux/</a></p>
+<h1 id="css-checkbox-generator">CSS Checkbox generator</h1>
+<p><a href="http://www.csscheckbox.com/css-checkbox-generator.php">http://www.csscheckbox.com/css-checkbox-generator.php</a></p>
+<h1 id="typography-collection">Typography Collection</h1>
+<h2 id="http-www-coudalpartners-com-"><a href="http://www.coudalpartners.com/">http://www.coudalpartners.com/</a></h2>
+<p>Small headline</p>
+<pre class="highlight"><code class="hljs http">    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">Gill Sans, Verdana;</span>
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-string">11px;</span>
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-string">14px;</span>
+    <span class="hljs-attribute">text-transform</span>: <span class="hljs-string">uppercase;</span>
+    <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-string">2px;</span>
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-string">bold;</span>
+</code></pre><p>Large Headline</p>
+<pre class="highlight"><code class="hljs css">
+    <span class="hljs-tag">font-family</span>: <span class="hljs-tag">times</span>, <span class="hljs-tag">Times</span> <span class="hljs-tag">New</span> <span class="hljs-tag">Roman</span>, <span class="hljs-tag">times-roman</span>, <span class="hljs-tag">georgia</span>, <span class="hljs-tag">serif</span>;
+    <span class="hljs-tag">color</span>: <span class="hljs-id">#444</span>;
+    <span class="hljs-tag">margin</span>: 0;
+    <span class="hljs-tag">padding</span>: 0<span class="hljs-tag">px</span> 0<span class="hljs-tag">px</span> 6<span class="hljs-tag">px</span> 0<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">font-size</span>: 51<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">line-height</span>: 44<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">letter-spacing</span>: <span class="hljs-tag">-2px</span>;
+    <span class="hljs-tag">font-weight</span>: <span class="hljs-tag">bold</span>;
+</code></pre>
+<h2 id="human-sexuality-and-the-nuptial-mystery">Human Sexuality and the Nuptial Mystery</h2>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">HEADLINE</span>
+        <span class="hljs-tag">font-family</span><span class="hljs-pseudo">:Georgia</span>,<span class="hljs-tag">serif</span>;
+    <span class="hljs-tag">color</span>:<span class="hljs-id">#4E443C</span>;
+    <span class="hljs-tag">font-variant</span>: <span class="hljs-tag">small-caps</span>; <span class="hljs-tag">text-transform</span>: <span class="hljs-tag">none</span>; <span class="hljs-tag">font-weight</span>: 100; <span class="hljs-tag">margin-bottom</span>: 0;
+
+<span class="hljs-tag">PARAGRAPH</span>
+        <span class="hljs-tag">font-family</span>: "<span class="hljs-tag">Helvetica</span> <span class="hljs-tag">Neue</span>", "<span class="hljs-tag">Lucida</span> <span class="hljs-tag">Grande</span>", <span class="hljs-tag">Helvetica</span>, <span class="hljs-tag">Arial</span>, <span class="hljs-tag">Verdana</span>, <span class="hljs-tag">sans-serif</span>;
+        <span class="hljs-tag">font-size</span>: 14<span class="hljs-tag">px</span>;
+        <span class="hljs-tag">margin-top</span>: <span class="hljs-class">.5em</span>; <span class="hljs-tag">color</span>: <span class="hljs-id">#666</span>;
+
+<span class="hljs-tag">PARAGRAPH</span> <span class="hljs-tag">START</span>
+        <span class="hljs-tag">font-family</span><span class="hljs-pseudo">:Georgia</span>,<span class="hljs-tag">serif</span>;
+    <span class="hljs-tag">font-size</span>: <span class="hljs-class">.8em</span>;
+        <span class="hljs-tag">font-weight</span>: <span class="hljs-tag">bold</span>;
+    <span class="hljs-tag">text-transform</span><span class="hljs-pseudo">:uppercase</span>;
+    <span class="hljs-tag">letter-spacing</span><span class="hljs-pseudo">:2px</span>;
+</code></pre>
+<h2 id="i-love-typography">I love Typography</h2>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">HEADLINE</span>
+        <span class="hljs-tag">font-family</span>: <span class="hljs-tag">Georgia</span>, "<span class="hljs-tag">Times</span> <span class="hljs-tag">New</span> <span class="hljs-tag">Roman</span>", <span class="hljs-tag">Times</span>, <span class="hljs-tag">serif</span>;
+        <span class="hljs-tag">font-size</span><span class="hljs-pseudo">:24px</span>;
+    <span class="hljs-tag">margin-top</span>: 5<span class="hljs-tag">px</span>; <span class="hljs-tag">margin-bottom</span>: 0<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">text-align</span>: <span class="hljs-tag">center</span>;
+        <span class="hljs-tag">font-weight</span>: <span class="hljs-tag">normal</span>;
+        <span class="hljs-tag">color</span>: <span class="hljs-id">#222</span>;
+
+<span class="hljs-tag">SUBHEADLINE</span>
+        <span class="hljs-tag">font-family</span>: "<span class="hljs-tag">Lucida</span> <span class="hljs-tag">Grande</span>", <span class="hljs-tag">Tahoma</span>;
+    <span class="hljs-tag">font-size</span>: 10<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">font-weight</span>: <span class="hljs-tag">lighter</span>;
+    <span class="hljs-tag">font-variant</span>: <span class="hljs-tag">normal</span>;
+    <span class="hljs-tag">text-transform</span>: <span class="hljs-tag">uppercase</span>;
+    <span class="hljs-tag">color</span>: <span class="hljs-id">#666666</span>;
+        <span class="hljs-tag">margin-top</span>: 10<span class="hljs-tag">px</span>;
+    <span class="hljs-tag">text-align</span>: <span class="hljs-tag">center</span>!<span class="hljs-tag">important</span>;
+    <span class="hljs-tag">letter-spacing</span>: 0<span class="hljs-class">.3em</span>;
+</code></pre>
+<h2 id="the-big-noob">The Big Noob</h2>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">DATE</span>
+      <span class="hljs-tag">font-size</span>: 85%;
+      <span class="hljs-tag">text-transform</span>: <span class="hljs-tag">uppercase</span>;
+      <span class="hljs-tag">letter-spacing</span>: 1<span class="hljs-tag">px</span>;
+      <span class="hljs-tag">color</span>: <span class="hljs-id">#bbb</span>;
+      <span class="hljs-tag">font-size</span>: 10<span class="hljs-tag">px</span>;
+      <span class="hljs-tag">font-family</span>: "<span class="hljs-tag">Lucida</span> <span class="hljs-tag">Grande</span>", <span class="hljs-tag">Verdana</span>, <span class="hljs-tag">Helvetica</span>, <span class="hljs-tag">Arial</span>, <span class="hljs-tag">sans-serif</span>;
+      <span class="hljs-tag">font-weight</span>: 100; 
+
+<span class="hljs-tag">HEADLINE</span>
+        <span class="hljs-tag">font</span>: <span class="hljs-tag">bold</span> 34<span class="hljs-tag">px</span> "<span class="hljs-tag">Century</span> <span class="hljs-tag">Schoolbook</span>", <span class="hljs-tag">Georgia</span>, <span class="hljs-tag">Times</span>, <span class="hljs-tag">serif</span>;
+    <span class="hljs-tag">color</span>: <span class="hljs-id">#333</span>;
+    <span class="hljs-tag">line-height</span>: 90%;
+    <span class="hljs-tag">margin</span>: <span class="hljs-class">.2em</span> 0 <span class="hljs-class">.4em</span> 0;
+    <span class="hljs-tag">letter-spacing</span>: <span class="hljs-tag">-2px</span>;
+
+<span class="hljs-tag">TAG</span>
+        <span class="hljs-tag">color</span>: <span class="hljs-id">#76879b</span>;
+        <span class="hljs-tag">font-size</span>: 10<span class="hljs-tag">px</span>;
+        <span class="hljs-tag">margin</span>: 5<span class="hljs-tag">px</span>;
+        <span class="hljs-tag">font-family</span>: "<span class="hljs-tag">Lucida</span> <span class="hljs-tag">Grande</span>", <span class="hljs-tag">Verdana</span>, <span class="hljs-tag">Helvetica</span>, <span class="hljs-tag">Arial</span>, <span class="hljs-tag">sans-serif</span>;
+        <span class="hljs-tag">font-size</span>: 11<span class="hljs-tag">px</span>;
+</code></pre>
+<h2 id="orange-overstated-by-chad-pierce">Orange Overstated by Chad Pierce</h2>
+<p>h1 { color: #7c795d; font-family: &#39;Trocchi&#39;, serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }</p>
+<p>h2 { color: #7c795d; font-family: &#39;Source Sans Pro&#39;, sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }</p>
+<p>.subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }</p>
+<h2 id="bold-by-rafal-tomal">Bold by Rafal Tomal</h2>
+<p>h1 { color: #111; font-family: &#39;Helvetica Neue&#39;, sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }</p>
+<p>h2 { color: #111; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; }</p>
+<p>p { color: #685206; font-family: &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; line-height: 24px; margin: 0 0 24px; text-align: justify; text-justify: inter-word; }</p>
+<h2 id="don-t-taste-me-bro-by-robert-neu">Don’t Taste Me Bro by Robert Neu</h2>
+<p>h1 { color: #ffffff; font-family: &#39;Raleway&#39;,sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }</p>
+<p>h2 { color: #ffffff; font-family: &#39;Raleway&#39;,sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }</p>
+<p>p { color: #f8f8f8; font-family: &#39;Raleway&#39;,sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }</p>
+<h2 id="early-night-by-rafal-tomal">Early Night by Rafal Tomal</h2>
+<p>h1 { color: #ffffff; font-family: &#39;Lato&#39;, sans-serif; font-size: 54px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }</p>
+<p>p { color: #adb7bd; font-family: &#39;Lucida Sans&#39;, Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }</p>
+<p>.date { background: #fe921f; color: #ffffff; display: inline-block; font-family: &#39;Lato&#39;, sans-serif; font-size: 12px; font-weight: bold; line-height: 12px; letter-spacing: 1px; margin: 0 0 30px; padding: 10px 15px 8px; text-transform: uppercase; }</p>
+<h2 id="surefire-by-jon-perez">SureFire by Jon Perez</h2>
+<p>a { color: #ff6600; transition: .5s; -moz-transition: .5s; -webkit-transition: .5s; -o-transition: .5s; font-family: &#39;Muli&#39;, sans-serif; }</p>
+<p>a:hover { text-decoration: underline }</p>
+<p>h1 { padding-bottom: 15px }</p>
+<p>h1 a { font-family: &#39;Open Sans Condensed&#39;, sans-serif; font-size: 48px; color: #333; }</p>
+<p>h1 a:hover { color: #ff6600; text-decoration: none; }</p>
+<p>p { color: #333; font-family: &#39;Muli&#39;, sans-serif; margin-bottom: 15px; }</p>
+<p>a.more-link { color: white; font-weight: bold; font-size: 14px; font-family: Arial, Helvetica, sans-serif; padding: 3px 10px; background-color: #ff6600; border-radius: 5px; float: right; }</p>
+<p>a.more-link:hover { text-decoration: none; background-color: #666; border-radius: 0px; }</p>
+<h2 id="the-beauty-of-words-by-jim-rush">The Beauty of Words by Jim Rush</h2>
+<p>blockquote { background-image: url(<a href="http://typespiration.com/wp-content/themes/typespiration/images/quote.png">http://typespiration.com/wp-content/themes/typespiration/images/quote.png</a>); background-position: 10px 10%; background-repeat: no-repeat no-repeat; padding: 150px 0; }</p>
+<p>p { color: #f2f2f2; background: #ff4a4a; font-size: 75px; line-height: 74px; font-weight: 700; margin: 0 5px 24px; float: left; padding: 10px; margin: 0 5px 24px; font-family: &#39;Libre Baskerville&#39;, serif; }</p>
+<p>.punchline p { background: #f2f2f2; color: #ff4a4a; }</p>
+<p>a { color: #adadad; font-size: 25px; text-decoration: none; float: right; font-family: &#39;Libre Baskerville&#39;, serif; line-height: 4; }</p>
+<p>a:hover { color: #ff4a4a; text-decoration: none; }</p>
+<h1 id="character-cod">Character-cod</h1>
+<p><a href="http://character-code.com/">http://character-code.com/</a></p>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

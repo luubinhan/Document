@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>jQuery | Notes</title>
+	<meta name="description" content="The Write Less, Do More, JavaScript Library" />
+	<meta name="keywords" content="Notes, development, code optimize, website" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.64.2" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/normalize.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/vendor/h5bp.css" /><link  rel="stylesheet" href="http://luubinhan.github.io/notes/styles/style.css" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<section class="sidebar">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://luubinhan.github.io/notes">Notes</a>
+		    </div><!-- navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		      <div class="list-group nav">
+		      	
+
+				  <a href="http://luubinhan.github.io/notes/posts/css.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">CSS</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/window.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Windows</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/jquery.html" class="active list-group-item">
+				    <h4 class="list-group-item-heading">jQuery</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/joomla.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Joomla</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/wordpress.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Wordpress</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/docpad.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">DocPad</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/owncloud.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">OwnCloud</h4>
+				    
+				  </a>				
+				
+
+				  <a href="http://luubinhan.github.io/notes/posts/compass.html" class="inactive list-group-item">
+				    <h4 class="list-group-item-heading">Compass</h4>
+				    
+				  </a>				
+				  
+							        
+		            <a href="http://luubinhan.github.io/notes/pages/photography.html" class="inactive list-group-item">
+		               <h4 class="list-group-item-heading"> Photography</h4>
+		              
+		            </a>			        
+			         
+		      </div> 
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</section><!-- sidebar -->
+	<section class="master">
+		<article class="article">
+	<div class="killer-logo">
+		<h1>jQuery</h1>
+	</div>
+	<div class="single-post">
+		<h4 id="table-of-content">Table of Content</h4>
+<!-- MarkdownTOC depth=2 -->
+
+<ul>
+<li>Get data attribute jquery</li>
+<li>get which radio is selected via jQuery?</li>
+<li>5 JQUERY RESPONSIVE FULLSCREEN BACKGROUND IMAGE PLUGINS</li>
+<li>problem with when scroll iphone Backstretch plugin</li>
+<li>Plugin</li>
+<li>GA</li>
+<li>Khai báo mảng trong javascript</li>
+<li>Converts a JavaScript value to a JavaScript Object Notation (JSON) string.</li>
+<li>Make an array of object</li>
+<li>One Page Plugin</li>
+<li>Instagram</li>
+<li>Datetime picker</li>
+<li>Chạy 1 function sau X giây</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+
+<h1 id="get-data-attribute-jquery">Get data attribute jquery</h1>
+<pre class="highlight"><code class="hljs javascript">$(<span class="hljs-keyword">this</span>).data(<span class="hljs-string">"id"</span>)
+</code></pre>
+<h1 id="get-which-radio-is-selected-via-jquery-">get which radio is selected via jQuery?</h1>
+<pre class="highlight"><code class="hljs javascript">$(<span class="hljs-string">'input[name=radioName]:checked'</span>, <span class="hljs-string">'#myForm'</span>).val()
+</code></pre>
+<h1 id="5-jquery-responsive-fullscreen-background-image-plugins">5 JQUERY RESPONSIVE FULLSCREEN BACKGROUND IMAGE PLUGINS</h1>
+<p><a href="http://www.jquery4u.com/plugins/responsive-fullscreen-background-image-plugins/">http://www.jquery4u.com/plugins/responsive-fullscreen-background-image-plugins/</a></p>
+<h1 id="problem-with-when-scroll-iphone-backstretch-plugin">problem with when scroll iphone Backstretch plugin</h1>
+<p>add</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">if</span> (<span class="hljs-regexp">/iP/</span>.test(navigator.platform) &amp;&amp; <span class="hljs-regexp">/Safari/i</span>.test(navigator.userAgent)) {
+    g += <span class="hljs-number">100</span>;
+    j += <span class="hljs-number">100</span>;
+}
+</code></pre>
+<p>before</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">this</span>.$wrap.css({
+    width: b,
+    height: g
+}).find(<span class="hljs-string">"img:not(.deleteable)"</span>).css({
+    width: e,
+    height: j
+}).css(a)
+</code></pre>
+<h1 id="plugin">Plugin</h1>
+<p><a href="http://kitchen.net-perspective.com/open-source/scroll-follow/">JQUERY SCROLL FOLLOW</a></p>
+<p><a href="https://github.com/luubinhan/jquery-smartresize">jquery smartresize</a></p>
+<p><a href="https://github.com/rstacruz/jquery.transit#readme">Transit</a></p>
+<p><a href="http://git.aaronlumsden.com/progression">Form process</a></p>
+<p><a href="http://ed-lea.github.io/jquery-collagePlus/">CallagePlus</a></p>
+<p><a href="http://nicolasbize.com/magicsuggest/examples.html">Magic Select</a></p>
+<h1 id="ga">GA</h1>
+<pre class="highlight"><code class="hljs javascript">gaq.push([<span class="hljs-string">'_trackPageview'</span>, <span class="hljs-string">'/url/to/page/view'</span>]);
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">""</span><span class="hljs-value">text</span>/<span class="hljs-attribute">javascript</span>""&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> _gaq = _gaq || [];
+    _gaq.push([<span class="hljs-string">'_setAccount'</span>, <span class="hljs-string">'UA-5016452-17'</span>]);
+    _gaq.push([<span class="hljs-string">'_trackPageview'</span>]);   <span class="hljs-comment">// ←</span>
+    (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">var</span> ga = document.createElement(<span class="hljs-string">'script'</span>); ga.type = <span class="hljs-string">'text/javascript'</span>; ga.async = <span class="hljs-literal">true</span>;
+        ga.src = (<span class="hljs-string">'https:'</span> == document.location.protocol ? <span class="hljs-string">'https://ssl'</span> : <span class="hljs-string">'http://www'</span>) + <span class="hljs-string">'.google-analytics.com/ga.js'</span>;
+        <span class="hljs-keyword">var</span> s = document.getElementsByTagName(<span class="hljs-string">'script'</span>)[<span class="hljs-number">0</span>]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    gaq.push([<span class="hljs-string">'_trackEvent'</span>, <span class="hljs-string">'Article'</span>, <span class="hljs-string">'Reed'</span>, title, <span class="hljs-number">1</span>, <span class="hljs-literal">true</span>]);   
+    gaq.push([<span class="hljs-string">'_trackEvent'</span>, category, action, label, value, opt_noninteraction]);
+    <span class="hljs-comment">//Ví dụ trang TOP</span>
+    gaq.push([<span class="hljs-string">'_trackEvent'</span>, <span class="hljs-string">'/recruit2015/top'</span>, <span class="hljs-string">'top_student'</span>]);  
+
+    <span class="hljs-comment">//example for a student get 800.5 point</span>
+    gaq.push([<span class="hljs-string">'_trackEvent'</span>, <span class="hljs-string">'/recruit2015/top'</span>, <span class="hljs-string">'top_student'</span>, <span class="hljs-number">800.5</span>]); 
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<ul>
+<li>Notice
+<a href="https://support.google.com/analytics/answer/1136920?hl=en">https://support.google.com/analytics/answer/1136920?hl=en</a></li>
+</ul>
+<h1 id="khai-b-o-m-ng-trong-javascript">Khai báo mảng trong javascript</h1>
+<p>best practices</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> a = [];
+</code></pre>
+<p>nếu khai báo</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">1</span>);
+</code></pre>
+<p>Array là object có thể overwritten</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-built_in">Array</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(key)</span>{</span>
+    <span class="hljs-keyword">this</span>.id = key;
+}
+</code></pre>
+<h1 id="converts-a-javascript-value-to-a-javascript-object-notation-json-string-">Converts a JavaScript value to a JavaScript Object Notation (JSON) string.</h1>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-built_in">JSON</span>.stringify(value [, replacer] [, space])
+</code></pre>
+<p>value
+Required. A JavaScript value, usually an object or array, to be converted.</p>
+<p>replacer
+Optional. A function or array that transforms the results.</p>
+<p>If replacer is a function, JSON.stringify calls the function, passing in the key and value of each member. The return value is used instead of the original value. If the function returns undefined, the member is excluded. The key for the root object is an empty string: &quot;&quot;.
+If replacer is an array, only members with key values in the array will be converted. The order in which the members are converted is the same as the order of the keys in the array. The replacer array is ignored when the value argument is also an array.</p>
+<p>space
+Optional. Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
+If space is omitted, the return-value text is generated without any extra white space.
+If space is a number, the return-value text is indented with the specified number of white spaces at each level. If space is greater than 10, text is indented 10 spaces.
+If space is a non-empty string, such as &#39;\t&#39;, the return-value text is indented with the characters in the string at each level.
+If space is a string that is longer than 10 characters, the first 10 characters are used.</p>
+<h1 id="make-an-array-of-object">Make an array of object</h1>
+<pre class="highlight"><code class="hljs javascript"> <span class="hljs-keyword">var</span> usersData = [{
+        firstName: <span class="hljs-string">"tommy"</span>,
+        lastName: <span class="hljs-string">"MalCom"</span>,
+        email: <span class="hljs-string">"test@test.com"</span>,
+        id: <span class="hljs-number">102</span>
+    }, {
+        firstName: <span class="hljs-string">"Peter"</span>,
+        lastName: <span class="hljs-string">"breCht"</span>,
+        email: <span class="hljs-string">"test2@test2.com"</span>,
+        id: <span class="hljs-number">103</span>
+    }, {
+        firstName: <span class="hljs-string">"RoHan"</span>,
+        lastName: <span class="hljs-string">"sahu"</span>,
+        email: <span class="hljs-string">"test3@test3.com"</span>,
+        id: <span class="hljs-number">104</span>
+    }];
+</code></pre>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> n = <span class="hljs-number">100</span>;
+<span class="hljs-keyword">var</span> sample = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>();
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+    sample.push(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>());
+</code></pre>
+<p><a href="http://nfriedly.com/techblog/2009/06/advanced-javascript-objects-arrays-and-array-like-objects/">http://nfriedly.com/techblog/2009/06/advanced-javascript-objects-arrays-and-array-like-objects/</a></p>
+<h1 id="one-page-plugin">One Page Plugin</h1>
+<p><a href="https://github.com/alvarotrigo/fullPage.js">https://github.com/alvarotrigo/fullPage.js</a>
+<a href="https://github.com/peachananr/onepage-scroll">https://github.com/peachananr/onepage-scroll</a></p>
+<p>Gallery
+<a href="https://github.com/nghuuphuoc/bootstrapvalidator">https://github.com/nghuuphuoc/bootstrapvalidator</a>
+<a href="http://www.elevateweb.co.uk/image-zoom/examples">http://www.elevateweb.co.uk/image-zoom/examples</a>
+<a href="http://sachinchoolur.github.io/lightslider/">http://sachinchoolur.github.io/lightslider/</a></p>
+<p>ScrollMe is a jQuery plugin for adding simple scrolling effects to web pages.
+<a href="http://scrollme.nckprsn.com/">http://scrollme.nckprsn.com/</a></p>
+<p>A color generator for JavaScript.
+<a href="http://llllll.li/randomColor/">http://llllll.li/randomColor/</a></p>
+<p>Countdown
+<a href="https://github.com/mudar/Amarok-Apollo-WebUI">https://github.com/mudar/Amarok-Apollo-WebUI</a></p>
+<h1 id="instagram">Instagram</h1>
+<p><a href="http://pongstr.github.io/pongstagr.am">http://pongstr.github.io/pongstagr.am</a></p>
+<h1 id="datetime-picker">Datetime picker</h1>
+<p><a href="http://xdsoft.net/jqplugins/datetimepicker/">http://xdsoft.net/jqplugins/datetimepicker/</a></p>
+<h1 id="ch-y-1-function-sau-x-gi-y">Chạy 1 function sau X giây</h1>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> timeoutID;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">delayedAlert</span><span class="hljs-params">()</span> {</span>
+  timeoutID = window.setTimeout(slowAlert, <span class="hljs-number">2000</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">slowAlert</span><span class="hljs-params">()</span> {</span>
+  alert(<span class="hljs-string">"That was really slow!"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clearAlert</span><span class="hljs-params">()</span> {</span>
+  window.clearTimeout(timeoutID);
+}
+</code></pre>
+<h1 id="direction">Direction</h1>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">if</span> ($(<span class="hljs-string">'.routeLink'</span>).length) {
+    <span class="hljs-keyword">if</span>(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(position)</span> {</span>
+            <span class="hljs-comment">//http://maps.google.com/maps?saddr=10.823099000000001,106.62966399999999&amp;daddr=52.165045,5.353441;        </span>
+
+            <span class="hljs-keyword">var</span> url = <span class="hljs-string">"http://maps.google.com/maps?saddr="</span> + position.coords.latitude + <span class="hljs-string">","</span>+ position.coords.longitude +<span class="hljs-string">"&amp;daddr=52.165045,5.353441"</span>;
+            $(<span class="hljs-string">'.routeLink'</span>).attr(<span class="hljs-string">'href'</span>, url);
+
+        }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+          handleNoGeolocation(<span class="hljs-literal">true</span>);
+        });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Browser doesn't support Geolocation</span>
+        handleNoGeolocation(<span class="hljs-literal">false</span>);
+
+
+    }
+}
+</code></pre>
+<h1 id="input-number-step">Input Number Step</h1>
+<p><a href="http://codepen.io/djgrant/pen/AwFHL">http://codepen.io/djgrant/pen/AwFHL</a></p>
+
+	</div>
+</article>
+	</section>	
+
+	<!-- DocPad Scripts + Our Own -->
+	<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/log.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/vendor/modernizr.js"></script><script defer="defer"  src="http://luubinhan.github.io/notes/scripts/script.js"></script>
+</body>
+</html>

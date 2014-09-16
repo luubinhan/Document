@@ -1,0 +1,301 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #3F3F3F;
+  color: #DCDCDC;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.css .hljs-class,
+.css .hljs-id,
+.lisp .hljs-title,
+.nginx .hljs-title,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #E3CEAB;
+}
+
+.django .hljs-template_tag,
+.django .hljs-variable,
+.django .hljs-filter .hljs-argument {
+  color: #DCDCDC;
+}
+
+.hljs-number,
+.hljs-date {
+  color: #8CD0D3;
+}
+
+.dos .hljs-envvar,
+.dos .hljs-stream,
+.hljs-variable,
+.apache .hljs-sqbracket {
+  color: #EFDCBC;
+}
+
+.dos .hljs-flow,
+.diff .hljs-change,
+.python .exception,
+.python .hljs-built_in,
+.hljs-literal,
+.tex .hljs-special {
+  color: #EFEFAF;
+}
+
+.diff .hljs-chunk,
+.hljs-subst {
+  color: #8F8F8F;
+}
+
+.dos .hljs-keyword,
+.python .hljs-decorator,
+.hljs-title,
+.haskell .hljs-type,
+.diff .hljs-header,
+.ruby .hljs-class .hljs-parent,
+.apache .hljs-tag,
+.nginx .hljs-built_in,
+.tex .hljs-command,
+.hljs-prompt {
+    color: #efef8f;
+}
+
+.dos .hljs-winutils,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-string {
+  color: #DCA3A3;
+}
+
+.diff .hljs-deletion,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.hljs-javadoc,
+.smalltalk .hljs-class,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.css .hljs-rules .hljs-value,
+.hljs-attr_selector,
+.hljs-pseudo,
+.apache .hljs-cbracket,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute {
+  color: #CC9393;
+}
+
+.hljs-shebang,
+.diff .hljs-addition,
+.hljs-comment,
+.java .hljs-annotation,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype {
+  color: #7F9F7F;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+.sidebar {
+	position: fixed;
+	height: 100%;
+	overflow-y: scroll;
+	width: 300px;
+	background: #F8F8F8;
+}
+body {
+	padding: 0;
+}
+.navbar {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.navbar-header {
+	float: none;
+}
+.navbar-nav {
+	float: none;
+}
+.navbar-nav > li {
+	float: left;
+}
+.navbar-default {
+	background: none;
+	border: none;
+}
+.sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: #ddd
+}
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ddd
+}
+.sidebar::-webkit-scrollbar-thumb {  
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #999
+}
+.killer-logo {
+  padding-bottom: 20px;
+  padding-top: 80px;
+}
+.killer-logo h1{
+  font-size: 48px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.killer-logo a {
+  color: #000;
+}
+body {
+  line-height: 1.8;
+  font-family: 'Tinos', serif;
+  font-size: 16px;
+  color: #222;
+}
+pre {
+  padding: 0;
+}
+#table-of-content {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 25px;
+}
+.single-post h1 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Tinos', serif;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#table-of-content {
+
+}
+.single-post {
+  font-size: 20px;
+}
+.single-post h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  color: #ba2935;
+  font-size: 28px;
+}
+.single-post h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #ba2935;
+  margin: 30px 0 20px;
+}
+.navbar-brand {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.article {
+  padding-bottom: 150px;
+}
+.master {
+  margin-left: 400px;
+  padding-right: 400px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+@media (max-width: 1280px) {
+  img {
+    max-width: 100%;
+  }
+  .master {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .master {
+    margin-left: 0;
+    padding-left: 30px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    background: #e5e5e5;
+  }
+  .navbar-collapse {
+    max-height: none;
+  }
+}
+@media ( max-width: 480px) {
+  .killer-logo h1 {
+    font-size: 25px;
+  }
+  .single-post h3 {
+    font-size: 18px;
+  }
+  .master {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #table-of-content {
+    font-size: 20px;
+  }
+  .single-post {
+    font-size: 16px;
+  }
+  h2, .h2 {
+    font-size: 20px;
+  }
+  h4, .h4 {
+    font-size: 14px;
+  }
+  .single-post h4 {
+    margin: 15px 0 10px;
+  }
+  .killer-logo {
+    padding-bottom: 0;
+  }
+  .gist-name {
+    font-size: 18px;
+  }
+}
+.gist-name {  
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+  font-size: 25px;
+}
+.gist-name a {
+  color: #333;
+
+}
+.gist-name:hover {
+  
+}
+.gist-name a:hover {
+  text-decoration: none;
+  color: #428BCA;
+}
