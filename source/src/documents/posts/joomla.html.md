@@ -105,7 +105,7 @@ $document->addCustomTag( '<script type="text/javascript">jQuery.noConflict();</s
 
 # Xac dinh home page or article page
 
- //identify front page
+//identify front page
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 $lang = JFactory::getLanguage();
@@ -122,7 +122,7 @@ if (JRequest::getVar('option')=='com_content' && JRequest::getVar('view')=='arti
 ```php
 // GET CURRENT CATEGORY
 $pathway =& $mainframe->getPathway();
-$cates   = $pathway->getPathWay();                                
+$cates   = $pathway->getPathWay();                                ư
 if ($cates[0]->name) {
    echo stripslashes(htmlspecialchars($cates[0]->name));
 } 
