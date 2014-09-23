@@ -93,6 +93,10 @@ http://exacttarget.github.io/fuelux/
 
 http://www.csscheckbox.com/css-checkbox-generator.php
 
+# Meta data template
+
+http://moz.com/blog/meta-data-templates-123
+
 
 # Typography Collection
 

@@ -255,3 +255,24 @@ if ($('.routeLink').length) {
 # Input Number Step
 
 http://codepen.io/djgrant/pen/AwFHL
+
+# Change default image when share
+
+http://www.kingmoney.net/social-network/set-image-title-description-preview
+
+Schema.org
+```
+<body itemscope itemtype="http://schema.org/Article">
+<h1 itemprop="name">Titolo del post</h1>
+<img itemprop="image" src="immagine-di-anteprima.jpg" />
+<p itemprop="description">Descrizione dell'articolo.</p>
+</body>
+```
+
+Open Graph Protocol
+
+```
+<meta property="og:title" content="Titolo del post"/>
+<meta property="og:image" content="Immagine di anteprima"/>
+<meta property="og:description" content="Descrizione del post"/>
+```
