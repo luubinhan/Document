@@ -1364,3 +1364,12 @@ include_once(TEMPLATEPATH.'plugins/my-plugin/my-plugin.php');
 # Bắt buộc cài plugin sau khi cài theme
 
 http://tgmpluginactivation.com/
+
+# Disable WordPress Heartbeat API
+
+http://www.inmotionhosting.com/support/website/wordpress/heartbeat-ajax-php-usage
+add_action( 'init', 'stop_heartbeat', 1 );
+
+function stop_heartbeat() {
+        wp_deregister_script('heartbeat');
+}

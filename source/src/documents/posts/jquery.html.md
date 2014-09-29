@@ -276,3 +276,14 @@ Open Graph Protocol
 <meta property="og:image" content="Immagine di anteprima"/>
 <meta property="og:description" content="Descrizione del post"/>
 ```
+
+
+# Disable submit
+
+//disable submit comment
+     $('input[type="submit"]').attr('disabled','disabled');
+     $('input[type="text"]').keyup(function() {
+        if($(this).val() != '') {
+           $('input[type="submit"]').removeAttr('disabled');
+        }
+     });
