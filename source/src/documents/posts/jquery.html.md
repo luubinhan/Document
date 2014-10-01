@@ -287,3 +287,7 @@ Open Graph Protocol
            $('input[type="submit"]').removeAttr('disabled');
         }
      });
+
+# Drop drop plugin
+
+http://interactjs.io/
