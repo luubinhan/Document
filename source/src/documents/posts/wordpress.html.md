@@ -87,13 +87,6 @@ Wordpress Snip Code
     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );
     <img src="<?php echo $url ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
 
-    function get_thumbnail_src( $post ){
-
-        $thumb_id = get_post_thumbnail_id( $post );
-        $src = wp_get_attachment_thumb_url( $thumb_id );
-        
-        return $src;
-    }
 
 echo '<img alt="" src="' . get_thumbnail_src( get_the_ID() ) . '" />';
 
