@@ -61,3 +61,21 @@ Now open that file and put the following configuration inside
         "command": "goto_definition"
     }
 ]
+
+
+# Sublime Fetch Setup
+
+{
+    "files":
+    {
+        "jquery": "http://code.jquery.com/jquery.min.js",
+        "JS Velocity": "https://github.com/julianshapiro/velocity/blob/master/velocity.min.js",
+        "JS Velocity UI": "https://github.com/julianshapiro/velocity/blob/master/velocity.ui.min.js",
+    },
+    "packages":
+    {
+        "Grunt Template": "https://github.com/luubinhan/grunt-template/zipball/master",
+        "WP Template": "https://github.com/luubinhan/wordpress-boilerplate-theme/zipball/master",
+        "WP Recaptcha": "https://github.com/luubinhan/wp-recaptcha-integration/zipball/master",
+    }
+}

@@ -291,3 +291,8 @@ Open Graph Protocol
 # Drop drop plugin
 
 http://interactjs.io/
+
+
+# CDN
+
+https://cdnjs.com/
