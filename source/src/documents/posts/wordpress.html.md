@@ -1415,3 +1415,29 @@ function the_breadcrumb() {
     echo '</ul>';
 }
 ```
+
+# ACF Repeater template
+
+```php
+<?php 
+  // check for rows (parent repeater)
+  if( have_rows('timeline') ): 
+    echo "<ul class='timeline'>";
+    $i = 1;
+    // loop through rows (parent repeater)
+    while( have_rows('timeline') ): the_row(); ?>     
+      <li>
+        <div class="<?php if ($i%2 == 0) { echo 'direction-r'; } else{ echo 'direction-l';} ?>">
+          <div class="flag-wrapper">
+            <span class="flag"><?php the_sub_field('history_title'); ?></span>           
+          </div>
+          <div class="desc"><?php the_sub_field('history_content'); ?></div>
+        </div>
+      </li>                       
+  <?php 
+    $i++;
+    endwhile; // while( has_sub_field('to-do_lists') ):
+    echo "</ul>";
+  endif; // if( get_field('to-do_lists') ): 
+  ?> 
+```
