@@ -68,14 +68,22 @@ Now open that file and put the following configuration inside
 {
     "files":
     {
-        "jquery": "http://code.jquery.com/jquery.min.js",
         "JS Velocity": "https://github.com/julianshapiro/velocity/blob/master/velocity.min.js",
         "JS Velocity UI": "https://github.com/julianshapiro/velocity/blob/master/velocity.ui.min.js",
+        "jquery": "http://code.jquery.com/jquery.min.js"
     },
     "packages":
     {
         "Grunt Template": "https://github.com/luubinhan/grunt-template/zipball/master",
-        "WP Template": "https://github.com/luubinhan/wordpress-boilerplate-theme/zipball/master",
+        "WP ACF": "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+        "WP ACF Leaflet Field": "https://downloads.wordpress.org/plugin/advanced-custom-fields-leaflet-field.zip",
+        "WP Admin menu editor": "https://downloads.wordpress.org/plugin/admin-menu-editor.1.4.1.zip",
+        "WP Image widget": "https://downloads.wordpress.org/plugin/image-widget.4.1.zip",
+        "WP Ninja form": "https://downloads.wordpress.org/plugin/ninja-forms.2.8.5.zip",
+        "WP Page navi": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.86.zip",
         "WP Recaptcha": "https://github.com/luubinhan/wp-recaptcha-integration/zipball/master",
+        "WP SEO by Yoast": "https://downloads.wordpress.org/plugin/wordpress-seo.1.6.3.zip",
+        "WP Template": "https://github.com/luubinhan/wordpress-boilerplate-theme/zipball/master",
+        "WP Types": "https://downloads.wordpress.org/plugin/types.zip"
     }
 }
