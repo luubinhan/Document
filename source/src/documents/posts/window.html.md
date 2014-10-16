@@ -75,6 +75,7 @@ Now open that file and put the following configuration inside
     "packages":
     {
         "Grunt Template": "https://github.com/luubinhan/grunt-template/zipball/master",
+        "HTML Template": "https://github.com/luubinhan/HTML-Template/zipball/master",
         "WP ACF": "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
         "WP ACF Leaflet Field": "https://downloads.wordpress.org/plugin/advanced-custom-fields-leaflet-field.zip",
         "WP Admin menu editor": "https://downloads.wordpress.org/plugin/admin-menu-editor.1.4.1.zip",

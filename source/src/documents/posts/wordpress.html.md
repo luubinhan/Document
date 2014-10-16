@@ -1250,66 +1250,6 @@ function jetstream_rewrite_flush() {
 add_action('init', 'jetstream_rewrite_flush');
 ```
 
-# Lưu hình ở dạng relative url
-
-```php
-//http://www.plankdesign.com/blog/2013/10/making-wordpress-more-portable/
-function relativePathForUploads($fileInfos)
-{
-    global $blog_id;
-    $path = get_blog_option($blog_id,'siteurl');
-
-    $fileInfos['url'] = str_replace($path,'',$fileInfos['url']);
-
-    return $fileInfos;
-}
-add_filter('wp_handle_upload', 'relativePathForUploads');
-```
-
-Thay đổi trên nút upload media khi đăng bài viết
-
-File functions.php
-
-```php
-//shortcode for the install directory
-function site_url_shortcode(){
-    return site_url();
-}
-add_shortcode( 'site_url', 'site_url_shortcode' );
-
-//shortcode for the upload directory
-function upload_url_shortcode(){
-    $upload_dir = wp_upload_dir();
-    return $upload_dir['baseurl'];
-}
-add_shortcode( 'upload_url', 'upload_url_shortcode' );
-
-//shortcode for the theme directory
-function theme_url_shortcode(){
-    return get_stylesheet_directory_url();
-}
-add_shortcode( 'theme_url', 'theme_url_shortcode' );
-/*
- * Force send_to_editor to use shortcodes for paths rather than hardcoded absolute links
- */
-function environment_safe_send_to_editor($html){
-    //media uploads -> upload_url
-    $upload_dir = wp_upload_dir();
-    $html = str_replace($upload_dir['baseurl'], '[upload_url]', $html);
-
-    //theme assets -> theme_url
-    $html = str_replace(get_stylesheet_directory_uri(), '[theme_url]', $html);
-
-    //attachment pages -> site_url
-    $html = str_replace(site_url(),'http://www.plankdesign.com',$html);
-
-    return $html;
-}
-add_filter('image_send_to_editor','environment_safe_send_to_editor');
-add_filter('image_send_to_editor_url','environment_safe_send_to_editor');
-add_filter('media_send_to_editor','environment_safe_send_to_editor');
-```
-
 # Make wordpress portable
 
 wp-config
@@ -1325,7 +1265,6 @@ define('WP_HOME',    "http://${_SERVER['HTTP_HOST']}${base_path}");
 http://alexking.org/blog/2012/07/09/include-plugin-in-wordpress-theme
 
 ```php
-<?php
  
 // Run this code on 'after_theme_setup', when plugins have already been loaded.
 add_action('after_setup_theme', 'my_load_plugin');
