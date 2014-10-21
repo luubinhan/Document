@@ -85,6 +85,7 @@ Now open that file and put the following configuration inside
         "WP Recaptcha": "https://github.com/luubinhan/wp-recaptcha-integration/zipball/master",
         "WP SEO by Yoast": "https://downloads.wordpress.org/plugin/wordpress-seo.1.6.3.zip",
         "WP Template": "https://github.com/luubinhan/wordpress-boilerplate-theme/zipball/master",
-        "WP Types": "https://downloads.wordpress.org/plugin/types.zip"
+        "WP Types": "https://downloads.wordpress.org/plugin/types.zip",
+        "WP": "https://wordpress.org/latest.zip"
     }
 }
