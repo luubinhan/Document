@@ -296,3 +296,15 @@ http://interactjs.io/
 # CDN
 
 https://cdnjs.com/
+
+# Scroll to element
+
+```js
+$(".link-more").click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(id).offset().top - 50
+    }, 800);
+});
+```
