@@ -411,12 +411,17 @@ $('select').each(function(){
     var $listItems = $list.children('li');
   
     $styledSelect.click(function(e) {
+
         e.stopPropagation();
-        $('div.select-styled.active').each(function(){
-            $(this).removeClass('active').next('ul.select-options').hide();
-        });
-        $(this).toggleClass('active').next('ul.select-options').toggle();
-    });
+          
+          if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+              $(this).next('ul.select-options').hide();
+          } else {
+            $(this).addClass('active');
+            $(this).next('ul.select-options').show();
+          }
+      });  
   
     $listItems.click(function(e) {
         e.stopPropagation();
@@ -809,3 +814,11 @@ $('.check-box').on('click', function () {
     $(this).toggleClass('checkedBox');
 });
 ```
+
+# Must have meta tag 
+
+http://moz.com/blog/meta-data-templates-123
+
+# Bootstrap slider
+
+https://github.com/seiyria/bootstrap-slider
