@@ -1380,3 +1380,48 @@ function the_breadcrumb() {
   endif; // if( get_field('to-do_lists') ): 
   ?> 
 ```
+
+# Remove button from the TinyMCE
+
+```php
+add_filter( 'mce_buttons_2', 'acme_remove_from_kitchen_sink');
+/**
+ * Removes the all but the formatting button from the post editor.
+ *
+ * @since 1.0.0
+ *
+ * @param array $buttons The current array buttons including the kitchen sink.
+ * @return array The updated array of buttons that exludes the kitchen sink.
+ */
+function acme_remove_from_kitchen_sink( $buttons ) {
+ 
+$invalid_buttons = array(
+'underline',
+'justifyfull',
+'forecolor',
+'|',
+'pastetext',
+'pasteword',
+'removeformat',
+'charmap',
+'outdent',
+'indent',
+'undo',
+'redo',
+'wp_help'
+);
+ 
+ 
+ 
+foreach ( $buttons as $button_key => $button_value ) {
+ 
+if ( in_array( $button_value, $invalid_buttons ) ) {
+unset( $buttons[ $button_key ] );
+}
+ 
+}
+ 
+return $buttons;
+ 
+}
+```

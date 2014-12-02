@@ -17,3 +17,5 @@ http://code.tutsplus.com/tutorials/create-a-simple-crm-in-wordpress-advanced-cus
     6.2.3 Phía trên đầu file acf-fields, thêm add_action( 'after_setup_theme', 'acf_fields' );   
 
 3. Ẩn menu ACF: define( 'ACF_LITE', true );
+
+http://code.tutsplus.com/tutorials/adding-the-css-for-a-color-scheme-in-the-theme-customizer--cms-21351
