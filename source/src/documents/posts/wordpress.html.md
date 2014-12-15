@@ -52,7 +52,9 @@ Wordpress Snip Code
 - Add google map
 - Make Clickable
 - Add shortcodes in sidebar Widgets
-- Thêm cột trong admin
+- Thêm cột trong admin // ADD COLUMN IN ADMIN
+    - Để hiển thị hình ảnh
+    - Để cột có thể sắp xếp
 - Permalink structrue ending .html
 - Tao shortcode
 - Thêm class cho widget
@@ -77,6 +79,15 @@ Wordpress Snip Code
 - check if admin
 - Add discount/fee woocommerce
 - Paging problem with custom taxonomi
+- Make wordpress portable
+- Include plugin từ theme
+- Bắt buộc cài plugin sau khi cài theme
+- Disable WordPress Heartbeat API
+- Fix option tree textarea issue
+- breadcrumbs
+- ACF Repeater template
+- Remove button from the TinyMCE
+- Gallery Option tree
 
 <!-- /MarkdownTOC -->
 
@@ -739,7 +750,7 @@ make_clickable()
 
 add_filter('widget_text', 'do_shortcode');
 
-# Thêm cột trong admin
+# Thêm cột trong admin // ADD COLUMN IN ADMIN
 
 ```php
 
@@ -760,7 +771,7 @@ add_action( 'manage_{Post Type}_posts_custom_column', 'output_table_columns_data
 
 Các giá trị phone_number tương ứng với id của ACF
 
-Để hiển thị hình ảnh
+## Để hiển thị hình ảnh
 
 ```php
 function output_table_columns_data( $columnName, $post_id ) {
@@ -778,7 +789,7 @@ function output_table_columns_data( $columnName, $post_id ) {
 }
 ```
 
-Để cột có thể sắp xếp
+## Để cột có thể sắp xếp
 
 ```php
 function define_sortable_table_columns( $columns ) {
@@ -1424,4 +1435,21 @@ unset( $buttons[ $button_key ] );
 return $buttons;
  
 }
+```
+
+# Gallery Option tree
+
+```php
+if ( function_exists( 'ot_get_option' ) ) {
+    // Convert to array 
+    $gallery =  explode(',', ot_get_option('partners_gallery'));
+
+    if ( ! empty( $gallery ) ) {
+        foreach( $gallery as $id ) {
+          if ( ! empty( $id ) ) {
+            echo wp_get_attachment_image( $id, 'full' );                
+          }
+        } /*foreach*/
+    } /*! empty( $gallery )*/
+} /*function_exists*/
 ```

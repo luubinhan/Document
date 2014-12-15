@@ -21,6 +21,15 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Instagram
 - Datetime picker
 - Chạy 1 function sau X giây
+- Direction
+- Input Number Step
+- Change default image when share
+- Disable submit
+- Drop drop plugin
+- CDN
+- Scroll to element
+- Scroll
+- Lazy Load Google Map
 
 <!-- /MarkdownTOC -->
 
@@ -308,3 +317,26 @@ $(".link-more").click(function(e) {
     }, 800);
 });
 ```
+
+# Scroll
+
+```js
+jQuery(document).ready(function($) {
+    hashtag = window.location.hash;
+    if (location.hash) {
+      setTimeout(function() {
+        $(window).scrollTop(0);
+      }, 1);
+      setTimeout(function() {
+        console.log($(hashtag));
+        $('html, body').animate({
+            scrollTop: $(hashtag).offset().top - 100
+        }, 900);
+      }, 500)
+    }
+});
+```
+
+# Lazy Load Google Map 
+
+http://osvaldas.info/lazy-loading-google-maps
