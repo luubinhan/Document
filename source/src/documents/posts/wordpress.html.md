@@ -88,6 +88,7 @@ Wordpress Snip Code
 - ACF Repeater template
 - Remove button from the TinyMCE
 - Gallery Option tree
+- Get all categories woocommerce
 
 <!-- /MarkdownTOC -->
 
@@ -1453,3 +1454,20 @@ if ( function_exists( 'ot_get_option' ) ) {
     } /*! empty( $gallery )*/
 } /*function_exists*/
 ```
+
+# Get all categories woocommerce
+
+```php
+woocommerce_product_categories();
+or
+$args = array(
+    'number'     => $number,
+    'orderby'    => $orderby,
+    'order'      => $order,
+    'hide_empty' => $hide_empty,
+    'include'    => $ids
+);
+
+$product_categories = get_terms( 'product_cat', $args );
+```
+<?php wp_list_categories( 'taxonomy=product_cat&pad_counts=1&show_count=1&exclude=25&title_li=' ); ?>
