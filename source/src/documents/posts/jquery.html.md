@@ -30,6 +30,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Scroll to element
 - Scroll
 - Lazy Load Google Map
+- justifyGallery
 
 <!-- /MarkdownTOC -->
 
@@ -340,3 +341,7 @@ jQuery(document).ready(function($) {
 # Lazy Load Google Map 
 
 http://osvaldas.info/lazy-loading-google-maps
+
+# justifyGallery
+
+http://miromannino.github.io/Justified-Gallery/options-and-events/
