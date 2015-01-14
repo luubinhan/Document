@@ -577,7 +577,7 @@ add_action('woocommerce_calculate_totals', 'mysite_box_discount');
 -------------------------------------------------------------- */
 
 if (function_exists('add_theme_support')) {
-    add_theme_support('post-thumbnails', array( 'post', 'page' ));
+    add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
     add_image_size('index-categories', 694, 150, true);
 }
 ```

@@ -19,6 +19,26 @@ description: Best practice and trick
 - Popular font
 - ont face
 - Extend Bootstrap
+- CSS Checkbox generator
+- Meta data template
+- Typography Collection
+  - http://www.coudalpartners.com/
+  - Human Sexuality and the Nuptial Mystery
+  - I love Typography
+  - The Big Noob
+  - Orange Overstated by Chad Pierce
+  - Bold by Rafal Tomal
+  - Don’t Taste Me Bro by Robert Neu
+  - Early Night by Rafal Tomal
+  - SureFire by Jon Perez
+  - The Beauty of Words by Jim Rush
+- Character-code
+- FAVICON
+- Custom Select
+- File upload
+- Checkbox Radio
+- Must have meta tag
+- Bootstrap slider
 
 <!-- /MarkdownTOC -->
 
@@ -425,10 +445,14 @@ $('select').each(function(){
   
     $listItems.click(function(e) {
         e.stopPropagation();
+        // Change Text
         $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('rel'));
+        $rel = $(this).attr('rel');
+        $this.val($rel);
         $list.hide();
-        //console.log($this.val());
+
+        //Change Select Option      
+        $(this).parents('.select').find('select').val($rel).change();
     });
   
     $(document).click(function() {
