@@ -31,6 +31,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Scroll
 - Lazy Load Google Map
 - justifyGallery
+- Simple accordion
 
 <!-- /MarkdownTOC -->
 
@@ -345,3 +346,13 @@ http://osvaldas.info/lazy-loading-google-maps
 # justifyGallery
 
 http://miromannino.github.io/Justified-Gallery/options-and-events/
+
+# Simple accordion
+
+```js
+$('.dropdown').hover(function () {
+        $(this).find('ul').stop(true, true).slideDown()
+    }, function () {
+        $(this).find('ul').stop(true, true).slideUp()
+    }).find('ul').hide();
+```
