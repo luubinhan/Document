@@ -90,6 +90,7 @@ Wordpress Snip Code
 - Gallery Option tree
 - Get all categories woocommerce
 - Get the excert outside the loop
+- Woocomerce change city to dropdown field
 
 <!-- /MarkdownTOC -->
 
@@ -1494,3 +1495,5 @@ function get_excerpt_by_id($post_id){
     return $the_excerpt;
 }
 ```
+
+# Woocomerce change city to dropdown field
