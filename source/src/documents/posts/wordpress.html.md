@@ -1466,7 +1466,6 @@ $args = array(
     'number'     => $number,
     'orderby'    => $orderby,
     'order'      => $order,
-    'hide_empty' => $hide_empty,
     'include'    => $ids
 );
 
@@ -1497,3 +1496,38 @@ function get_excerpt_by_id($post_id){
 ```
 
 # Woocomerce change city to dropdown field
+
+```php
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+  $fields['billing']['billing_city'] =  array(
+      'label'       => __('Thành phố', 'woocommerce'),      
+      'required'    => true,
+      'clear'       => true,
+      'type'        => 'select',
+      'class'       => array('form-row form-row-first billing_anrede_dropdown'),
+      'options'     => array(
+          '1' => __('Nội thành Hồ Chí Minh', 'woocommerce' ),
+          '2' => __('Khu vực khác', 'woocommerce' )
+          )
+  );
+
+  $fields['shipping']['shipping_city'] =  array(
+      'label'       => __('Thành phố', 'woocommerce'),      
+      'required'    => true,
+      'clear'       => true,
+      'type'        => 'select',
+      'class'       => array('address-field','update_totals_on_change'),
+      'options'     => array(
+          '1' => __('Nội thành Hồ Chí Minh', 'woocommerce' ),
+          '2' => __('Khu vực khác', 'woocommerce' )
+          )
+  );
+ /* $fields['billing']['billing_address_1']['options'] = array(
+    '1' => 'Nội thành Hồ Chí Minh',
+    '2' => 'Tỉnh/TP khác'
+  ); */  
+  return $fields;
+}
+```
