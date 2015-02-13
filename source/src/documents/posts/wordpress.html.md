@@ -91,6 +91,7 @@ Wordpress Snip Code
 - Get all categories woocommerce
 - Get the excert outside the loop
 - Woocomerce change city to dropdown field
+- FILTER NOT GET CURRENT POST
 
 <!-- /MarkdownTOC -->
 
@@ -1530,4 +1531,16 @@ function custom_override_checkout_fields( $fields ) {
   ); */  
   return $fields;
 }
+```
+
+# FILTER NOT GET CURRENT POST
+
+```php
+function no_post_id( $query ) {
+  global $post;    
+  $query['post__not_in'] = array($post->ID);  
+  return $query;
+   
+}
+add_filter( 'rpwe_default_query_arguments', 'no_post_id' );
 ```
