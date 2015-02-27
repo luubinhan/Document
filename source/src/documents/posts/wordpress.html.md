@@ -92,6 +92,9 @@ Wordpress Snip Code
 - Get the excert outside the loop
 - Woocomerce change city to dropdown field
 - FILTER NOT GET CURRENT POST
+- REMOVE SUBMENU NINJA FORM
+- REMOVE NINJA FORM METABOX
+- FORMAT DATE FROM STRING
 
 <!-- /MarkdownTOC -->
 
@@ -1544,3 +1547,26 @@ function no_post_id( $query ) {
 }
 add_filter( 'rpwe_default_query_arguments', 'no_post_id' );
 ```
+
+# REMOVE SUBMENU NINJA FORM
+
+```php
+add_action( 'admin_menu', 'adjust_the_wp_menu', 999 );
+function adjust_the_wp_menu() {
+  remove_submenu_page( 'index.php', 'nf-about' );
+  remove_submenu_page( 'index.php', 'nf-changelog' );
+  remove_submenu_page( 'index.php', 'nf-getting-started' );
+  remove_submenu_page( 'index.php', 'nf-credits' );
+}
+```
+
+# REMOVE NINJA FORM METABOX
+
+```php
+remove_action('add_meta_boxes','ninja_forms_add_custom_box');
+remove_action('save_post','ninja_forms_save_postdata');
+```
+
+# FORMAT DATE FROM STRING
+
+$date = $file->file_date; $d = DateTime::createFromFormat("Y-m-d H:i:s", $date); echo $d->format("F j, Y");
