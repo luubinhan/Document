@@ -1569,4 +1569,6 @@ remove_action('save_post','ninja_forms_save_postdata');
 
 # FORMAT DATE FROM STRING
 
+```php
 $date = $file->file_date; $d = DateTime::createFromFormat("Y-m-d H:i:s", $date); echo $d->format("F j, Y");
+```
