@@ -95,6 +95,7 @@ Wordpress Snip Code
 - REMOVE SUBMENU NINJA FORM
 - REMOVE NINJA FORM METABOX
 - FORMAT DATE FROM STRING
+- Create Front-End login
 
 <!-- /MarkdownTOC -->
 
@@ -1081,6 +1082,7 @@ function themename_scripts() {
 ```
 
 Xem code icon ở đây: http://melchoyce.github.io/dashicons/
+https://developer.wordpress.org/resource/dashicons
 
 # Woocommerce - Thêm nút clear giỏ hàng
 
@@ -1572,3 +1574,55 @@ remove_action('save_post','ninja_forms_save_postdata');
 ```php
 $date = $file->file_date; $d = DateTime::createFromFormat("Y-m-d H:i:s", $date); echo $d->format("F j, Y");
 ```
+
+# Create Front-End login
+
+
+https://wordpress.org/plugins/sidebar-login/screenshots/
+<?php
+/**
+ * Template Name: Login
+ *
+ */
+?>
+ 
+<?php get_header(); ?>
+<!-- section -->
+<section class="aa_loginForm">
+ 
+<?php global $user_login;
+if(isset($_GET['login']) && $_GET['login'] == 'failed')
+{
+?>
+<div class="aa_error">
+<p>FAILED: Try again!</p>
+</div>
+<?php
+}
+if (is_user_logged_in()) {
+echo '<div class="aa_logout"> Hello, <div class="aa_logout_user">', $user_login, '. You are already logged in.</div><a id="wp-submit" href="', wp_logout_url(), '" title="Logout">Logout</a></div>';
+} else {
+wp_login_form($args);
+$args = array(
+'echo' => true,
+'redirect' => home_url('/wp-admin/'),
+'form_id' => 'loginform',
+'label_username' => __( 'Username' ),
+'label_password' => __( 'Password' ),
+'label_remember' => __( 'Remember Me' ),
+'label_log_in' => __( 'Log In' ),
+'id_username' => 'user_login',
+'id_password' => 'user_pass',
+'id_remember' => 'rememberme',
+'id_submit' => 'wp-submit',
+'remember' => true,
+'value_username' => NULL,
+'value_remember' => true
+);
+}
+?>
+ 
+</section>
+<!-- /section -->
+ 
+<?php get_footer(); ?> 
