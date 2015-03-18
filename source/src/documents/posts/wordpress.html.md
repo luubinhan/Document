@@ -96,6 +96,7 @@ Wordpress Snip Code
 - REMOVE NINJA FORM METABOX
 - FORMAT DATE FROM STRING
 - Create Front-End login
+- Posting in front-end
 
 <!-- /MarkdownTOC -->
 
@@ -1626,3 +1627,7 @@ $args = array(
 <!-- /section -->
  
 <?php get_footer(); ?> 
+
+# Posting in front-end
+
+http://code.tutsplus.com/tutorials/posting-via-the-front-end-inserting--wp-27034
