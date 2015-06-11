@@ -97,6 +97,7 @@ Wordpress Snip Code
 - FORMAT DATE FROM STRING
 - Create Front-End login
 - Posting in front-end
+- GET FRONT PAGE ID
 
 <!-- /MarkdownTOC -->
 
@@ -1631,3 +1632,9 @@ $args = array(
 # Posting in front-end
 
 http://code.tutsplus.com/tutorials/posting-via-the-front-end-inserting--wp-27034
+
+# GET FRONT PAGE ID
+
+```php
+$frontpage_ID = get_option('page_on_front');
+```
