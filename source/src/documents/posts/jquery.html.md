@@ -32,6 +32,7 @@ description: 'The Write Less, Do More, JavaScript Library'
 - Lazy Load Google Map
 - justifyGallery
 - Simple accordion
+- Page scroll gallery
 
 <!-- /MarkdownTOC -->
 
@@ -356,3 +357,8 @@ $('.dropdown').hover(function () {
         $(this).find('ul').stop(true, true).slideUp()
     }).find('ul').hide();
 ```
+
+
+# Page scroll gallery
+
+http://codyhouse.co/demo/page-scroll-effects/parallax-hijacking.html
