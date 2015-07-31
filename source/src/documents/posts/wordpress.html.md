@@ -98,6 +98,7 @@ Wordpress Snip Code
 - Create Front-End login
 - Posting in front-end
 - GET FRONT PAGE ID
+- CUSTOM SUB-MENU CLASS
 
 <!-- /MarkdownTOC -->
 
@@ -1637,4 +1638,26 @@ http://code.tutsplus.com/tutorials/posting-via-the-front-end-inserting--wp-27034
 
 ```php
 $frontpage_ID = get_option('page_on_front');
+```
+
+# CUSTOM SUB-MENU CLASS
+
+```php
+class UL_Class_Walker extends Walker_Nav_Menu {
+
+  function start_lvl(&$output, $depth = 0, $args = array()) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"submenu dropdown-menu level-".$depth."\">\n";
+  }
+}
+
+ $args = array(
+    'theme_location' => 'primary-menu',
+    'container'      => false,
+    'menu'           => 'primary-menu',                
+    'menu_class'     => 'ul-primary-nav',
+    'depth'          => 5,
+    'walker' => new UL_Class_Walker()
+  );
+  wp_nav_menu( $args );
 ```
