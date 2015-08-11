@@ -99,6 +99,7 @@ Wordpress Snip Code
 - Posting in front-end
 - GET FRONT PAGE ID
 - CUSTOM SUB-MENU CLASS
+- Display user name on menu
 
 <!-- /MarkdownTOC -->
 
@@ -1660,4 +1661,19 @@ class UL_Class_Walker extends Walker_Nav_Menu {
     'walker' => new UL_Class_Walker()
   );
   wp_nav_menu( $args );
+```
+
+# Display user name on menu
+
+```php
+add_filter('wp_nav_menu', 'do_menu_shortcodes'); 
+function do_menu_shortcodes( $menu ){ 
+        return do_shortcode( $menu ); 
+} 
+
+add_shortcode( 'current-username' , 'username_on_menu' );
+function username_on_menu(){
+    $user = wp_get_current_user();
+    return $user->display_name;
+}
 ```
