@@ -100,6 +100,7 @@ Wordpress Snip Code
 - GET FRONT PAGE ID
 - CUSTOM SUB-MENU CLASS
 - Display user name on menu
+- Limit search
 
 <!-- /MarkdownTOC -->
 
@@ -1676,4 +1677,17 @@ function username_on_menu(){
     $user = wp_get_current_user();
     return $user->display_name;
 }
+```
+
+# Limit search
+
+```php
+function searchfilter($query) {
+    if ($query->is_search ) {
+        $query->set('post_type',array('page'));
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
 ```
