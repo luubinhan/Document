@@ -101,6 +101,12 @@ Wordpress Snip Code
 - CUSTOM SUB-MENU CLASS
 - Display user name on menu
 - Limit search
+- Enqueue JQUERY
+- Add to cart url
+- GET BEST SELLER PRODUCT
+- LOGOUT MENU
+- Get products by categories
+- Remove un use class body class
 
 <!-- /MarkdownTOC -->
 
@@ -1690,4 +1696,125 @@ function searchfilter($query) {
 }
 
 add_filter('pre_get_posts','searchfilter');
+```
+
+# Enqueue JQUERY
+
+```php
+wp_deregister_script('jquery');
+      wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-1.11.2.min.js", false, null);
+      wp_enqueue_script('jquery');
+```
+
+# Add to cart url
+
+```php
+<?php echo $checkout_url ?>?add-to-cart=<?php echo $best_seller->ID?>
+```
+
+
+# GET BEST SELLER PRODUCT
+
+```php
+$args = array(   
+    'post_type'              => 'product',
+    'post_status'            => 'publish',
+    'order'                  => 'DESC',
+    'orderby'                => 'meta_value_num',
+    'meta_key'               => 'total_sales',
+    'posts_per_page'         => $number_of_products_per_page,
+    'posts_per_archive_page' => $number_of_products_per_page,
+    'paged'                  => get_query_var('paged'),                    
+    'tax_query' => array(
+        'relation'  => 'AND',
+        array(
+          'taxonomy'         => 'product_type',
+          'field'            => 'slug',
+          'terms'            => array( 'simple' ),
+          'include_children' => true,
+          'operator'         => 'IN'
+        ),          
+    )
+  
+);
+
+$query = new WP_Query( $args );
+```
+
+# LOGOUT MENU
+
+```php
+add_filter( 'wp_nav_menu_items', 'wti_loginout_menu_link', 10, 2 );
+
+function wti_loginout_menu_link( $items, $args ) {
+   if ($args->theme_location == 'primary') {
+      if (is_user_logged_in()) {
+         $items .= '<li class="right"><a href="'. wp_logout_url() .'">Log Out</a></li>';
+      } else {
+         $items .= '<li class="right"><a href="'. wp_login_url(get_permalink()) .'">Log In</a></li>';
+      }
+   }
+   return $items;
+}
+```
+
+# Get products by categories
+
+```php
+$args = array(
+    'number'     => $number,
+    'orderby'    => 'title',
+    'order'      => 'ASC',
+    'hide_empty' => $hide_empty,
+    'include'    => $ids
+);
+$product_categories = get_terms( 'product_cat', $args );
+$count = count($product_categories);
+if ( $count > 0 ){
+    foreach ( $product_categories as $product_category ) {
+        echo '<h4><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></h4>';
+        $args = array(
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'slug',
+                    // 'terms' => 'white-wines'
+                    'terms' => $product_category->slug
+                )
+            ),
+            'post_type' => 'product',
+            'orderby' => 'title,'
+        );
+        $products = new WP_Query( $args );
+        echo "<ul>";
+        while ( $products->have_posts() ) {
+            $products->the_post();
+            ?>
+                <li>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                    </a>
+                </li>
+            <?php
+        }
+        echo "</ul>";
+    }
+}
+```
+
+# Remove un use class body class
+
+```php
+add_filter( 'body_class', 'my_class_names', 10, 2  );
+function my_class_names( $classes ) {
+    foreach($classes as $key => $value) {
+        if ($value == 'woocommerce') unset($classes[$key]);
+        if ($value == 'woocommerce-page') unset($classes[$key]);
+        if ($value == 'page') unset($classes[$key]);
+        if ($value == 'single-author') unset($classes[$key]);
+    }
+    return $classes;
+}
 ```
