@@ -107,6 +107,7 @@ Wordpress Snip Code
 - LOGOUT MENU
 - Get products by categories
 - Remove un use class body class
+- Woocommerce add to cart
 
 <!-- /MarkdownTOC -->
 
@@ -1817,4 +1818,14 @@ function my_class_names( $classes ) {
     }
     return $classes;
 }
+```
+
+# Woocommerce add to cart
+
+```php
+
+// Use add-to-cart.js theme instead of woocommerce it self
+wp_deregister_script('wc-add-to-cart');
+wp_register_script('wc-add-to-cart', get_bloginfo( 'stylesheet_directory' ). '/js/add-to-cart-multi.js' , array( 'jquery' ), WC_VERSION, TRUE);
+wp_enqueue_script('wc-add-to-cart');
 ```
