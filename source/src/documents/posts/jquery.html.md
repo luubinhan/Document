@@ -202,7 +202,7 @@ https://github.com/alvarotrigo/fullPage.js
 https://github.com/peachananr/onepage-scroll
 
 Gallery
-https://github.com/nghuuphuoc/bootstrapvalidator
+http://1000hz.github.io/bootstrap-validator/
 http://www.elevateweb.co.uk/image-zoom/examples
 http://sachinchoolur.github.io/lightslider/
 

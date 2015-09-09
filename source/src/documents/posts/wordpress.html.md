@@ -108,6 +108,7 @@ Wordpress Snip Code
 - Get products by categories
 - Remove un use class body class
 - Woocommerce add to cart
+- Archieve page
 
 <!-- /MarkdownTOC -->
 
@@ -1828,4 +1829,28 @@ function my_class_names( $classes ) {
 wp_deregister_script('wc-add-to-cart');
 wp_register_script('wc-add-to-cart', get_bloginfo( 'stylesheet_directory' ). '/js/add-to-cart-multi.js' , array( 'jquery' ), WC_VERSION, TRUE);
 wp_enqueue_script('wc-add-to-cart');
+```
+
+# Archieve page
+
+```php
+function filter_archive_page() {
+
+  if( is_tax( 'product_cat' )) {
+    
+    set_query_var( 'posts_per_archive_page', 8 );
+    set_query_var( 'posts_per_page', 8 );
+    set_query_var( 'tax_query', array(
+            'relation'  => 'AND',
+            array(
+              'taxonomy'         => 'product_type',
+              'field'            => 'slug',
+              'terms'            => array( 'simple' ),
+              'include_children' => true,
+              'operator'         => 'IN'
+            ), )      );
+  }
+  return;
+}
+add_action( 'parse_query', 'filter_archive_page' );
 ```
