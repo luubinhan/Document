@@ -42,6 +42,7 @@ description: Best practice and trick
 - Must have meta tag
 - Bootstrap slider
 - Font convert
+- Share link
 
 <!-- /MarkdownTOC -->
 
@@ -929,3 +930,10 @@ https://github.com/seiyria/bootstrap-slider
 # Font convert
 
 https://fontie.flowyapps.com/home
+
+# Share link
+<a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com."
+   title="Share by Email">
+  <img src="http://png-2.findicons.com/files/icons/573/must_have/48/mail.png">
+</a>
+https://gist.github.com/chrisjlee/5196139
