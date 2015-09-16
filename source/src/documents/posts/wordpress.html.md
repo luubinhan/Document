@@ -1834,13 +1834,17 @@ wp_enqueue_script('wc-add-to-cart');
 # Archieve page
 
 ```php
-function filter_archive_page() {
+function filter_archive_page($query) {
 
-  if( is_tax( 'product_cat' )) {
+  if( (is_tax( 'product_cat' ) || is_post_type_archive('product') ) && is_main_query() ) {
     
-    set_query_var( 'posts_per_archive_page', 8 );
-    set_query_var( 'posts_per_page', 8 );
-    set_query_var( 'tax_query', array(
+    
+     $query->set( 'posts_per_archive_page', 8 );
+     $query->set( 'posts_per_page', 8 );
+     $query->set('order','DESC');
+     $query->set('orderby','meta_value');
+     $query->set('meta_key','publicationDate');
+     $query->set( 'tax_query', array(
             'relation'  => 'AND',
             array(
               'taxonomy'         => 'product_type',
@@ -1850,7 +1854,11 @@ function filter_archive_page() {
               'operator'         => 'IN'
             ), )      );
   }
-  return;
+  return $query;
 }
-add_action( 'parse_query', 'filter_archive_page' );
+
+if ( is_admin()) {
+  add_filter( 'pre_get_posts', 'filter_archive_page' );
+}
+
 ```

@@ -356,9 +356,13 @@ $('.dropdown').hover(function () {
     }, function () {
         $(this).find('ul').stop(true, true).slideUp()
     }).find('ul').hide();
-```
 
+    
+```
+http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery
 
 # Page scroll gallery
 
 http://codyhouse.co/demo/page-scroll-effects/parallax-hijacking.html
+
+
