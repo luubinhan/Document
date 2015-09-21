@@ -1836,7 +1836,7 @@ wp_enqueue_script('wc-add-to-cart');
 ```php
 function filter_archive_page($query) {
 
-  if( (is_tax( 'product_cat' ) || is_post_type_archive('product') ) && is_main_query() ) {
+  if( (is_tax( 'product_cat' ) || is_post_type_archive('product') ) && is_main_query() &&  ($query->query['post_type'] != 'nav_menu_item') && isset($query->queried_object_id)) {
     
     
      $query->set( 'posts_per_archive_page', 8 );
@@ -1857,8 +1857,11 @@ function filter_archive_page($query) {
   return $query;
 }
 
-if ( is_admin()) {
-  add_filter( 'pre_get_posts', 'filter_archive_page' );
+if ( !is_admin()) {
+  add_filter( 'pre_get_posts', 'filter_archive_page',10,3 );
+  //add_filter('query_vars', 'filter_archive_page' );
 }
+
+
 
 ```
