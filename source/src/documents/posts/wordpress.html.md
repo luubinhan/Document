@@ -109,6 +109,7 @@ Wordpress Snip Code
 - Remove un use class body class
 - Woocommerce add to cart
 - Archieve page
+- Wordpress menu walker with Bootstrap
 
 <!-- /MarkdownTOC -->
 
@@ -1865,3 +1866,7 @@ if ( !is_admin()) {
 
 
 ```
+
+# Wordpress menu walker with Bootstrap
+
+https://github.com/twittem/wp-bootstrap-navwalker
