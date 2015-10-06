@@ -110,6 +110,8 @@ Wordpress Snip Code
 - Woocommerce add to cart
 - Archieve page
 - Wordpress menu walker with Bootstrap
+- Best practise ajax
+- pagination with ajax
 
 <!-- /MarkdownTOC -->
 
@@ -1802,7 +1804,7 @@ if ( $count > 0 ){
                 </li>
             <?php
         }
-        echo "</ul>";
+        echo '</ul>';
     }
 }
 ```
@@ -1863,10 +1865,139 @@ if ( !is_admin()) {
   //add_filter('query_vars', 'filter_archive_page' );
 }
 
-
-
 ```
 
 # Wordpress menu walker with Bootstrap
 
+```
 https://github.com/twittem/wp-bootstrap-navwalker
+```
+
+# Best practise ajax
+
+http://premium.wpmudev.org/blog/load-posts-ajax/
+```
+wp_localize_script('ajax-pagination', 'ajaxpagination', array(
+  'ajaxurl' => admin_url( 'admin-ajax.php' )
+));
+```
+
+# pagination with ajax
+
+File functions.php
+
+include 'includes/ajax-loading.php'
+
+```php
+wp_enqueue_script( 'ajax-pagination', $GLOBALS["TEMPLATE_RELATIVE_URL"] . 'js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
+wp_localize_script('ajax-pagination', 'ajaxpagination', array(
+  'ajaxurl' => admin_url( 'admin-ajax.php' )
+));
+```
+
+File ajax-loading.php
+
+```php
+function topdeal_ajax_pagination() {
+  
+    $nextPage = json_decode( stripslashes( $_POST['nextPage'] ), true );
+    $postPerPage = ot_get_option('deal_numeric_slider');
+    $haveNextPage = true;
+    $query_args = array(
+        'posts_per_page' => $postPerPage,
+        'paged'          => $nextPage,
+        'post_status'    => 'publish',
+        'post_type'      => 'product',
+        'orderby'        => 'meta_value_num',       
+    );
+    $query_args['meta_query'][] = array(
+        'relation' => 'AND',
+        array(
+          'relation' => 'OR',
+          array(
+                'key'     => '_status',
+                'value'   => 'inactive',
+                'compare' => '!='
+          ),
+          array(
+                'key'     => '_status',
+                'compare' => 'NOT EXISTS',
+          )
+        ),
+        array(
+            'key'     => '_date_end',
+            'value'   => date("Y-m-d h:i"),
+            'compare' => '>=',
+            'type'    => 'DATETIME'
+        ),
+        array(
+            'key'     => '_date_start',
+            'value'   => date("Y-m-d h:i"),
+            'compare' => '<=',
+            'type'    => 'DATETIME'
+        ),
+        array(
+            'key'     => 'total_sales',
+            'value'   => 0,
+            'compare' => '>'
+        )
+        
+    );
+    $products  = new WP_Query( $query_args );
+
+    if ( ($products->found_posts/$postPerPage) <= $nextPage ) {
+        $haveNextPage = false;
+    }
+    
+
+    ob_start();
+    while($products->have_posts()): $products->the_post(); 
+        global $product;
+
+        wc_get_template_part( 'content', 'product' );
+    endwhile; 
+    
+    $html = ob_get_clean();
+
+    //$posts = $products->get_posts();  
+    echo json_encode(array('success' => true, 'result' => $html, 'haveNextPage' => $haveNextPage ));
+    //echo $html;
+    die();
+}
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'topdeal_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'topdeal_ajax_pagination' );
+```
+
+File ajax-pagination.js
+
+```js
+jQuery(document).ready(function($) {
+    $('body').on('click', '#topDealZone .nextPageAjax', function(event) {
+        
+        event.preventDefault();
+        var next_page = $(this).data('next-page');
+
+        $.ajax({
+            url: ajaxpagination.ajaxurl,
+            type: 'POST',           
+            data: {
+                action: 'ajax_pagination',
+                nextPage: next_page
+            },
+            success: function( data ) { 
+                var parseData = $.parseJSON(data);
+                if (parseData.success) {
+
+                    $('#productTop').append(parseData.result);
+                    $('#topDealZone .nextPageAjax').data('next-page',next_page+1);  
+
+                    if (parseData.haveNextPage == false) {
+                        $('#topDealZone .nextPageAjax').remove();
+                    };
+                };
+            }
+        }); 
+        
+    });
+});
+```
