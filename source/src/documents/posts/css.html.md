@@ -43,6 +43,7 @@ description: Best practice and trick
 - Bootstrap slider
 - Font convert
 - Share link
+- Bootstrap Snipp
 
 <!-- /MarkdownTOC -->
 
@@ -937,3 +938,8 @@ https://fontie.flowyapps.com/home
   <img src="http://png-2.findicons.com/files/icons/573/must_have/48/mail.png">
 </a>
 https://gist.github.com/chrisjlee/5196139
+
+
+# Bootstrap Snipp
+
+http://bootsnipp.com/
