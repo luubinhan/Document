@@ -89,3 +89,12 @@ Now open that file and put the following configuration inside
         "WP": "https://wordpress.org/latest.zip"
     }
 }
+
+
+# Source tree perform slow
+
+git config --global core.preloadindex true
+
+git config --global core.fscache true
+
+git config --global gc.auto 256
