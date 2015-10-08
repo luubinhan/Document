@@ -112,6 +112,7 @@ Wordpress Snip Code
 - Wordpress menu walker with Bootstrap
 - Best practise ajax
 - pagination with ajax
+- Woocommerce Redirect
 
 <!-- /MarkdownTOC -->
 
@@ -2000,4 +2001,17 @@ jQuery(document).ready(function($) {
         
     });
 });
+```
+
+# Woocommerce Redirect
+
+```php
+function redirect_to_checkout() {
+  global $woocommerce;
+  $checkout_url = $woocommerce->cart->get_checkout_url();  
+  return $checkout_url;
+}
+
+add_filter( "woocommerce_add_to_cart_redirect", "redirect_to_checkout", 10 );
+
 ```
