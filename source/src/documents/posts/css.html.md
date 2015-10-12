@@ -44,6 +44,7 @@ description: Best practice and trick
 - Font convert
 - Share link
 - Bootstrap Snipp
+- Just Good Photo
 
 <!-- /MarkdownTOC -->
 
@@ -943,3 +944,7 @@ https://gist.github.com/chrisjlee/5196139
 # Bootstrap Snipp
 
 http://bootsnipp.com/
+
+# Just Good Photo
+
+http://justgoodphotos.io/
