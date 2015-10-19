@@ -45,6 +45,7 @@ description: Best practice and trick
 - Share link
 - Bootstrap Snipp
 - Just Good Photo
+- Loop Transition
 
 <!-- /MarkdownTOC -->
 
@@ -948,3 +949,23 @@ http://bootsnipp.com/
 # Just Good Photo
 
 http://justgoodphotos.io/
+
+# Loop Transition
+
+```css
+.ss-ul li.active:hover:before {
+  animation-duration: 0.5s;
+  animation-name: changeposition;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes changeposition {
+  from {
+    top: -30px;
+  }
+
+  to {
+    top: -17px;
+  }
+}
+```
