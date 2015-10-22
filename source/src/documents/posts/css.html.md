@@ -47,6 +47,7 @@ description: Best practice and trick
 - Just Good Photo
 - Loop Transition
 - Select picker for bootstrap
+- Star rating
 
 <!-- /MarkdownTOC -->
 
@@ -974,3 +975,86 @@ http://justgoodphotos.io/
 # Select picker for bootstrap
 
 https://silviomoreto.github.io/bootstrap-select/
+
+# Star rating
+
+```html
+<h1>Percentage based star ratings</h1>
+
+<h2><em>Method 1)</em> Pure CSS/Unicode (68% rating)</h2>
+<div class="star-ratings-css">
+  <div class="star-ratings-css-top" style="width: 68%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+</div>
+
+<br/><br/>
+
+<h2><em>Method 2)</em> Using a Sprite (54% rating)</h2>
+<div class="star-ratings-sprite"><span style="width:54%" class="rating"></span></div>
+```
+
+```css
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+.star-ratings-css .star-ratings-css-top {
+  color: #e7711b;
+  padding: 0;
+  text-shadow: 0px 1px 0 #ab5414;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  left: 0px;
+  overflow: hidden;
+}
+.star-ratings-css .star-ratings-css-bottom {
+  z-index: 0;
+}
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin: 0 auto;
+}
+.star-ratings-sprite .rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+}
+body {
+  margin: 50px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background: #f2fbff;
+}
+em {
+  font-style: italic;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+
+```
