@@ -46,6 +46,7 @@ description: Best practice and trick
 - Bootstrap Snipp
 - Just Good Photo
 - Loop Transition
+- Select picker for bootstrap
 
 <!-- /MarkdownTOC -->
 
@@ -969,3 +970,7 @@ http://justgoodphotos.io/
   }
 }
 ```
+
+# Select picker for bootstrap
+
+https://silviomoreto.github.io/bootstrap-select/
