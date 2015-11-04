@@ -48,6 +48,7 @@ description: Best practice and trick
 - Loop Transition
 - Select picker for bootstrap
 - Star rating
+- Site inspiration
 
 <!-- /MarkdownTOC -->
 
@@ -1058,3 +1059,8 @@ h2 {
 
 
 ```
+
+
+# Site inspiration
+
+http://www.siteinspire.com/websites?categories=101+184
