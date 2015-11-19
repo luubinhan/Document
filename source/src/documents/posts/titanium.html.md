@@ -21,3 +21,7 @@ userInfo.save();
 // You can also do this in one step
 userInfo.save({
     cookie: 'SOME_COOKIE_STRING'
+
+# Tuts Using Remote Server to save data
+
+http://www.itexico.com/blog/bid/91112/Tutorial-Titanium-using-PHP-and-Alloy-to-Connect-a-Remote-Database
