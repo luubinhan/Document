@@ -113,6 +113,7 @@ Wordpress Snip Code
 - Best practise ajax
 - pagination with ajax
 - Woocommerce Redirect
+- How to Update WordPress Automatically Without Using FTP
 
 <!-- /MarkdownTOC -->
 
@@ -2014,4 +2015,10 @@ function redirect_to_checkout() {
 
 add_filter( "woocommerce_add_to_cart_redirect", "redirect_to_checkout", 10 );
 
+```
+
+# How to Update WordPress Automatically Without Using FTP 
+
+```php
+define('FS_METHOD','direct');
 ```
