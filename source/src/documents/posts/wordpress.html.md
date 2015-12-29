@@ -114,6 +114,8 @@ Wordpress Snip Code
 - pagination with ajax
 - Woocommerce Redirect
 - How to Update WordPress Automatically Without Using FTP
+- Reponsive image
+- Change user role name
 
 <!-- /MarkdownTOC -->
 
@@ -1798,13 +1800,13 @@ if ( $count > 0 ){
         echo "<ul>";
         while ( $products->have_posts() ) {
             $products->the_post();
-            ?>
+           
                 <li>
                     <a href="<?php the_permalink(); ?>">
                         <?php the_title(); ?>
                     </a>
                 </li>
-            <?php
+           
         }
         echo '</ul>';
     }
@@ -2021,4 +2023,55 @@ add_filter( "woocommerce_add_to_cart_redirect", "redirect_to_checkout", 10 );
 
 ```php
 define('FS_METHOD','direct');
+```
+
+
+# Reponsive image
+
+```php
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ */
+function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
+    $width = $size[0];
+    840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+    if ( 'page' === get_post_type() ) {
+        840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+    } else {
+        840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
+        600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+    }
+    return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
+
+
+```
+
+# Change user role name
+
+```
+function change_role_name() {
+    global $wp_roles;
+
+    if ( ! isset( $wp_roles ) )
+        $wp_roles = new WP_Roles();
+
+    //You can list all currently available roles like this...
+    //$roles = $wp_roles->get_names();
+    //print_r($roles);
+
+    //You can replace "administrator" with any other role "editor", "author", "contributor" or "subscriber"...
+    $wp_roles->roles['administrator']['name'] = 'Owner';
+    $wp_roles->role_names['administrator'] = 'Owner';           
+}
+add_action('init', 'change_role_name');
 ```
