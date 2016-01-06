@@ -104,3 +104,11 @@ function check_for_other_fields() {
 $core_pages = get_option('um_core_pages'); 
 $login = $core_pages['login'];
 ```
+
+# User detail page
+
+```
+um_fetch_user($user->ID);
+echo um_user_profile_url();
+um_reset_user();
+```

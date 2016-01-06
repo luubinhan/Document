@@ -116,6 +116,7 @@ Wordpress Snip Code
 - How to Update WordPress Automatically Without Using FTP
 - Reponsive image
 - Change user role name
+- Custom login link on comment
 
 <!-- /MarkdownTOC -->
 
@@ -2076,3 +2077,13 @@ function change_role_name() {
 add_action('init', 'change_role_name');
 ```
 
+
+# Custom login link on comment
+
+```
+add_filter( 'login_url', 'my_login_linkchanger');
+function my_login_linkchanger( $link ) {
+
+  return home_url( '/login/?redirect_to=' . get_permalink() );
+}
+```
