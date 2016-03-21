@@ -118,6 +118,7 @@ Wordpress Snip Code
 - Change user role name
 - Custom login link on comment
 - Add custom field woocommerce register
+- Select
 
 <!-- /MarkdownTOC -->
 
@@ -2179,4 +2180,15 @@ function wooc_save_extra_register_fields( $customer_id ) {
 }
 
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+```
+
+# Select
+
+```
+<select id="attribute_pa_type-of-visa" name="attribute_pa_type-of-visa">
+$statuses = get_terms('pa_type-of-visa');
+foreach ( $statuses as $status  ) {
+    echo '<option value="' . esc_attr( $status->name ) . '" ' . selected( $status->slug , $value, false ) . '>' . esc_html( $status->name ) . '</option>';
+}
+</select>
 ```
