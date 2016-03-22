@@ -17,7 +17,7 @@ $fileUrl = $_GET['link'];
 if ($fileUrl != "") {
     header("Content-Type: application/octet-stream");
     header("Content-Transfer-Encoding: Binary");
-    header("Content-disposition: attachment; filename=\"$fileUrl\""); 
+    header('Content-Disposition: attachment; filename="'.basename($fileUrl).'"');
     echo readfile($fileUrl);
 }
 ```
