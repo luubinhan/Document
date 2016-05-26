@@ -49,6 +49,7 @@ description: Best practice and trick
 - Select picker for bootstrap
 - Star rating
 - Site inspiration
+- Parallax effect
 
 <!-- /MarkdownTOC -->
 
@@ -1064,3 +1065,8 @@ h2 {
 # Site inspiration
 
 http://www.siteinspire.com/websites?categories=101+184
+
+
+# Parallax effect
+
+http://keithclark.co.uk/articles/pure-css-parallax-websites/
