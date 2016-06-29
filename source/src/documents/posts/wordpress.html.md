@@ -61,7 +61,7 @@ Wordpress Snip Code
 - Remove Width and Height Attributes From Inserted Images
 - WooCommerce : Remove Review tab
 - Convert string to date
-- Get the taxonomy (use as category)
+- Get the taxonomy \(use as category\)
 - Get next/previous product
 - Lấy ngẫu nhiên danh sách post liên quan với post hiện tại
 - LOAD DASH ICON IN THEME
@@ -120,6 +120,7 @@ Wordpress Snip Code
 - Add custom field woocommerce register
 - Select
 - redirect user after entering wrong password
+- Limit search
 
 <!-- /MarkdownTOC -->
 
@@ -2008,6 +2009,17 @@ jQuery(document).ready(function($) {
         
     });
 });
+
+//  Fix loading isotop
+
+var $items = $(parseData.items);
+$searchIsoTop.append( $items );        
+
+$searchIsoTop.imagesLoaded(function(){
+    $searchIsoTop.isotope('appended', $items );
+});
+
+_this.data('page')
 ```
 
 # Woocommerce Redirect
@@ -2207,4 +2219,15 @@ function my_front_end_login_fail( $username ) {
       exit;
    }
 }
+```
+
+# Limit search
+```
+function dev_advanced_custom_search( $query ) {
+  if ($query->is_search && !is_admin() ) {    
+    $query->set('post_type',array('post'));
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts', 'dev_advanced_custom_search', 500, 2 );
 ```
