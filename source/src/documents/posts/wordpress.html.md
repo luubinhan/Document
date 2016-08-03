@@ -2231,3 +2231,7 @@ function dev_advanced_custom_search( $query ) {
 }
 add_filter( 'pre_get_posts', 'dev_advanced_custom_search', 500, 2 );
 ```
+
+# SET EVENT SCHEDULE
+SELECT @@global.event_scheduler;
+SET @@global.event_scheduler = 1;
