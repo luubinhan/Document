@@ -2222,7 +2222,8 @@ function my_front_end_login_fail( $username ) {
 ```
 
 # Limit search
-```
+
+```php
 function dev_advanced_custom_search( $query ) {
   if ($query->is_search && !is_admin() ) {    
     $query->set('post_type',array('post'));
@@ -2233,5 +2234,14 @@ add_filter( 'pre_get_posts', 'dev_advanced_custom_search', 500, 2 );
 ```
 
 # SET EVENT SCHEDULE
+
+```
 SELECT @@global.event_scheduler;
 SET @@global.event_scheduler = 1;
+```
+
+# TRIM WORDS
+
+```
+wp_trim_words(  get_the_excerpt(), 50, ' &hellip;' )
+```
