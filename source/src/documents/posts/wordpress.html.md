@@ -2273,3 +2273,23 @@ add_action( 'admin_notices', function () {
   }
 } );
 ```
+
+# Custom taxonomy required
+Install plugin: radio-buttons-for-taxonomies
+Custom file: class.WordPress_Radio_Taxonomy.php
+
+```php
+// Change this line
+wp_terms_checklist( $post->ID, array( 'taxonomy' => $taxonomy, 'popular_cats' => $popular_ids ) )
+// To
+// AN LUU: Customize to remove no taxonomy select
+$terms = get_terms( array(
+    'taxonomy'     => 'industry',
+    'hide_empty'   => false,
+    'parent'       => 0,
+    'hierarchical' => true,
+) );
+$default_term_id = $terms[0]->term_id;
+wp_terms_checklist( $post->ID, array( 'taxonomy' => $taxonomy, 'popular_cats' => $popular_ids, 'selected_cats' => array($default_term_id) ) )
+
+```

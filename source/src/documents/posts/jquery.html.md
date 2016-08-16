@@ -365,4 +365,14 @@ http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jqu
 
 http://codyhouse.co/demo/page-scroll-effects/parallax-hijacking.html
 
+# [Plugin] Tabs
+* easytabs
 
+# [Plugin] Form
+
++ http://bootstrapformhelpers.com
+    *  a collection of jQuery plugins to help you build better forms
+
++  Auto tab: https://github.com/Mathachew/jquery-autotab
+    *  Auto tabbing and filtering on text fields in a form. Once the maximum number of characters has been reached within a text field, the focus is automatically set to a defined element. Likewise, clearing out the text field's content by pressing backspace eventually places the focus on a previous element.
++ File Input: http://markusslima.github.io/bootstrap-filestyle/
