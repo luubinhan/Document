@@ -1910,7 +1910,7 @@ File ajax-loading.php
 function topdeal_ajax_pagination() {
   
     $nextPage = json_decode( stripslashes( $_POST['nextPage'] ), true );
-    $postPerPage = ot_get_option('deal_numeric_slider');
+    $postPerPage = get_option('posts_per_page');
     $haveNextPage = true;
     $query_args = array(
         'posts_per_page' => $postPerPage,
