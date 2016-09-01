@@ -1985,7 +1985,8 @@ jQuery(document).ready(function($) {
         
         event.preventDefault();
         var next_page = $(this).data('next-page');
-
+        // IF next_page = []
+        // var next_page = JSON.stringify(next_page);
         $.ajax({
             url: ajaxpagination.ajaxurl,
             type: 'POST',           
