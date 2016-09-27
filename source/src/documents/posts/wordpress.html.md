@@ -202,16 +202,17 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
     $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
     if( $related )
-        echo "<hr /><h3>Đọc thêm </h3>";
+        echo "<hr /><h3>Đọc thêm </h3><ul>";
         foreach( $related as $post ) {
             setup_postdata($post); ?>
-            <ul> 
+             
                 <li>
                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                 </li>
-            </ul>   
+               
             <?php 
         }
+        echo "</ul>";
     wp_reset_postdata(); 
 ```
 
@@ -1898,7 +1899,7 @@ File functions.php
 include 'includes/ajax-loading.php'
 
 ```php
-wp_enqueue_script( 'ajax-pagination', $GLOBALS["TEMPLATE_RELATIVE_URL"] . 'js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
+wp_enqueue_script( 'ajax-pagination', TEMPLATE_URL . 'js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
 wp_localize_script('ajax-pagination', 'ajaxpagination', array(
   'ajaxurl' => admin_url( 'admin-ajax.php' )
 ));
