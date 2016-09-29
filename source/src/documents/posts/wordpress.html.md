@@ -2295,3 +2295,96 @@ $default_term_id = $terms[0]->term_id;
 wp_terms_checklist( $post->ID, array( 'taxonomy' => $taxonomy, 'popular_cats' => $popular_ids, 'selected_cats' => array($default_term_id) ) )
 
 ```
+
+# Before get main query
+
+```php
+add_action( 'pre_get_posts', function ( $q ) 
+{
+    if ( !is_admin() // VERY important, targets only front end queries
+         && $q->is_main_query() // VERY important, targets only main query
+         && $q->is_post_type_archive( 'faq' ) // Which post type archive page to target
+    ) {
+        $q->set( 'nopaging', true );
+        $q->set( 'meta_value', 'META_VALUE_VALUE');
+        // Rest of your arguments to set
+    }
+});
+
+```
+
+# Adding Buttons to WordPress Visual Editor
+
+1. Add our button to the toolbar
+2. Register a TinyMCE plugin
+3. Create that TinyMCE plug-in which tells TinyMCE what to do when our button is clicked
+
+Steps #1 and #2
+In these steps we register our TinyMCE plug-in which will live inside a javascript file at 'path/to/shortcode.js' (see wpse72394_register_tinymce_plugin() below)
+
+```php
+// init process for registering our button
+ add_action('init', 'wpse72394_shortcode_button_init');
+ function wpse72394_shortcode_button_init() {
+
+      //Abort early if the user will never see TinyMCE
+      if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') && get_user_option('rich_editing') == 'true')
+           return;
+
+      //Add a callback to regiser our tinymce plugin   
+      add_filter("mce_external_plugins", "wpse72394_register_tinymce_plugin"); 
+
+      // Add a callback to add our button to the TinyMCE toolbar
+      add_filter('mce_buttons', 'wpse72394_add_tinymce_button');
+}
+
+
+//This callback registers our plug-in
+function wpse72394_register_tinymce_plugin($plugin_array) {
+    $plugin_array['wpse72394_button'] = 'path/to/shortcode.js';
+    return $plugin_array;
+}
+
+//This callback adds our button to the toolbar
+function wpse72394_add_tinymce_button($buttons) {
+            //Add the button ID to the $button array
+    $buttons[] = "wpse72394_button";
+    return $buttons;
+}
+```
+
+Step #3
+
+Now we need to create our TinyMCE plug-in. This will go in a file 'path/to/shortcode.js' (as specified in the early steps).
+
+```js
+jQuery(document).ready(function($) {
+
+    tinymce.create('tinymce.plugins.wpse72394_plugin', {
+        init : function(ed, url) {
+                // Register command for when button is clicked
+                ed.addCommand('wpse72394_insert_shortcode', function() {
+                    selected = tinyMCE.activeEditor.selection.getContent();
+
+                    if( selected ){
+                        //If text is selected when button is clicked
+                        //Wrap shortcode around it.
+                        content =  '[shortcode]'+selected+'[/shortcode]';
+                    }else{
+                        content =  '[shortcode]';
+                    }
+
+                    tinymce.execCommand('mceInsertContent', false, content);
+                });
+
+            // Register buttons - trigger above command when clicked
+            ed.addButton('wpse72394_button', {title : 'Insert shortcode', cmd : 'wpse72394_insert_shortcode', image: url + '/path/to/image.png' });
+        },   
+    });
+
+    // Register our TinyMCE plugin
+    // first parameter is the button ID1
+    // second parameter must match the first parameter of the tinymce.create() function above
+    tinymce.PluginManager.add('wpse72394_button', tinymce.plugins.wpse72394_plugin);
+});
+```
