@@ -2388,3 +2388,145 @@ jQuery(document).ready(function($) {
     tinymce.PluginManager.add('wpse72394_button', tinymce.plugins.wpse72394_plugin);
 });
 ```
+
+
+# Term meta
+
+## Extending The Term Form
+
+Dung hook {$taxonomy}_add_form_fields de add them field select
+
+```php
+add_action( 'house_feature_add_form_fields', 'add_feature_group_field', 10, 2 );
+function add_feature_group_field($taxonomy) {
+    global $feature_groups;
+    ?><div class="form-field term-group">
+        <label for="featuret-group"><?php _e('Feature Group', 'my_plugin'); ?></label>
+        <select class="postform" id="equipment-group" name="feature-group">
+            <option value="-1"><?php _e('none', 'my_plugin'); ?></option><?php foreach ($feature_groups as $_group_key => $_group) : ?>
+                <option value="<?php echo $_group_key; ?>" class=""><?php echo $_group; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div><?php
+}
+```
+
+## Luu gia tri bang hook created_{$taxonomy}
+
+```php
+add_action( 'created_house_feature', 'save_feature_meta', 10, 2 );
+
+function save_feature_meta( $term_id, $tt_id ){
+    if( isset( $_POST['feature-group'] ) && '' !== $_POST['feature-group'] ){
+        $group = sanitize_title( $_POST['feature-group'] );
+        add_term_meta( $term_id, 'feature-group', $group, true );
+    }
+}
+
+```
+
+## Updating A Term With Meta Data
+
+Dung hook {$taxonomy}_edit_form_fields
+
+```php
+add_action( 'house_feature_edit_form_fields', 'edit_feature_group_field', 10, 2 );
+
+function edit_feature_group_field( $term, $taxonomy ){
+                
+    global $feature_groups;
+          
+    // get current group
+    $feature_group = get_term_meta( $term->term_id, 'feature-group', true );
+                
+    ?><tr class="form-field term-group-wrap">
+        <th scope="row"><label for="feature-group"><?php _e( 'Feature Group', 'my_plugin' ); ?></label></th>
+        <td><select class="postform" id="feature-group" name="feature-group">
+            <option value="-1"><?php _e( 'none', 'my_plugin' ); ?></option>
+            <?php foreach( $feature_groups as $_group_key => $_group ) : ?>
+                <option value="<?php echo $_group_key; ?>" <?php selected( $feature_group, $_group_key ); ?>><?php echo $_group; ?></option>
+            <?php endforeach; ?>
+        </select></td>
+    </tr><?php
+}
+```
+
+Luu data tren man hinh edit bang hook edited_{$taxonomy}
+
+```php
+add_action( 'edited_house_feature', 'update_feature_meta', 10, 2 );
+
+function update_feature_meta( $term_id, $tt_id ){
+
+    if( isset( $_POST['feature-group'] ) && '' !== $_POST['feature-group'] ){
+        $group = sanitize_title( $_POST['feature-group'] );
+        update_term_meta( $term_id, 'feature-group', $group );
+    }
+}
+```
+
+## Displaying The Term Meta Data In The Term List
+
+hook manage_edit-{$taxonomy}_columns
+
+```php
+add_filter('manage_edit-house_feature_columns', 'add_feature_group_column' );
+
+function add_feature_group_column( $columns ){
+    $columns['feature_group'] = __( 'Group', 'my_plugin' );
+    return $columns;
+}
+```
+
+manage_{$taxonomy}_custom_column
+
+```php  
+add_filter('manage_house_feature_custom_column', 'add_feature_group_column_content', 10, 3 );
+
+function add_feature_group_column_content( $content, $column_name, $term_id ){
+    global $feature_groups;
+
+    if( $column_name !== 'feature_group' ){
+        return $content;
+    }
+
+    $term_id = absint( $term_id );
+    $feature_group = get_term_meta( $term_id, 'feature-group', true );
+
+    if( !empty( $feature_group ) ){
+        $content .= esc_attr( $feature_groups[ $feature_group ] );
+    }
+
+    return $content;
+}
+```
+
+## Enable sort 
+
+```php
+add_filter( 'manage_edit-house_feature_sortable_columns', 'add_feature_group_column_sortable' );
+
+function add_feature_group_column_sortable( $sortable ){
+    $sortable[ 'feature_group' ] = 'feature_group';
+    return $sortable;
+}
+```
+
+## Deleting Term Meta Data
+
+## Get term by meta query
+
+```php
+$args = array(
+    'hide_empty' => false, // also retrieve terms which are not used yet
+    'meta_query' => array(
+        array(
+           'key'       => 'feature-group',
+           'value'     => 'kitchen',
+           'compare'   => 'LIKE'
+        )
+    )
+);
+                
+$terms = get_terms( 'house_feature', $args );
+```
