@@ -2530,3 +2530,19 @@ $args = array(
                 
 $terms = get_terms( 'house_feature', $args );
 ```
+
+
+# Set custom template for taxonomy
+
+```php
+add_filter('taxonomy_template', 'dev_survey_taxonomy_template' );
+function dev_survey_taxonomy_template($single_template) {
+    $taxonomy = get_query_var('taxonomy');      
+    if ( $single_template == 'survey' ) {
+        
+        $single_template = SURVEY_TEMPLATE_DIR . '\field.php';
+    }
+    return $single_template;
+}
+
+```
