@@ -2546,3 +2546,22 @@ function dev_survey_taxonomy_template($single_template) {
 }
 
 ```
+
+# Add custom link to admin toolbar
+
+```php
+// add a link to the WP Toolbar
+function custom_toolbar_link($wp_admin_bar) {
+    $args = array(
+        'id' => 'wpbeginner',
+        'title' => 'Search WPBeginner', 
+        'href' => 'https://www.google.com:443/cse/publicurl?cx=014650714884974928014:oga60h37xim', 
+        'meta' => array(
+            'class' => 'wpbeginner', 
+            'title' => 'Search WPBeginner Tutorials'
+            )
+    );
+    $wp_admin_bar->add_node($args);
+}
+add_action('admin_bar_menu', 'custom_toolbar_link', 999);
+```

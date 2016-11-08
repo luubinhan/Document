@@ -2,14 +2,35 @@
 
 # 1 Using The Built-In WordPress Functionality
 
+add menu to admin ( or submenu add_submenu_page( 'options-general.php', $page_title, $menu_title, $capability, $slug, $callback ); )
+
+```php
+// Hook into the admin menu
+add_action( 'admin_menu', array( $this, 'create_plugin_settings_page' ) );
+public function create_plugin_settings_page() {
+    // Add the menu item and page
+    $page_title = 'My Awesome Settings Page';
+    $menu_title = 'Awesome Plugin';
+    $capability = 'manage_options';
+    $slug = 'mystyle_fields';
+    $callback = array( $this, 'plugin_settings_page_content' );
+    $icon = 'dashicons-admin-plugins';
+    $position = 100;
+
+    add_menu_page( $page_title, $menu_title, $capability, $slug, $callback, $icon, $position );
+}
+```
+
+Display setting page
+
 ``` php
 public function plugin_settings_page_content() { ?>
     <div class="wrap">
         <h2>My Awesome Settings Page</h2>
         <form method="post" action="options.php">
             <?php
-                settings_fields( 'smashing_fields' );
-                do_settings_sections( 'smashing_fields' );
+                settings_fields( 'mystyle_fields' );
+                do_settings_sections( 'mystyle_fields' );
                 submit_button();
             ?>
         </form>
@@ -17,15 +38,12 @@ public function plugin_settings_page_content() { ?>
 }
 ```
 
-Sections And Fields
+Add sections
 
 ```php
 add_action( 'admin_init', array( $this, 'setup_sections' ) );
-
 public function setup_sections() {
-    add_settings_section( 'our_first_section', 'My First Section Title', array( $this, 'section_callback' ), 'smashing_fields' );
-    add_settings_section( 'our_second_section', 'My Second Section Title', array( $this, 'section_callback' ), 'smashing_fields' );
-    add_settings_section( 'our_third_section', 'My Third Section Title', array( $this, 'section_callback' ), 'smashing_fields' );
+    add_settings_section( 'our_first_section', 'My First Section Title', array( $this, 'section_callback' ), 'mystyle_fields' );
 }
 
 public function section_callback( $arguments ) {
@@ -41,7 +59,11 @@ public function section_callback( $arguments ) {
             break;
     }
 }
+```
 
+Fields
+
+```php
 add_action( 'admin_init', array( $this, 'setup_fields' ) );
 public function setup_fields() {
     $fields = array(
@@ -55,11 +77,37 @@ public function setup_fields() {
             'helper' => 'Does this help?',
             'supplemental' => 'I am underneath!',
             'default' => '01/01/2015'
+        ),
+        array(
+            'uid' => 'our_second_field',
+            'label' => 'Awesome Date',
+            'section' => 'our_first_section',
+            'type' => 'textarea',
+            'options' => false,
+            'placeholder' => 'DD/MM/YYYY',
+            'helper' => 'Does this help?',
+            'supplemental' => 'I am underneath!',
+            'default' => '01/01/2015'
+        ),
+        array(
+            'uid' => 'our_third_field',
+            'label' => 'Awesome Select',
+            'section' => 'our_first_section',
+            'type' => 'select',
+            'options' => array(
+                'yes' => 'Yeppers',
+                'no' => 'No way dude!',
+                'maybe' => 'Meh, whatever.'
+            ),
+            'placeholder' => 'Text goes here',
+            'helper' => 'Does this help?',
+            'supplemental' => 'I am underneath!',
+            'default' => 'maybe'
         )
     );
     foreach( $fields as $field ){
-        add_settings_field( $field['uid'], $field['label'], array( $this, 'field_callback' ), 'smashing_fields', $field['section'], $field );
-        register_setting( 'smashing_fields', $field['uid'] );
+        add_settings_field( $field['uid'], $field['label'], array( $this, 'field_callback' ), 'mystyle_fields', $field['section'], $field );
+        register_setting( 'mystyle_fields', $field['uid'] );
     }
 }
 public function field_callback( $arguments ) {
@@ -98,6 +146,8 @@ public function field_callback( $arguments ) {
     }
 }
 ```
+
+
 
 # 2 Integrating ACF (Advanced Custom Fields) Into Your Plugin
 
@@ -174,7 +224,7 @@ public function setup_options() {
                     array (
                         'param' => 'options_page',
                         'operator' => '==',
-                        'value' => 'smashing_fields',
+                        'value' => 'mystyle_fields',
                     ),
                 ),
             ),
@@ -205,7 +255,7 @@ public function plugin_settings_page_content() {
         'post_id' => 'options',
         'new_post' => false,
         'field_groups' => array( 'acf_awesome-options' ),
-        'return' => admin_url('admin.php?page=smashing_fields'),
+        'return' => admin_url('admin.php?page=mystyle_fields'),
         'submit_value' => 'Update',
     );
     acf_form( $options );
