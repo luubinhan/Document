@@ -2565,3 +2565,8 @@ function custom_toolbar_link($wp_admin_bar) {
 }
 add_action('admin_bar_menu', 'custom_toolbar_link', 999);
 ```
+
+# Add custom field to menu
+
+
+http://www.wpexplorer.com/adding-custom-attributes-to-wordpress-menus/
