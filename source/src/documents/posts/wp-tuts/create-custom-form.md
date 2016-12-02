@@ -1,6 +1,7 @@
 
 
-Form
+# Form HTML
+
 
 ```php
 <form action="" method="POST">
@@ -12,7 +13,7 @@ Form
 </form>
 ```
 
-Handle form submission at init action
+# Handle form submission at init action
 
 ```php
 public function dev_survey_submit_form() {

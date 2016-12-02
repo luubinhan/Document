@@ -2576,3 +2576,10 @@ http://www.wpexplorer.com/adding-custom-attributes-to-wordpress-menus/
 ```php
 'meta_query' => array(array('key' => '_thumbnail_id'))
 ```
+
+
+#
+
+```php
+the_post_thumbnail( 'medium', ['sizes' => '(min-width:64em) 33vw,(min-width:48em) 50vw, 100vw']);
+```
