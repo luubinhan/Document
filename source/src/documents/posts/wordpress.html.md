@@ -2570,3 +2570,9 @@ add_action('admin_bar_menu', 'custom_toolbar_link', 999);
 
 
 http://www.wpexplorer.com/adding-custom-attributes-to-wordpress-menus/
+
+# Query post with thumbnail
+
+```php
+'meta_query' => array(array('key' => '_thumbnail_id'))
+```
