@@ -2583,3 +2583,13 @@ http://www.wpexplorer.com/adding-custom-attributes-to-wordpress-menus/
 ```php
 the_post_thumbnail( 'medium', ['sizes' => '(min-width:64em) 33vw,(min-width:48em) 50vw, 100vw']);
 ```
+
+
+# Woocommerce remove password strenght
+
+```php
+function remove_wc_password_meter() {
+    wp_dequeue_script( "wc-password-strength-meter" );
+}
+add_action("wp_print_scripts", "remove_wc_password_meter", 100 );
+```
