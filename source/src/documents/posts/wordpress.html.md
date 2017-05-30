@@ -1887,7 +1887,7 @@ https://github.com/twittem/wp-bootstrap-navwalker
 
 http://premium.wpmudev.org/blog/load-posts-ajax/
 ```
-wp_localize_script('ajax-pagination', 'ajaxpagination', array(
+wp_localize_script('ajax-pagination', 'mystyle', array(
   'ajaxurl' => admin_url( 'admin-ajax.php' )
 ));
 ```
@@ -1900,7 +1900,7 @@ include 'includes/ajax-loading.php'
 
 ```php
 wp_enqueue_script( 'ajax-pagination', TEMPLATE_URL . 'js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
-wp_localize_script('ajax-pagination', 'ajaxpagination', array(
+wp_localize_script('ajax-pagination', 'mystyle', array(
   'ajaxurl' => admin_url( 'admin-ajax.php' )
 ));
 ```
@@ -1989,7 +1989,7 @@ jQuery(document).ready(function($) {
         // IF next_page = []
         // var next_page = JSON.stringify(next_page);
         $.ajax({
-            url: ajaxpagination.ajaxurl,
+            url: mystyle.ajaxurl,
             type: 'POST',           
             data: {
                 action: 'ajax_pagination',
@@ -2592,4 +2592,54 @@ function remove_wc_password_meter() {
     wp_dequeue_script( "wc-password-strength-meter" );
 }
 add_action("wp_print_scripts", "remove_wc_password_meter", 100 );
+```
+
+
+# CSS Variables with PHP 
+
+1
+
+```html
+<link rel='stylesheet' type='text/css' href='css/style.php' />
+```
+
+2 
+style.php 
+
+```php
+<?php
+    header("Content-type: text/css; charset: UTF-8");
+    $brandColor = "#990000";
+        $linkColor = "#555555";
+?>
+```
+
+3. Add class name for categoies
+
+```php
+function wpa_category_nav_class( $classes, $item ){
+    if( 'category' == $item->object ){
+        $classes[] = 'menu-category-' . $item->object_id;
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'wpa_category_nav_class', 10, 2 );
+```
+
+# Count a custom post type
+
+```php
+$count_posts = wp_count_posts( 'jobs' )->publish;
+```
+
+# Remove default wordpress thumbnail size
+
+```php
+function remove_default_image_sizes( $sizes) {
+    unset( $sizes['thumbnail']);
+    unset( $sizes['medium_large']);
+    unset( $sizes['large']);     
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes');
 ```
