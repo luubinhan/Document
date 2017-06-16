@@ -13,8 +13,6 @@ Applying Visual Psychology to Modern Day Design
     - Serial position effect
     - Cognitive Load Theory \(John Sweller\)
     - Fitts' Law \(Paul Fitts\)
-    - Command button
-    - The outer edges and corners
     - The Gestalt Laws and Interface Design
     - Design better forms
     - Some sample patterns from https://www.goodui.org
@@ -128,12 +126,12 @@ Fitts's Law provides a model of human movement, established in 1954 by Paul Fitt
 
 Apply?
 
-## Command button
+### Command button
 interactive element in the graphical user interface must be distinguished from other non-interactive elements by **size**
 
 ![](http://upload.wikimedia.org/wikipedia/commons/f/f9/Command_button.png)
 
-## The outer edges and corners
+### The outer edges and corners
 
 The outer edges and corners of the graphical user interface can be acquired with greater speed than anywhere else in the display, due to the pinning action of the screen
 
@@ -369,7 +367,11 @@ Designer everywhere prefer gray over gray. If you still using gray this year, th
 
 # The State of UX in 2017
 
+![The State of UX in 2017](https://cdn-images-1.medium.com/max/1000/1*B4jSvYEQJ4CNM08WGkecvw.jpeg)
+
 ## Usability becomes a commodity
+
+![Usability becomes a commodity](https://cdn-images-1.medium.com/max/1000/1*zZjiL1mIhikicbwzz4Wspg.jpeg)
 
 >> Design patterns are still a thing — a big thing. 
 
@@ -381,49 +383,72 @@ More and more, designers can rely on robust and comprehensive **interaction patt
 
 >> You don’t need to reinvent the wheel when designing a door handle. 
 
-Innovation just for innovation’s sake, like trying to create a completely disruptive navigation system for your website or app, can bring usability problems in the long term. 
+Innovation just for innovation’s sake, like trying to create a completely **disruptive navigation** system for your website or app, can bring usability problems in the long term. 
 
 If you don’t have time, or are not sure that you can build small components (like a dropdown) from scratch, ask your developer what library s/he suggests, and polish a pre-made version. One typical case is reinventing a datepicker. 
 
 ![](https://cdn-images-1.medium.com/max/800/1*Cgndb4fH9aXPnrLIuyuE4Q@2x.png)
 
 Too many people think they just need to draw a calendar with numbers on it, but you also need to think about:
+
 - Whether you will mark dates from the previous or next month.
 - What the hover effect will be for each date.
 - How you will mark the current date.
 - How you will mark a picked date.
 - How you will switch years or months.
 
-It all comes down to: what exactly is the user need you’re trying to solve by introducing a new interaction pattern?
+It all comes down to: *what exactly is the user need* you’re trying to solve by introducing a new interaction pattern?
 
 Luckily, interaction design pattern **libraries** and **guidelines** are helping keep designers honest and focused on what really matters for the user: *getting things done in an easy and familiar way*.
 
-Although someone in the room will always feel entitled to raise their hand and argue Snapchat is not the most “intuitive” experience ever, yet is still successful.
+Although someone in the room will always feel entitled to raise their hand and argue Snapchat is not the most *“intuitive”* experience ever, yet is still successful.
 
 ## Pay more attention to microinteractions
 
 [Dan Saffer’s book Microinteractions – Designing with Details][https://www.youtube.com/watch?v=9CEtqnPdWoI]
 
-Why choose to use Gmail over Yahoo, Medium over Blogger, the features are 99% the same -> It’s about that additional layer of sophistication that can only be achieved when you put enough time and brainpower into the tiniest details, the most subtle animations, the most elegant transitions.
+Why choose to use Gmail over Yahoo, Medium over Blogger, the features are 99% the same -> It’s about that additional layer of **sophistication** that can only be achieved when you put enough time and brainpower into the *tiniest details*, the most *subtle animations*, the most *elegant transitions*.
 
 Should not be afraid of starting from design patterns to cover the basics,  and then focusing the bulk of their time on the details that will make experiences feel more relevant, delightful — and therefore more memorable.
 
 ## The words we will stop using
 
-Do you still need to sell your design as “mobile-friendly”?
-Do you still describe experiences as being “intuitive”?
+![The words we will stop using](https://cdn-images-1.medium.com/max/1000/1*W4gcqgSfpQvS05FmIumy6Q.jpeg)
+
+>> Do you still need to sell your design as “mobile-friendly”? Do you still describe experiences as being “intuitive”?
 
 Back in 2011 everyone was talking about Responsive Design. It was the topic everyone was writing, reading, and tweeting about that year.
 
 ![Interest in the search term “Responsive Design” over time (source: Google Trends)](https://cdn-images-1.medium.com/max/800/0*XegLLytw-qvrCOOW.)
 
-- We don’t sell an experience as being “intuitive” — we prove it through user testing and positive feedback from customers.
-- We don’t sell our process as being “human-centered”; it’s an assumption that any capable and successful company these days will bring users to the design process at some level and at some point in the project.
-- 2016 was the year Google decided to remove the label “mobile friendly” from its search results, 85% of all pages in the mobile search results now meet the appropriate criteria and show the mobile-friendly label
+- We don’t sell an experience as being *“intuitive”* — we prove it through user *testing* and *positive feedback from customers*.
+- We don’t sell our process as being *“human-centered”*; it’s an assumption that any capable and successful company these days will bring users to the design process at some level and at some point in the project.
+- 2016 was the year Google decided to remove the label *“mobile friendly”* from its search results, 85% of all pages in the mobile search results now meet the appropriate criteria and show the mobile-friendly label
 
+![All websites are now (or should be) “mobile-friendly”](https://cdn-images-1.medium.com/max/800/0*AgHr6fS66CjiCsNO.)
 
 ## Everything is a conversation
+![Everything is a conversation](https://cdn-images-1.medium.com/max/1000/1*r2ztnLyv1kuGjDUXMpHNXQ.jpeg)
 
+**Chatbot** is one of the hottest terms in our industry right now. You are going to be building one quite soon — if you haven’t already. 
+
+But what does the future of Conversational Interfaces look like?
+
+Think of the most commen apps you user everyday. Like hailing a cab
+
+First, you **tell** Uber that you need a ride. Then, it **asks** you where you are, and once it has found a driver, it **tells** you the time estimate. When the ride is over, it **asks** you how it went. And you **tell** it your opinion by clicking on the stars and rating the ride.
+
+Traditional interfaces (the ones we design every day) are quite similar to a conversation — that just happens to manifest as buttons, menus and other interaction patterns. With Conversational UI the structure is the same. But instead of buttons, menus, and stars, you tell the machine what you want using words. And emojis
+
+>> The interactions of the future are not made of buttons.
+
+Example
+
+- https://chatbottle.co/bots/jarvis
+- https://chatbottle.co/bots/kayak-bot
+- https://chatbottle.co/bots/zoom-1
+- https://chatbottle.co/bots/freebusy-for-skype
+- https://chatbottle.co/bots/kayak-bot
 
 
 # REFERENCE
@@ -441,3 +466,4 @@ http://www.goodui.org/
 
 https://techcrunch.com/2015/02/05/the-psychology-of-notifications/
 
+[]: https://cdn-images-1.medium.com/max/1000/1*B4jSvYEQJ4CNM08WGkecvw.jpeg
