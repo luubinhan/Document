@@ -11,6 +11,7 @@ Applying Visual Psychology to Modern Day Design
     - Hick-Hyman Law
     - Von Restorff effect
     - Serial position effect
+    - The Deictic Gaze
     - Cognitive Load Theory \(John Sweller\)
     - Fitts' Law \(Paul Fitts\)
     - The Gestalt Laws and Interface Design
@@ -75,6 +76,15 @@ The Von Restorff effect (also known as the isolation effect) predicts that **whe
 **the propensity of a user to best remember the first and last items in a series.**
 
 ![From left to right, Twitter, Medium, ProductHunt](https://blog.marvelapp.com/wp-content/uploads/2017/06/1CpPcu45_U03GXNeJ9PKo7A.png)
+
+## The Deictic Gaze
+
+When we see someone looking at something our brain acts reflexively and starts looking at that thing, too
+
+The deictic gaze theory states that our eyes immediately go to where someone else is looking. So, using directional cues on your landing pages to point to the sweet spot helps.
+![](https://instapage.com/wp-content/uploads/2015/03/baby-1.jpg)
+![](https://instapage.com/wp-content/uploads/2015/03/baby-2.jpg)
+
 
 ## Cognitive Load Theory (John Sweller)
 
@@ -148,7 +158,7 @@ The outer edges and corners of the graphical user interface can be acquired with
 ![](http://architectingusability.com/wp-content/uploads/2011/05/Proximity_Form_1.png)
 
 Conceptually, each label matches up with a corresponding text-entry field. And yet the labels are so far away from the text-entry fields that the labels appear to form their own group, and the fields appear to form another group. The connection between each label and its corresponding field isn’t perfectly obvious.
-[](http://architectingusability.com/wp-content/uploads/2011/05/Proximity_Form_2.png)
+![](http://architectingusability.com/wp-content/uploads/2011/05/Proximity_Form_2.png)
 
 ### Law of closure
 
@@ -157,6 +167,10 @@ The mind fills in any gaps in incomplete shapes, to achieve closure in the form 
 In the following classic example, we perceive the image to be a circle, even though part of the circle is missing:
 
 ![](http://architectingusability.com/wp-content/uploads/2011/05/ClosureCircle_1.png)
+
+### 7±2 Principle (George A. Miller)
+
+Humans’ short term memory can retain only about 5-9 things at one time
 
 ## Design better forms
 
@@ -285,7 +299,7 @@ Example: Squarespace
 
 Desinger think: placing navigation under a hamburger menu makes a site cleaner sleeker.
 
-Most people are familiar with this pattern, but this isn't something that work for every site and can reduce **discorverability**
+Most people are familiar with this pattern, but this isn't something that work for every site and can reduce **discoverability**
 
 The consequences can be harmful for e-commerce sites and news sites, where discoverability of topics and items *critical* to the experience.
 
@@ -460,6 +474,7 @@ Example
 5. [Material - Usability][https://material.io/guidelines/usability/accessibility.html#]
 6. [Handoffs Guide for Pixel Perfect Design][https://medium.com/pixelpoint/handoffs-guide-for-pixel-perfect-design-part-iii-3acc5a93d3a2]
 7. [Gestalt Principles for Designers – Applying Visual Psychology to Modern Day Design][http://blog.teamtreehouse.com/gestalt-principles-designers-applying-visual-psychology-modern-day-design]
+8. [6 Cognitive Biases Affecting Your Conversion Rates][https://instapage.com/blog/6-cognitive-biases-affecting-your-conversion-rates]
 
 
 http://www.goodui.org/
